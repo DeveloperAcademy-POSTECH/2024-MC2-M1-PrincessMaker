@@ -1,18 +1,9 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: Basic Issue Template
+about: 기본적인 이슈 템플릿입니다.
 title: "[Prefix] 이슈 타이틀"
 labels: ''
 assignees: ''
-
----
-
----
-name:   WSS - Issue Template
-about: "WSS-iOS 이슈 템플릿입니다.🎇"
-title: '[Prefix] 이슈 타이틀'
-labels: ''
-assignees: 'self'
 
 ---
 
