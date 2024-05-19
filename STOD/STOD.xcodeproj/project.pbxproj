@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268402BF7E0E800C27F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentView.swift */; };
-		397268422BF7E0E800C27F52 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268412BF7E0E800C27F52 /* Item.swift */; };
+		397268422BF7E0E800C27F52 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268412BF7E0E800C27F52 /* Cloth.swift */; };
 		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
 		397268472BF7E0E900C27F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268462BF7E0E900C27F52 /* Preview Assets.xcassets */; };
 		3972685D2BF7E30200C27F52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972685C2BF7E30200C27F52 /* Home.swift */; };
@@ -30,13 +30,16 @@
 		39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */; };
 		39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */; };
 		39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44F2BFA0D290033FB89 /* TestView.swift */; };
+		89E813252BFA542D0043E39F /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E813242BFA542D0043E39F /* ClothList.swift */; };
+		89E813272BFA546A0043E39F /* FirstSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E813262BFA546A0043E39F /* FirstSubmit.swift */; };
+		89E813292BFA54D60043E39F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E813282BFA54D60043E39F /* UpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		397268412BF7E0E800C27F52 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		397268412BF7E0E800C27F52 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 		397268432BF7E0E900C27F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		397268462BF7E0E900C27F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3972685C2BF7E30200C27F52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -56,6 +59,9 @@
 		39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditer.swift; sourceTree = "<group>"; };
 		39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditPicker.swift; sourceTree = "<group>"; };
 		39E3E44F2BFA0D290033FB89 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		89E813242BFA542D0043E39F /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClothList.swift; path = "../../../../../../../.Trash/2024-MC2-M1-PrincessMaker 오전 12.30.29/STOD/STOD/Source/Model/ClothList.swift"; sourceTree = "<group>"; };
+		89E813262BFA546A0043E39F /* FirstSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSubmit.swift; sourceTree = "<group>"; };
+		89E813282BFA54D60043E39F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +185,8 @@
 		397268552BF7E1E400C27F52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				397268412BF7E0E800C27F52 /* Item.swift */,
+				397268412BF7E0E800C27F52 /* Cloth.swift */,
+				89E813242BFA542D0043E39F /* ClothList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				3972685E2BF7E30F00C27F52 /* Register.swift */,
+				89E813262BFA546A0043E39F /* FirstSubmit.swift */,
+				89E813282BFA54D60043E39F /* UpdateView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -312,13 +321,16 @@
 			files = (
 				397268612BF7E31700C27F52 /* Onboarding.swift in Sources */,
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
-				397268422BF7E0E800C27F52 /* Item.swift in Sources */,
+				397268422BF7E0E800C27F52 /* Cloth.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
+				89E813292BFA54D60043E39F /* UpdateView.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
 				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
+				89E813272BFA546A0043E39F /* FirstSubmit.swift in Sources */,
 				39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */,
+				89E813252BFA542D0043E39F /* ClothList.swift in Sources */,
 				39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */,
 				3972685D2BF7E30200C27F52 /* Home.swift in Sources */,
 				39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */,
@@ -457,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = D23XDL6TZZ;
+				DEVELOPMENT_TEAM = 8D32S9PLZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -491,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = D23XDL6TZZ;
+				DEVELOPMENT_TEAM = 8D32S9PLZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
