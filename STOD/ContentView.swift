@@ -10,52 +10,63 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    @Query var clothes: [Cloth]
+    @State private var isUpdatingNewCloth = false
+    @State var newCloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "")
+    @State private var selectedCloth: Cloth? = nil
+    
+    public func deleteCloth(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { clothes[$0] }.forEach(modelContext.delete)
+        }
+    }
+    
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                ForEach(clothes) { cloth in
+                    VStack {
+                        HStack {
+                            Text(cloth.name)
+                                .bold()
+                            Text(cloth.size)
+                                .foregroundStyle(.blue)
+                            Text(cloth.selectedSubCategory)
+                                .foregroundStyle(.yellow)
+                        }
+                    }
+                    .contextMenu {
+                        Button(action: {
+                            // 고정 기능 구현
+                        }) {
+                            Text("고정")
+                        }
+                        Button(action: {
+                            selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhoto: cloth.numericalPhotoPath, mainPhoto: cloth.mainPhoto, selectedSubCategory: cloth.selectedSubCategory)
+                            isUpdatingNewCloth = true
+                            // 수정 기능 구현
+                        }) {
+                            Text("수정")
+                        }
+                        Button(action: {
+                            if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+                                deleteCloth(offsets: IndexSet(integer: index))
+                            }
+                        }) {
+                            Text("삭제")
+                        }
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteCloth)
+                
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            .navigationTitle("어떤 옷을 찾고 계신가요?")
+            NavigationLink(destination: FirstSubmit(cloth: $newCloth)) {
+                Label("Add Cloth", systemImage: "plus")
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        }.sheet(isPresented: $isUpdatingNewCloth, content: {
+            UpdateView(cloth: selectedCloth ?? Cloth(name: "", size: "", numericalPhoto: Data(), mainPhoto: nil, selectedSubCategory: ""))
+        })
     }
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
-}

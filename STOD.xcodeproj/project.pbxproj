@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		895699102BF9062100525371 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8956990F2BF9062100525371 /* STODApp.swift */; };
 		895699122BF9062100525371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895699112BF9062100525371 /* ContentView.swift */; };
-		895699142BF9062100525371 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895699132BF9062100525371 /* Item.swift */; };
+		895699142BF9062100525371 /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895699132BF9062100525371 /* Cloth.swift */; };
 		895699162BF9062300525371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895699152BF9062300525371 /* Assets.xcassets */; };
 		895699192BF9062300525371 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895699182BF9062300525371 /* Preview Assets.xcassets */; };
+		895699202BF9C5DA00525371 /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8956991F2BF9C5DA00525371 /* UpdateView.swift */; };
+		895699222BF9C62300525371 /* FirstSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895699212BF9C62300525371 /* FirstSubmit.swift */; };
+		895699242BF9D03300525371 /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895699232BF9D03300525371 /* ClothList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8956990C2BF9062100525371 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8956990F2BF9062100525371 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		895699112BF9062100525371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		895699132BF9062100525371 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		895699132BF9062100525371 /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 		895699152BF9062300525371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		895699182BF9062300525371 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8956991F2BF9C5DA00525371 /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
+		895699212BF9C62300525371 /* FirstSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSubmit.swift; sourceTree = "<group>"; };
+		895699232BF9D03300525371 /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,10 @@
 			children = (
 				8956990F2BF9062100525371 /* STODApp.swift */,
 				895699112BF9062100525371 /* ContentView.swift */,
-				895699132BF9062100525371 /* Item.swift */,
+				895699132BF9062100525371 /* Cloth.swift */,
+				8956991F2BF9C5DA00525371 /* UpdateView.swift */,
+				895699212BF9C62300525371 /* FirstSubmit.swift */,
+				895699232BF9D03300525371 /* ClothList.swift */,
 				895699152BF9062300525371 /* Assets.xcassets */,
 				895699172BF9062300525371 /* Preview Content */,
 			);
@@ -140,9 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895699242BF9D03300525371 /* ClothList.swift in Sources */,
 				895699122BF9062100525371 /* ContentView.swift in Sources */,
-				895699142BF9062100525371 /* Item.swift in Sources */,
+				895699202BF9C5DA00525371 /* UpdateView.swift in Sources */,
+				895699142BF9062100525371 /* Cloth.swift in Sources */,
 				895699102BF9062100525371 /* STODApp.swift in Sources */,
+				895699222BF9C62300525371 /* FirstSubmit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
