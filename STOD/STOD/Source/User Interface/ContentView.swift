@@ -24,7 +24,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(clothes) { cloth in
+                ForEach(clothes, id: \.self) { cloth in
                     VStack {
                         HStack {
                             Text(cloth.name)
@@ -42,7 +42,7 @@ struct ContentView: View {
                             Text("고정")
                         }
                         Button(action: {
-                            selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhoto: cloth.numericalPhotoPath, mainPhoto: cloth.mainPhoto, selectedSubCategory: cloth.selectedSubCategory)
+                            selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhotoPath: cloth.numericalPhotoPath, mainPhotoPath: cloth.mainPhotoPath, selectedSubCategory: cloth.selectedSubCategory)
                             isUpdatingNewCloth = true
                             // 수정 기능 구현
                         }) {
@@ -65,7 +65,7 @@ struct ContentView: View {
                 Label("Add Cloth", systemImage: "plus")
             }
         }.sheet(isPresented: $isUpdatingNewCloth, content: {
-            UpdateView(cloth: selectedCloth ?? Cloth(name: "", size: "", numericalPhoto: Data(), mainPhoto: nil, selectedSubCategory: ""))
+            UpdateView(cloth: selectedCloth ?? Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: ""))
         })
     }
 }
