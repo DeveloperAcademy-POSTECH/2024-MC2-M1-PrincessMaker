@@ -27,6 +27,7 @@
 		39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */; };
 		39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4472BF9D2230033FB89 /* BrightroomEngine */; };
 		39E3E44A2BF9D2230033FB89 /* BrightroomUI in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4492BF9D2230033FB89 /* BrightroomUI */; };
+		39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		39E3E43D2BF875210033FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3E43E2BF87CF30033FB89 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			children = (
 				397268622BF7E32900C27F52 /* CustomView.swift */,
 				39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */,
+				39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
 				397268422BF7E0E800C27F52 /* Item.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
+				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
 				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
