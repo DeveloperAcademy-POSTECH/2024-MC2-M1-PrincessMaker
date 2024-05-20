@@ -9,7 +9,18 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 24) {
+            PIPSection()
+            CategorySection()
+            VStack(alignment: .leading) {
+                Text("어떤 옷을 찾고 계신가요?")
+                    .font(.StodHeadline)
+                Image(.categoryRuler)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 20)
+            }
+        }
     }
 }
 
