@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategorySection: View {
-    @State private var selectedCategory: MainCategory? = .recent
+    @Binding var selectedCategory: MainCategory?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -58,5 +58,5 @@ struct CategorySection: View {
 }
 
 #Preview {
-    CategorySection()
+    CategorySection(selectedCategory: .constant(.recent))
 }

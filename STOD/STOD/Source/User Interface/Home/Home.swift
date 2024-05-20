@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct Home: View {
+    @State private var selectedCategory: MainCategory? = .recent
+    
     var body: some View {
         VStack(spacing: 24) {
             PIPSection()
-            CategorySection()
+            CategorySection(selectedCategory: $selectedCategory)
         }
     }
 }
