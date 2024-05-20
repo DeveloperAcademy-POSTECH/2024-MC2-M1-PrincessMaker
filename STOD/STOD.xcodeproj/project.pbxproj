@@ -30,6 +30,13 @@
 		39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */; };
 		39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */; };
 		39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44F2BFA0D290033FB89 /* TestView.swift */; };
+		EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72112BFA2B6500CD3E7F /* Cloth.swift */; };
+		EE2E72142BFA2B8F00CD3E7F /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72132BFA2B8F00CD3E7F /* ClothList.swift */; };
+		EE2E72162BFA2BB100CD3E7F /* JaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72152BFA2BB100CD3E7F /* JaneView.swift */; };
+		EE2E72182BFA2BC100CD3E7F /* FirstSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72172BFA2BC100CD3E7F /* FirstSubmit.swift */; };
+		EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */; };
+		EE2E721C2BFA395200CD3E7F /* BigCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E721B2BFA395200CD3E7F /* BigCategory.swift */; };
+		EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E721D2BFA406D00CD3E7F /* NameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,13 @@
 		39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditer.swift; sourceTree = "<group>"; };
 		39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditPicker.swift; sourceTree = "<group>"; };
 		39E3E44F2BFA0D290033FB89 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		EE2E72112BFA2B6500CD3E7F /* Cloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
+		EE2E72132BFA2B8F00CD3E7F /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
+		EE2E72152BFA2BB100CD3E7F /* JaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JaneView.swift; sourceTree = "<group>"; };
+		EE2E72172BFA2BC100CD3E7F /* FirstSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSubmit.swift; sourceTree = "<group>"; };
+		EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
+		EE2E721B2BFA395200CD3E7F /* BigCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCategory.swift; sourceTree = "<group>"; };
+		EE2E721D2BFA406D00CD3E7F /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +238,13 @@
 			isa = PBXGroup;
 			children = (
 				3972685E2BF7E30F00C27F52 /* Register.swift */,
+				EE2E72112BFA2B6500CD3E7F /* Cloth.swift */,
+				EE2E72132BFA2B8F00CD3E7F /* ClothList.swift */,
+				EE2E72152BFA2BB100CD3E7F /* JaneView.swift */,
+				EE2E72172BFA2BC100CD3E7F /* FirstSubmit.swift */,
+				EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */,
+				EE2E721B2BFA395200CD3E7F /* BigCategory.swift */,
+				EE2E721D2BFA406D00CD3E7F /* NameView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -310,13 +331,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2E72142BFA2B8F00CD3E7F /* ClothList.swift in Sources */,
 				397268612BF7E31700C27F52 /* Onboarding.swift in Sources */,
+				EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */,
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
 				397268422BF7E0E800C27F52 /* Item.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
+				EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
+				EE2E72162BFA2BB100CD3E7F /* JaneView.swift in Sources */,
+				EE2E721C2BFA395200CD3E7F /* BigCategory.swift in Sources */,
+				EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
+				EE2E72182BFA2BC100CD3E7F /* FirstSubmit.swift in Sources */,
 				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
 				39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */,
 				39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */,
