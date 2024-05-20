@@ -19,14 +19,16 @@ final class Cloth: ObservableObject, Identifiable {
 //    @Attribute(.externalStorage)
     var mainPhotoPath: String?
     var selectedSubCategory: String
+    var selectedMainCategory: String
     
-    init(name: String, size: String, numericalPhotoPath: String?, mainPhotoPath: String?, selectedSubCategory: String) {
+    init(name: String, size: String, numericalPhotoPath: String?, mainPhotoPath: String?, selectedSubCategory: String, selectedMainCategory: String) {
         self.id = UUID()
         self.name = name
         self.size = size
         self.numericalPhotoPath = numericalPhotoPath
         self.mainPhotoPath = mainPhotoPath
         self.selectedSubCategory = selectedSubCategory
+        self.selectedMainCategory = selectedMainCategory
     }
     
     var numericalUIImage: UIImage? {
