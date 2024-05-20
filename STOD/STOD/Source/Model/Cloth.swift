@@ -10,7 +10,7 @@ import UIKit
 import SwiftData
 
 @Model
-final class Cloth {
+final class Cloth: ObservableObject, Identifiable {
     @Attribute(.unique) var id: UUID
     var name: String
     var size: String
@@ -44,4 +44,6 @@ final class Cloth {
             }
             return nil
         }
+    
+    
 }

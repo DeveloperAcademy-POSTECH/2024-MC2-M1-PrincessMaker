@@ -4,10 +4,17 @@ import SwiftData
 struct UpdateView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @State var cloth: Cloth
+    @Query var clothes: [Cloth]
+    @Binding var selectedCloth: Cloth
+    @Binding var selectedIndex: Int?
 
     func updateCloth() {
         do {
+            guard let index = selectedIndex else { return }
+            clothes[index].name = selectedCloth.name
+            clothes[index].size = selectedCloth.size
+            clothes[index].selectedSubCategory = selectedCloth.selectedSubCategory
+            
             try modelContext.save()
             print("Cloth updated successfully")
             dismiss()
@@ -19,10 +26,10 @@ struct UpdateView: View {
     var body: some View {
         VStack {
             Text("옷 수정 뷰입니다")
-            TextField("이름", text: $cloth.name)
-            TextField("사이즈", text: $cloth.size)
+            TextField("", text: $selectedCloth.name)
+            TextField("", text: $selectedCloth.size)
             // 추가적인 필드나 UI 요소들을 여기 추가합니다.
-            TextField("옷 종류", text: $cloth.selectedSubCategory)
+            TextField("", text: $selectedCloth.selectedSubCategory)
             
             Button(action: {
                 updateCloth()

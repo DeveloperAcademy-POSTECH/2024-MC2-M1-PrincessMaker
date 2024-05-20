@@ -13,7 +13,8 @@ struct ContentView: View {
     @Query var clothes: [Cloth]
     @State private var isUpdatingNewCloth = false
     @State var newCloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "")
-    @State private var selectedCloth: Cloth? = nil
+    @State private var selectedCloth: Cloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "")
+    @State private var selectedIndex: Int? = nil
     
     public func deleteCloth(offsets: IndexSet) {
         withAnimation {
@@ -21,18 +22,23 @@ struct ContentView: View {
         }
     }
     
+    
+    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(clothes, id: \.self) { cloth in
+                ForEach(clothes) { cloth in
                     VStack {
                         HStack {
                             Text(cloth.name)
                                 .bold()
+                            Text(selectedCloth.name)
                             Text(cloth.size)
                                 .foregroundStyle(.blue)
+                            Text(selectedCloth.size)
                             Text(cloth.selectedSubCategory)
                                 .foregroundStyle(.yellow)
+                            Text(selectedCloth.selectedSubCategory)
                         }
                     }
                     .contextMenu {
@@ -42,6 +48,9 @@ struct ContentView: View {
                             Text("고정")
                         }
                         Button(action: {
+                            if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+                                selectedIndex = index
+                            }
                             selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhotoPath: cloth.numericalPhotoPath, mainPhotoPath: cloth.mainPhotoPath, selectedSubCategory: cloth.selectedSubCategory)
                             isUpdatingNewCloth = true
                             // 수정 기능 구현
@@ -56,6 +65,11 @@ struct ContentView: View {
                             Text("삭제")
                         }
                     }
+                    .sheet(isPresented: $isUpdatingNewCloth, content: {
+                        UpdateView(selectedCloth: $selectedCloth, selectedIndex: $selectedIndex
+            //                       ?? Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "")
+                        )
+                    })
                 }
                 .onDelete(perform: deleteCloth)
                 
@@ -64,8 +78,6 @@ struct ContentView: View {
             NavigationLink(destination: FirstSubmit(cloth: $newCloth)) {
                 Label("Add Cloth", systemImage: "plus")
             }
-        }.sheet(isPresented: $isUpdatingNewCloth, content: {
-            UpdateView(cloth: selectedCloth ?? Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: ""))
-        })
+        }
     }
 }
