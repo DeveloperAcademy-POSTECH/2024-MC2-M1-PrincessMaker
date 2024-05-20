@@ -27,6 +27,7 @@
 		3972686F2BF7E4BF00C27F52 /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */; };
 		397268702BF7E4BF00C27F52 /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */; };
 		397268712BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */; };
+		398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8EC2BFB919300780D74 /* HapticManager.swift */; };
 		39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E43E2BF87CF30033FB89 /* Font+.swift */; };
 		39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */; };
 		39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4472BF9D2230033FB89 /* BrightroomEngine */; };
@@ -58,6 +59,7 @@
 		3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
 		3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
 		3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
+		398DD8EC2BFB919300780D74 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		39E3E43D2BF875210033FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3E43E2BF87CF30033FB89 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */,
 				39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */,
 				39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */,
+				398DD8EC2BFB919300780D74 /* HapticManager.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
+				398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
 				3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */,
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
