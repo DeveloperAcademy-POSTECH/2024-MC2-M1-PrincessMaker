@@ -37,6 +37,8 @@
 		EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */; };
 		EE2E721C2BFA395200CD3E7F /* BigCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E721B2BFA395200CD3E7F /* BigCategory.swift */; };
 		EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E721D2BFA406D00CD3E7F /* NameView.swift */; };
+		EE2E72242BFB43F500CD3E7F /* SizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72232BFB43F500CD3E7F /* SizeView.swift */; };
+		EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		EE2E721B2BFA395200CD3E7F /* BigCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCategory.swift; sourceTree = "<group>"; };
 		EE2E721D2BFA406D00CD3E7F /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		EE2E72232BFB43F500CD3E7F /* SizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeView.swift; sourceTree = "<group>"; };
+		EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,8 @@
 				EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */,
 				EE2E721B2BFA395200CD3E7F /* BigCategory.swift */,
 				EE2E721D2BFA406D00CD3E7F /* NameView.swift */,
+				EE2E72232BFB43F500CD3E7F /* SizeView.swift */,
+				EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -332,8 +338,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE2E72142BFA2B8F00CD3E7F /* ClothList.swift in Sources */,
+				EE2E72242BFB43F500CD3E7F /* SizeView.swift in Sources */,
 				397268612BF7E31700C27F52 /* Onboarding.swift in Sources */,
 				EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */,
+				EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */,
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
 				397268422BF7E0E800C27F52 /* Item.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,

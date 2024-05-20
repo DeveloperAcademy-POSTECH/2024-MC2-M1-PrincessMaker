@@ -1,28 +1,26 @@
 //
-//  NameView.swift
+//  SizeView.swift
 //  STOD
 //
-//  Created by SOOKYUNG CHO on 5/19/24.
+//  Created by SOOKYUNG CHO on 5/20/24.
 //
 
 import SwiftUI
-import Combine
 
-struct NameView: View {
-    @State var name: String = ""
+struct SizeView: View {
+    @State var size: String = ""
+    @Binding var name: String
     
     var body: some View {
-        //키보드 위로 올라와있게
-        //사용자가 치기 시작하면 확인 버튼 뜨도록
         NavigationStack{
             
             VStack(alignment: .leading){
-                Text("옷 이름을 알려주세요")
+                Text("어떤 사이즈를 구매하셨나요?")
                     .foregroundColor(.white)
                     .font(.StodHeadline)
                     .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 16))
                 
-                TextField("ex) 똥싼바지, 여리여리 블라우스", text: $name)
+                TextField("ex) 스몰, XL, 240mm", text: $size)
                     .keyboardType(.default)
                     .font(.StodTitle2)
                     .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 16))
@@ -33,15 +31,30 @@ struct NameView: View {
                     path.addLine(to: CGPoint(x:343, y:12))
                 }
                 .stroke(.stodGray100, lineWidth: 1)
+                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 24, trailing: 16))
+                
+                
+                Text("이름")
+                    .font(.StodBody)
+                    .foregroundColor(.stodGray100)
+                    .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
+
+                Text(name)
+                    .font(.StodTitle2)
+                    .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
+
+                Path { path in
+                    path.move(to: CGPoint(x: 0, y:12))
+                    path.addLine(to: CGPoint(x:343, y:12))
+                }
+                .stroke(.stodGray100, lineWidth: 1)
                 .padding(EdgeInsets(top: 0 , leading: 16, bottom: 0, trailing: 16))
                 
+                //Spacer()
                 
-                Spacer()
-                
-                
-                VStack {
-                    if !name.isEmpty {
-                        NavigationLink(destination: SizeView(name: $name)) {
+                VStack{
+                    if !size.isEmpty{
+                        NavigationLink(destination: SubcategoryView()){
                             ZStack {
                                 RoundedRectangle(cornerRadius: 0)
                                     .frame(width: 393, height: 48)
@@ -63,22 +76,15 @@ struct NameView: View {
                                 .foregroundColor(.black)
                         }
                     }
-                }
-                .padding(.bottom, 20)
+                }.padding(.bottom, 20)
                 .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.bottom, 20)
-            
         }
     }
-    
 }
 
 
-
-
-
-
 #Preview {
-    NameView()
+    SizeView(name: .constant("Sample name"))
 }
