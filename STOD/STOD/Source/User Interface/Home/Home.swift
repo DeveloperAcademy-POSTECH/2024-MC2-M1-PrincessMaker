@@ -12,14 +12,6 @@ struct Home: View {
         VStack(spacing: 24) {
             PIPSection()
             CategorySection()
-            VStack(alignment: .leading) {
-                Text("어떤 옷을 찾고 계신가요?")
-                    .font(.StodHeadline)
-                Image(.categoryRuler)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 20)
-            }
         }
     }
 }

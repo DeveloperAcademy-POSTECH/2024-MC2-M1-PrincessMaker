@@ -18,8 +18,6 @@ struct PIPSection: View {
                     .font(.StodTitle1)
                     .foregroundStyle(.stodGray100)
             }
-            
-            
         }
         .padding(.horizontal, 16)
         .frame(height: 192)

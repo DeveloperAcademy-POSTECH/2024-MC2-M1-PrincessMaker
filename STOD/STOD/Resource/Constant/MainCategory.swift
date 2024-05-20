@@ -1,5 +1,5 @@
 //
-//  ClothList.swift
+//  MainCategory.swift
 //  STOD
 //
 //  Created by 김이예은 on 5/19/24.

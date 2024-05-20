@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct CategoryButton: View {
-    @State var isSelected = true
+    @Binding var selectedCategory: MainCategory?
     let category: MainCategory
+    
+    var isSelected: Bool {
+        return selectedCategory == category
+    }
     
     var body: some View {
         VStack(spacing: 4) {
             category.image
                 .resizable()
                 .scaledToFill()
-                .frame(width: 48, height: 48)
-                .clipShape(Circle())
                 .overlay {
                     Circle()
                         .stroke(isSelected ? Color.accentColor :
@@ -25,7 +27,8 @@ struct CategoryButton: View {
                                 lineWidth: isSelected ? 2.0 :
                                     1.0)
                 }
-            
+                .padding(2)
+                .frame(width: 48, height: 48)
             Text(category.rawValue)
                 .font(.StodBody)
         }
@@ -34,5 +37,5 @@ struct CategoryButton: View {
 }
 
 #Preview {
-    CategoryButton(category: .top)
+    CategoryButton(selectedCategory: .constant(.top), category: .top)
 }
