@@ -141,8 +141,8 @@
 			children = (
 				3972686A2BF7E4AD00C27F52 /* Pretendard-Bold.ttf */,
 				3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */,
-				3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */,
 				3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */,
+				3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
