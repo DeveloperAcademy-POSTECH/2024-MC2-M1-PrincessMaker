@@ -50,7 +50,7 @@ struct ContentView: View {
                                 selectedIndex = index
                             }
                             selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhotoPath: cloth.numericalPhotoPath, mainPhotoPath: cloth.mainPhotoPath, selectedSubCategory: cloth.selectedSubCategory, selectedMainCategory: cloth.selectedMainCategory)
-                            selectedCloth = cloth
+//                            selectedCloth = cloth
                             isUpdatingNewCloth = true
                             // 수정 기능 구현
                         }) {
