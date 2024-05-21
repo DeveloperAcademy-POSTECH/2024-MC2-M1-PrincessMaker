@@ -2,7 +2,7 @@
 //  STODApp.swift
 //  STOD
 //
-//  Created by 이윤학 on 5/18/24.
+//  Created by 김이예은 on 5/19/24.
 //
 
 import SwiftUI

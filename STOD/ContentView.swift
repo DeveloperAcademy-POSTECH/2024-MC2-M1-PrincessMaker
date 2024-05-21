@@ -12,9 +12,8 @@ struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query var clothes: [Cloth]
     @State private var isUpdatingNewCloth = false
-    @State private var newCloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "", selectedMainCategory: "")
-    @State private var selectedCloth: Cloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "", selectedMainCategory: "")
-    @State private var selectedIndex: Int? = nil
+    @State var newCloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "")
+    @State private var selectedCloth: Cloth? = nil
     
     public func deleteCloth(offsets: IndexSet) {
         withAnimation {
@@ -22,12 +21,10 @@ struct ContentView: View {
         }
     }
     
-    
-    
     var body: some View {
         NavigationStack {
             List {
-                ForEach(clothes, id: \.self) { cloth in
+                ForEach(clothes) { cloth in
                     VStack {
                         HStack {
                             Text(cloth.name)
@@ -45,16 +42,9 @@ struct ContentView: View {
                             Text("고정")
                         }
                         Button(action: {
-                            if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
-                                selectedCloth = clothes[index]
-                            }
-//                            selectedCloth = cloth
+                            selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhoto: cloth.numericalPhotoPath, mainPhoto: cloth.mainPhoto, selectedSubCategory: cloth.selectedSubCategory)
                             isUpdatingNewCloth = true
                             // 수정 기능 구현
-                            print(selectedCloth.name)
-                            print(selectedCloth.size)
-                            print(selectedCloth.selectedSubCategory)
-                            print(selectedCloth.selectedMainCategory)
                         }) {
                             Text("수정")
                         }
@@ -66,17 +56,17 @@ struct ContentView: View {
                             Text("삭제")
                         }
                     }
-                    .sheet(isPresented: $isUpdatingNewCloth){
-                        UpdateView(selectedCloth: $selectedCloth)
-                    }
                 }
                 .onDelete(perform: deleteCloth)
                 
             }
-            .navigationTitle("어떤 옷을 찾고 계신가요? 궁금하네요...")
-            NavigationLink(destination: FirstSubmit(newCloth: $newCloth)) {
+            .navigationTitle("어떤 옷을 찾고 계신가요?")
+            NavigationLink(destination: FirstSubmit(cloth: $newCloth)) {
                 Label("Add Cloth", systemImage: "plus")
             }
-        }
+        }.sheet(isPresented: $isUpdatingNewCloth, content: {
+            UpdateView(cloth: selectedCloth ?? Cloth(name: "", size: "", numericalPhoto: Data(), mainPhoto: nil, selectedSubCategory: ""))
+        })
     }
 }
+
