@@ -27,14 +27,10 @@ struct NameView: View {
                     .font(.StodTitle2)
                     .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 16))
                 
-                
-                Path { path in
-                    path.move(to: CGPoint(x: 0, y:12))
-                    path.addLine(to: CGPoint(x:343, y:12))
-                }
-                .stroke(.stodGray100, lineWidth: 1)
-                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 0, trailing: 16))
-                
+                Rectangle()
+                    .fill(Color.stodGray100)
+                    .frame(height: 1)
+                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
                 
                 Spacer()
                 

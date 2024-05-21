@@ -2,30 +2,24 @@
 //  ClothList.swift
 //  STOD
 //
-//  Created by SOOKYUNG CHO on 5/19/24.
-//
-
-//
-//  ClothList.swift
-//  STOD
-//
 //  Created by 김이예은 on 5/19/24.
 //
 
 import Foundation
 
 enum MainCategory: String, CaseIterable {
-    case 상의
+    case 최근
     case 아우터
+    case 상의
     case 하의
     case 원피스
     case 신발
-    case 가방
-    case 패션소품
-    case 언더웨어
+    case 패션잡화
 
     var subcategories: [String] {
         switch self {
+        case .최근:
+            return [""]
         case .상의:
             return ["맨투맨/스웨트셔츠",
                     "셔츠/블라우스",
@@ -93,33 +87,15 @@ enum MainCategory: String, CaseIterable {
                     "부츠",
                     "모카신/보트 슈즈",
                     "기타 신발"]
-        case .가방:
-            return ["백팩",
-                    "메신저/크로스 백",
-                    "숄더백",
-                    "토드백",
-                    "에코백",
-                    "보스턴/드럼/더플백",
-                    "웨이스트 백",
-                    "파우치 백",
-                    "브리프케이스",
-                    "캐리어",
-                    "가방 소품",
-                    "지갑/머니클립",
-                    "클러치 백"]
-        case .패션소품:
-            return ["모자",
+        case .패션잡화:
+            return ["가방",
+                    "모자",
                     "양말/레그워머",
                     "선글라스/안경테",
                     "액세서리",
                     "시계",
-                    "주얼리"]
-        case .언더웨어:
-            return ["여성 속옷 상의",
-                    "여성 속옷 하의",
-                    "여성 속옷 세트",
-                    "남성 속옷",
-                    "홈웨어"]
+                    "주얼리",
+                    "언더웨어"]
         }
     }
 }
