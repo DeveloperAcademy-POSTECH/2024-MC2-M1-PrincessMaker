@@ -1,42 +1,56 @@
 //
-//  NameView.swift
+//  SizeView.swift
 //  STOD
 //
-//  Created by SOOKYUNG CHO on 5/19/24.
+//  Created by 김이예은 on 5/21/24.
 //
 
 import SwiftUI
-import Combine
 
-struct NameView: View {
+struct SizeView: View {
     @Binding var newCloth: Cloth
+    @State var isAnimated: Bool = false
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("옷 이름을 알려주세요")
+            Text("어떤 사이즈를 구매하셨나요?")
                 .foregroundColor(.white)
                 .font(.StodHeadline)
                 .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 16))
             
-            TextField("ex) 똥싼바지, 여리여리 블라우스", text: $newCloth.name)
-                .keyboardType(.default)
+            if isAnimated {
+                TextField("ex) 스몰, XL, 240mm", text: $newCloth.size)
+                    .keyboardType(.default)
+                    .font(.StodTitle2)
+                    .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 16))
+                    .opacity(isAnimated ? 1 : 0)
+                
+                Rectangle()
+                    .fill(Color.stodGray100)
+                    .frame(height: 1)
+                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                    .opacity(isAnimated ? 1 : 0)
+                
+            }
+            
+            Text("이름")
+                .font(.StodBody)
+                .foregroundColor(.stodGray100)
+                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
+            
+            Text(newCloth.name)
                 .font(.StodTitle2)
-                .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 16))
-                .onAppear{
-                    UITextField.appearance().clearButtonMode = .whileEditing
-                }
+                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
             
             Rectangle()
                 .fill(Color.stodGray100)
                 .frame(height: 1)
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-            
             Spacer()
             
-            
-            VStack {
-                if !newCloth.name.isEmpty {
-                    NavigationLink(destination: SizeView(newCloth: $newCloth)) {
+            VStack{
+                if !newCloth.size.isEmpty{
+                    NavigationLink(destination: SubcategoryView()){
                         ZStack {
                             RoundedRectangle(cornerRadius: 0)
                                 .frame(width: 393, height: 48)
@@ -63,14 +77,13 @@ struct NameView: View {
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .padding(.bottom, 20)
-        
+        .onAppear {
+            withAnimation(.easeInOut(duration: 0.6)) {
+                isAnimated = true
+            }
+        }
+        //.animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/, value: $isAnimated)
     }
 }
-
-
-
-
-
-
 
 
