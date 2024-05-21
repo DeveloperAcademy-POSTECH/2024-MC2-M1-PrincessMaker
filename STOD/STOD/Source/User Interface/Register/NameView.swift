@@ -10,6 +10,8 @@ import Combine
 
 struct NameView: View {
     @State var name: String = ""
+    @Binding var selectedMainCategory: MainCategory
+
     
     var body: some View {
         //키보드 위로 올라와있게
@@ -37,7 +39,7 @@ struct NameView: View {
                 
                 VStack {
                     if !name.isEmpty {
-                        NavigationLink(destination: SizeView(name: $name)) {
+                        NavigationLink(destination: SizeView(name: $name, selectedMainCategory: $selectedMainCategory )) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 0)
                                     .frame(width: 393, height: 48)
@@ -76,5 +78,5 @@ struct NameView: View {
 
 
 #Preview {
-    NameView()
+    NameView(selectedMainCategory: .constant(.상의))
 }

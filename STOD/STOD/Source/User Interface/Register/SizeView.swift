@@ -11,6 +11,8 @@ struct SizeView: View {
     @State var size: String = ""
     @Binding var name: String
     @State var isAnimated: Bool = false
+    @Binding var selectedMainCategory: MainCategory
+    
     
     var body: some View {
         NavigationStack{
@@ -28,10 +30,10 @@ struct SizeView: View {
                         .opacity(isAnimated ? 1 : 0)
                     
                     Rectangle()
-                                            .fill(Color.stodGray100)
-                                            .frame(height: 1)
-                                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-                                            .opacity(isAnimated ? 1 : 0)
+                        .fill(Color.stodGray100)
+                        .frame(height: 1)
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                        .opacity(isAnimated ? 1 : 0)
                     
                 }
                 
@@ -43,40 +45,40 @@ struct SizeView: View {
                 Text(name)
                     .font(.StodTitle2)
                     .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                             
+                
                 Rectangle()
-                                        .fill(Color.stodGray100)
-                                        .frame(height: 1)
-                                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                    .fill(Color.stodGray100)
+                    .frame(height: 1)
+                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
                 Spacer()
                 
-                                VStack{
-                                    if !size.isEmpty{
-                                        NavigationLink(destination: SubcategoryView()){
-                                            ZStack {
-                                                RoundedRectangle(cornerRadius: 0)
-                                                    .frame(width: 393, height: 48)
-                                                    .foregroundColor(.accentColor)
-                
-                                                Text("확인")
-                                                    .font(.StodTitle1)
-                                                    .foregroundColor(.black)
-                                            }
-                                        }
-                                    } else {
-                                        ZStack {
-                                            RoundedRectangle(cornerRadius: 0)
-                                                .frame(width: 393, height: 48)
-                                                .foregroundColor(.stodGray100)
-                
-                                            Text("확인")
-                                                .font(.StodTitle1)
-                                                .foregroundColor(.black)
-                                        }
-                                    }
-                                }
-                                .padding(.bottom, 20)
-                                .frame(maxWidth: .infinity, alignment: .center)
+                VStack{
+                    if !size.isEmpty{
+                        NavigationLink(destination: SubcategoryView(name: $name, size: $size, selectedMainCategory: $selectedMainCategory)){
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 0)
+                                    .frame(width: 393, height: 48)
+                                    .foregroundColor(.accentColor)
+                                
+                                Text("확인")
+                                    .font(.StodTitle1)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                    } else {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 0)
+                                .frame(width: 393, height: 48)
+                                .foregroundColor(.stodGray100)
+                            
+                            Text("확인")
+                                .font(.StodTitle1)
+                                .foregroundColor(.black)
+                        }
+                    }
+                }
+                .padding(.bottom, 20)
+                .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.bottom, 20)
             .onAppear {
@@ -91,5 +93,5 @@ struct SizeView: View {
 
 
 #Preview {
-    SizeView(name: .constant("Sample name"))
+    SizeView(name: .constant("Sample name"), selectedMainCategory: .constant(.상의))
 }

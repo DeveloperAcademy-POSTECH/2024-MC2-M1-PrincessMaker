@@ -39,6 +39,7 @@
 		EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E721D2BFA406D00CD3E7F /* NameView.swift */; };
 		EE2E72242BFB43F500CD3E7F /* SizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72232BFB43F500CD3E7F /* SizeView.swift */; };
 		EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */; };
+		EE7C9BDA2BFCA8480016C053 /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C9BD92BFCA8480016C053 /* MeasurementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		EE2E721D2BFA406D00CD3E7F /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		EE2E72232BFB43F500CD3E7F /* SizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeView.swift; sourceTree = "<group>"; };
 		EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryView.swift; sourceTree = "<group>"; };
+		EE7C9BD92BFCA8480016C053 /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				EE2E721D2BFA406D00CD3E7F /* NameView.swift */,
 				EE2E72232BFB43F500CD3E7F /* SizeView.swift */,
 				EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */,
+				EE7C9BD92BFCA8480016C053 /* MeasurementView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
 				EE2E72182BFA2BC100CD3E7F /* FirstSubmit.swift in Sources */,
 				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
+				EE7C9BDA2BFCA8480016C053 /* MeasurementView.swift in Sources */,
 				39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */,
 				39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */,
 				3972685D2BF7E30200C27F52 /* Home.swift in Sources */,
