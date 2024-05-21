@@ -39,6 +39,7 @@ struct UpdateView: View {
                 }
             }
             Image(uiImage: selectedCloth.numericalUIImage ?? UIImage(resource: .imageEditorBasic))
+            Image(uiImage: selectedCloth.mainUIImage ?? UIImage(resource: .imageEditorBasic))
             
             Spacer()
             

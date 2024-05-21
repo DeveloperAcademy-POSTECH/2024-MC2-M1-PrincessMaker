@@ -49,3 +49,8 @@ final class Cloth: ObservableObject, Identifiable {
     
     
 }
+
+class ItemManager: ObservableObject {
+    @Published var items: [MainCategory] = MainCategory.allCases
+}
+

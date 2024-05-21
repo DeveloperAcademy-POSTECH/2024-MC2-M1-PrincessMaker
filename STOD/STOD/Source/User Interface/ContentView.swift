@@ -74,7 +74,7 @@ struct ContentView: View {
                 
             }
             .navigationTitle("어떤 옷을 찾고 계신가요? 궁금하네요...")
-            NavigationLink(destination: FirstSubmit(newCloth: $newCloth)) {
+            NavigationLink(destination: BigCategory(newCloth: $newCloth)) {
                 Label("Add Cloth", systemImage: "plus")
             }
         }

@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum MainCategory: String, CaseIterable {
+enum MainCategory: String, CaseIterable, Identifiable {
+    var id: String {rawValue}
+    
     case 최근
     case 아우터
     case 상의
