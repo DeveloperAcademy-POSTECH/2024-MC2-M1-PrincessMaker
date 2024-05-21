@@ -41,18 +41,20 @@ struct ContentView: View {
                     .contextMenu {
                         Button(action: {
                             // 고정 기능 구현
-                            //clothes[0].id = cloth.id
                         }) {
                             Text("고정")
                         }
                         Button(action: {
                             if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
-                                selectedIndex = index
+                                selectedCloth = clothes[index]
                             }
-                            selectedCloth = Cloth(name: cloth.name, size: cloth.size, numericalPhotoPath: cloth.numericalPhotoPath, mainPhotoPath: cloth.mainPhotoPath, selectedSubCategory: cloth.selectedSubCategory, selectedMainCategory: cloth.selectedMainCategory)
 //                            selectedCloth = cloth
                             isUpdatingNewCloth = true
                             // 수정 기능 구현
+                            print(selectedCloth.name)
+                            print(selectedCloth.size)
+                            print(selectedCloth.selectedSubCategory)
+                            print(selectedCloth.selectedMainCategory)
                         }) {
                             Text("수정")
                         }
@@ -64,9 +66,9 @@ struct ContentView: View {
                             Text("삭제")
                         }
                     }
-                    .sheet(isPresented: $isUpdatingNewCloth, content: {
-                        UpdateView(selectedCloth: selectedCloth)
-                    })
+                    .sheet(isPresented: $isUpdatingNewCloth){
+                        UpdateView(selectedCloth: $selectedCloth)
+                    }
                 }
                 .onDelete(perform: deleteCloth)
                 
