@@ -14,8 +14,6 @@ struct SubcategoryView: View {
     @Binding var size: String
     @Binding var selectedMainCategory: MainCategory
     // 고쳐야 하는 것
-    // 1. 서브 카테고리 칩들 가로폭만큼 몇개씩 들어가게 자동 정렬
-    // 2. 위에 것이 해결되면 scrollview를 없앨 수 있음
     // 3. 현재는 "상의" 카테고리만 가져와서 보이는데 사용자가 선택한 대분류에 해당하는 서브카테고리가 출력되도록
     
     var body: some View {
@@ -29,48 +27,41 @@ struct SubcategoryView: View {
                     
                     
                     if isAnimated {
-                        ForEach(MainCategory.상의.subcategories, id: \.self) { subcategory in
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], alignment: .leading, spacing: 0) {
+                            //2차원 형태로 chip들 배치하기 위해 lazyVgrid 사용
                             
-                            //maincategory에서 상의 subcategory 가져옴
-                            ZStack {
+                            ForEach(MainCategory.상의.subcategories, id: \.self) { subcategory in
+                                //maincategory에서 상의 subcategory 가져옴
                                 
-                                Text(subcategory)
-                                    .opacity(isAnimated ? 1 : 0)
-                                //subcategory 출력
-                                    .font(.StodTitle1)
-                                    .foregroundColor(selectedSubcategory == subcategory ? Color.accentColor : Color.stodGray100)
-                                //선택 전에는 회색, 선택되면 노란색으로 바뀜
-                                    .padding(.vertical,5)
-                                    .padding(.horizontal,10)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(selectedSubcategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 1)
-                                            .opacity(isAnimated ? 1 : 0)
+                                HStack{
+                                    
+                                    ZStack {
                                         
-                                        //text 문자열에 맞게 roundedrectangle로 감싸기
-                                    )
-                                    .onTapGesture {
-                                        selectedSubcategory = subcategory
+                                        Text(subcategory)
+                                            .opacity(isAnimated ? 1 : 0)
+                                        //subcategory 출력
+                                            .font(.StodTitle1)
+                                            .foregroundColor(selectedSubcategory == subcategory ? Color.accentColor : Color.stodGray100)
+                                        //선택 전에는 회색, 선택되면 노란색으로 바뀜
+                                            .padding(.vertical,5)
+                                            .padding(.horizontal,10)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(selectedSubcategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 1)
+                                                    .opacity(isAnimated ? 1 : 0)
+                                                
+                                                //text 문자열에 맞게 roundedrectangle로 감싸기
+                                            )
+                                            .onTapGesture {
+                                                selectedSubcategory = subcategory
+                                            }
                                     }
+                                }
                             }
-                            
-                            
-                        }                .padding(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
-                        
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
+                        }
                     }
-                    Text("이름")
-                        .font(.StodBody)
-                        .foregroundColor(.stodGray100)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
                     
-                    Text(name)
-                        .font(.StodTitle2)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                    
-                    Rectangle()
-                        .fill(Color.stodGray100)
-                        .frame(height: 1)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
                     
                     Text("사이즈")
                         .font(.StodBody)
@@ -86,11 +77,26 @@ struct SubcategoryView: View {
                         .frame(height: 1)
                         .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
                     
+                    
+                    Text("이름")
+                        .font(.StodBody)
+                        .foregroundColor(.stodGray100)
+                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
+                    
+                    Text(name)
+                        .font(.StodTitle2)
+                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
+                    
+                    Rectangle()
+                        .fill(Color.stodGray100)
+                        .frame(height: 1)
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                    
                     Spacer()
                     
                     VStack{
                         
-                        NavigationLink(destination: MeasurementView()){
+                        NavigationLink(destination: MeasurementView(name: .constant("sample name"), size: .constant("sample size"), selectedSubcategory: .constant("sample sub"))){
                             ZStack {
                                 RoundedRectangle(cornerRadius: 0)
                                     .frame(width: 393, height: 48)
