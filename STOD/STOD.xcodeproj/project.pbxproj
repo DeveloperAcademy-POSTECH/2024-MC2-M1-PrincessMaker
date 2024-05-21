@@ -62,6 +62,7 @@
 		89E813262BFA546A0043E39F /* FirstSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSubmit.swift; sourceTree = "<group>"; };
 		89E813282BFA54D60043E39F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		89E8132C2BFAF9C20043E39F /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +148,8 @@
 			children = (
 				3972686A2BF7E4AD00C27F52 /* Pretendard-Bold.ttf */,
 				3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */,
-				3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */,
 				3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */,
+				3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -469,7 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 8D32S9PLZ6;
+				DEVELOPMENT_TEAM = D23XDL6TZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -503,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 8D32S9PLZ6;
+				DEVELOPMENT_TEAM = D23XDL6TZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
