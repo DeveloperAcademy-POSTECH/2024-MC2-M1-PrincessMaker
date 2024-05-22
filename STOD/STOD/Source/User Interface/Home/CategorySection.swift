@@ -11,6 +11,7 @@ struct CategorySection: View {
     @Binding var selectedCategory: MainCategory?
     
     var body: some View {
+        
         VStack(alignment: .leading) {
             Text("어떤 옷을 찾고 계신가요?")
                 .font(.StodHeadline)

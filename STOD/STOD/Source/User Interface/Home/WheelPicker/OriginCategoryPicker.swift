@@ -10,13 +10,11 @@ import SwiftUI
 struct OriginCategoryPicker: View {
     @State private var config: OriginWheelPicker.Config = .init()
     @State var selectedCategory: MainCategory? = .recent
-    @State var value: Int = 15
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("\(value)")
-                OriginWheelPicker(config: config, selectedCategory: $selectedCategory, value: $value)
+                OriginWheelPicker(config: config, selectedCategory: $selectedCategory)
                     .frame(height: 200, alignment: .bottom)
             }
             .navigationTitle("Wheel Picker")
