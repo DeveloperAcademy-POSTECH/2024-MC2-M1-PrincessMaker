@@ -17,23 +17,23 @@ struct SubcategoryView: View {
     // 3. 현재는 "상의" 카테고리만 가져와서 보이는데 사용자가 선택한 대분류에 해당하는 서브카테고리가 출력되도록
     
     var body: some View {
-        NavigationStack{
-            ScrollView{
-                VStack(alignment: .leading){
-                    Text("옷 종류를 알려주세요")
-                        .foregroundColor(.white)
-                        .font(.StodHeadline)
-                        .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 0))
-                    
-                    
-                    if isAnimated {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], alignment: .leading, spacing: 0) {
-                            //2차원 형태로 chip들 배치하기 위해 lazyVgrid 사용
-                            
-                            ForEach(MainCategory.상의.subcategories, id: \.self) { subcategory in
-                                //maincategory에서 상의 subcategory 가져옴
+        
+            NavigationStack{
+                GeometryReader{ geometry in
+                    VStack(alignment: .leading){
+                        Text("옷 종류를 알려주세요")
+                            .foregroundColor(.white)
+                            .font(.StodHeadline)
+                            .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 0))
+                        
+                        
+                        if isAnimated {
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], alignment: .leading, spacing: 0) {
+                                //2차원 형태로 chip들 배치하기 위해 lazyVgrid 사용
                                 
-                                HStack{
+                                ForEach(MainCategory.상의.subcategories, id: \.self) { subcategory in
+                                    //maincategory에서 상의 subcategory 가져옴
+                                    
                                     
                                     ZStack {
                                         
@@ -57,67 +57,67 @@ struct SubcategoryView: View {
                                             }
                                     }
                                 }
+                                .padding(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
                             }
-                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 12, trailing: 16))
                         }
-                    }
-                    
-                    
-                    Text("사이즈")
-                        .font(.StodBody)
-                        .foregroundColor(.stodGray100)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
-                    
-                    Text(size)
-                        .font(.StodTitle2)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                    
-                    Rectangle()
-                        .fill(Color.stodGray100)
-                        .frame(height: 1)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-                    
-                    
-                    Text("이름")
-                        .font(.StodBody)
-                        .foregroundColor(.stodGray100)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
-                    
-                    Text(name)
-                        .font(.StodTitle2)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                    
-                    Rectangle()
-                        .fill(Color.stodGray100)
-                        .frame(height: 1)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-                    
-                    Spacer()
-                    
-                    VStack{
                         
-                        NavigationLink(destination: MeasurementView(name: .constant("sample name"), size: .constant("sample size"), selectedSubcategory: .constant("sample sub"))){
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 0)
-                                    .frame(width: 393, height: 48)
-                                    .foregroundColor(selectedSubcategory != nil ? Color.accentColor : Color.stodGray100)
-                                
-                                Text("확인")
-                                    .font(.StodTitle1)
-                                    .foregroundColor(.black)
-                                
-                                
+                        
+                        Text("사이즈")
+                            .font(.StodBody)
+                            .foregroundColor(.stodGray100)
+                            .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
+                        
+                        Text(size)
+                            .font(.StodTitle2)
+                            .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
+                        
+                        Rectangle()
+                            .fill(Color.stodGray100)
+                            .frame(height: 1)
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                        
+                        
+                        Text("이름")
+                            .font(.StodBody)
+                            .foregroundColor(.stodGray100)
+                            .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
+                        
+                        Text(name)
+                            .font(.StodTitle2)
+                            .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
+                        
+                        Rectangle()
+                            .fill(Color.stodGray100)
+                            .frame(height: 1)
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                        
+                        Spacer()
+                        
+                        VStack{
+                            
+                            NavigationLink(destination: MeasurementView(name: .constant("sample name"), size: .constant("sample size"), selectedSubcategory: .constant("sample sub"))){
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 0)
+                                        .frame(width: geometry.size.width, height: 48)
+                                        .foregroundColor(selectedSubcategory != nil ? Color.accentColor : Color.stodGray100)
+                                    
+                                    Text("확인")
+                                        .font(.StodTitle1)
+                                        .foregroundColor(.black)
+                                    
+                                    
+                                }
                             }
                         }
+                        .padding(.bottom, 20)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: geometry.size.height * 0.1)
                     }
-                    .padding(.bottom, 20)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                }
-                .onAppear {
-                    withAnimation(.easeInOut(duration: 0.6)) {
-                        isAnimated = true
+                    .onAppear {
+                        withAnimation(.easeInOut(duration: 0.6)) {
+                            isAnimated = true
+                        }
                     }
-                }
             }
         }
     }

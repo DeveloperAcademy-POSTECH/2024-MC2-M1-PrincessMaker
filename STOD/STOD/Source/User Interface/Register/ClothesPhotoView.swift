@@ -1,40 +1,30 @@
 //
-//  MeasurementView.swift
+//  ClothesPhotoView.swift
 //  STOD
 //
-//  Created by SOOKYUNG CHO on 5/21/24.
+//  Created by SOOKYUNG CHO on 5/22/24.
 //
 
 import SwiftUI
 
-
-struct MeasurementView: View {
+struct ClothesPhotoView: View {
     @State var isAnimated: Bool = false
     @State var showPicker = false
     @State var imageData: Data? = nil
     
-    @Binding var name: String
-    @Binding var size: String
-    @Binding var selectedSubcategory: String
-    
-    
-    //고쳐야 하는 것
-    //1. 서브카테고리 값 받아와서 보여주기
-    //2. image picker 내부 크롭하는 거 하이파이처럼 그리기
-    //3. 등록한 사진 변수에 저장
+    //해야하는 것
+    //앞에 Measurement랑 동일
     
     var body: some View {
         NavigationStack{
             GeometryReader{ geometry in
                 VStack(alignment: .leading){
                     
-                    
-                    Text("수치 사진을 올려주세요")
+                    Text("옷 사진을 올려주세요")
                         .foregroundColor(.white)
                         .font(.StodHeadline)
                         .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 0))
                     
-                    //imagepicker 가져옴
                     if isAnimated {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -42,7 +32,7 @@ struct MeasurementView: View {
                                 .frame(width: .infinity, height: 192)
                                 .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
                             
-                            Button {
+                            Button { //image picker 가져옴
                                 showPicker = true
                             } label : {
                                 if let data = imageData {
@@ -75,58 +65,12 @@ struct MeasurementView: View {
                         }
                         
                     }
-                    
-                    //종류 부분
-                    Text("종류")
-                        .font(.StodBody)
-                        .foregroundColor(.stodGray100)
-                        .padding(EdgeInsets(top: 24 , leading: 16, bottom: 10, trailing: 16))
-                    
-                    Text(selectedSubcategory)
-                        .font(.StodTitle2)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                    
-                    Rectangle()
-                        .fill(Color.stodGray100)
-                        .frame(height: 1)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-                    
-                    //사이즈 부분
-                    Text("사이즈")
-                        .font(.StodBody)
-                        .foregroundColor(.stodGray100)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
-                    
-                    Text(size)
-                        .font(.StodTitle2)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                    
-                    Rectangle()
-                        .fill(Color.stodGray100)
-                        .frame(height: 1)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-                    
-                    //이름 부분
-                    Text("이름")
-                        .font(.StodBody)
-                        .foregroundColor(.stodGray100)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
-                    
-                    Text(name)
-                        .font(.StodTitle2)
-                        .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
-                    
-                    Rectangle()
-                        .fill(Color.stodGray100)
-                        .frame(height: 1)
-                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
-                    
                     Spacer()
                     
                     VStack{
                         
                         //확인 버튼 부분
-                        NavigationLink(destination: ClothesPhotoView()){
+                        NavigationLink(destination: StartView()){
                             ZStack {
                                 RoundedRectangle(cornerRadius: 0)
                                     .frame(width: geometry.size.width, height: 48)
@@ -142,20 +86,26 @@ struct MeasurementView: View {
                     .padding(.bottom, 20)
                     .frame(maxWidth: .infinity)
                     .frame(height: geometry.size.height * 0.1)
+                    
+                    //나중에 할래요 버튼 부분
+                    NavigationLink(destination: StartView()) {
+                        Text("나중에 할래요")
+                            .font(.StodTitle2)
+                            .foregroundColor(.stodGray100)
+                            .underline()
+                    }
+                    .frame(maxWidth: .infinity) // 버튼을 수평 가운데로 정렬
+                    
                 }
-            }
-            .onAppear {
+            }.onAppear {
                 withAnimation(.easeInOut(duration: 0.6)) {
                     isAnimated = true
                 }
             }
-            
-            
         }
     }
 }
 
-
 #Preview {
-    MeasurementView(name: .constant("sample name"), size: .constant("sample size"), selectedSubcategory: .constant("sample sub"))
+    ClothesPhotoView()
 }
