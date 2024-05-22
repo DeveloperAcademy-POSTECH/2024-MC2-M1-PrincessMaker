@@ -42,6 +42,7 @@
 		EE7C9BDA2BFCA8480016C053 /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C9BD92BFCA8480016C053 /* MeasurementView.swift */; };
 		EE7C9BDE2BFD8ABE0016C053 /* ClothesPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C9BDD2BFD8ABE0016C053 /* ClothesPhotoView.swift */; };
 		EE7C9BE02BFD8D9C0016C053 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C9BDF2BFD8D9C0016C053 /* StartView.swift */; };
+		EE7C9C242BFDF21E0016C053 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C9C232BFDF21E0016C053 /* PullToRefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		EE7C9BD92BFCA8480016C053 /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
 		EE7C9BDD2BFD8ABE0016C053 /* ClothesPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesPhotoView.swift; sourceTree = "<group>"; };
 		EE7C9BDF2BFD8D9C0016C053 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		EE7C9C232BFDF21E0016C053 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */,
 				39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */,
 				39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */,
+				EE7C9C232BFDF21E0016C053 /* PullToRefresh.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				EE7C9BDE2BFD8ABE0016C053 /* ClothesPhotoView.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
 				EE2E72162BFA2BB100CD3E7F /* JaneView.swift in Sources */,
+				EE7C9C242BFDF21E0016C053 /* PullToRefresh.swift in Sources */,
 				EE2E721C2BFA395200CD3E7F /* BigCategory.swift in Sources */,
 				EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
