@@ -16,12 +16,12 @@ struct NameView: View {
             Text("옷 이름을 알려주세요")
                 .foregroundColor(.white)
                 .font(.StodHeadline)
-                .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 16))
+                .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 0))
             
             TextField("ex) 똥싼바지, 여리여리 블라우스", text: $newCloth.name)
                 .keyboardType(.default)
                 .font(.StodTitle2)
-                .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 16))
+                .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 0))
                 .onAppear{
                     UITextField.appearance().clearButtonMode = .whileEditing
                 }
@@ -29,7 +29,7 @@ struct NameView: View {
             Rectangle()
                 .fill(Color.stodGray100)
                 .frame(height: 1)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 0))
             
             Spacer()
             
@@ -66,7 +66,6 @@ struct NameView: View {
         
     }
 }
-
 
 
 

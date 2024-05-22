@@ -11,12 +11,13 @@ enum MainCategory: String, CaseIterable, Identifiable {
     var id: String {rawValue}
     
     case 최근
-    case 아우터
+    case outer = "아우터"
     case 상의
     case 하의
     case 원피스
     case 신발
     case 패션잡화
+    
     
     var subcategories: [String] {
         switch self {
@@ -33,7 +34,7 @@ enum MainCategory: String, CaseIterable, Identifiable {
                     "민소매 티셔츠",
                     "스포츠 상의",
                     "기타 상의"]
-        case .아우터:
+        case .outer:
             return ["후드 집업",
                     "블루종",
                     "레더/라이더스 재킷",

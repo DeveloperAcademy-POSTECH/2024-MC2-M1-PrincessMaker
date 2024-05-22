@@ -15,42 +15,41 @@ final class Cloth: ObservableObject, Identifiable {
     var name: String
     var size: String
 //    @Attribute(.externalStorage)
-    var numericalPhotoPath: String?
+    var numericalPhotoData: Data?
 //    @Attribute(.externalStorage)
-    var mainPhotoPath: String?
+    var mainPhotoData: Data?
     var selectedSubCategory: String
     var selectedMainCategory: String
-    
-    init(name: String, size: String, numericalPhotoPath: String?, mainPhotoPath: String?, selectedSubCategory: String, selectedMainCategory: String) {
-        self.id = UUID()
-        self.name = name
-        self.size = size
-        self.numericalPhotoPath = numericalPhotoPath
-        self.mainPhotoPath = mainPhotoPath
-        self.selectedSubCategory = selectedSubCategory
-        self.selectedMainCategory = selectedMainCategory
-    }
-    
     var numericalUIImage: UIImage? {
-            if let path = numericalPhotoPath,
-               let image = UIImage(contentsOfFile: path) {
+            if let data = numericalPhotoData,
+               let image = UIImage(data: data) {
                 return image
             }
             return nil
         }
         
         var mainUIImage: UIImage? {
-            if let path = mainPhotoPath,
-               let image = UIImage(contentsOfFile: path) {
+            if let data = mainPhotoData,
+               let image = UIImage(data: data) {
                 return image
             }
             return nil
         }
     
-    
+    init(name: String, size: String, numericalPhotoData: Data?, mainPhotoData: Data?, selectedSubCategory: String, selectedMainCategory: String, numericalUIImage: UIImage?, mainUIImage: UIImage?) {
+        self.id = UUID()
+        self.name = name
+        self.size = size
+        self.numericalPhotoData = numericalPhotoData
+        self.mainPhotoData = mainPhotoData
+        self.selectedSubCategory = selectedSubCategory
+        self.selectedMainCategory = selectedMainCategory
+//        self.numericalUIImage = numericalUIImage
+//        self.mainUIImage = mainUIImage
+    }
 }
 
-class ItemManager: ObservableObject {
-    @Published var items: [MainCategory] = MainCategory.allCases
-}
+//class ItemManager: ObservableObject {
+//    @Published var items: [MainCategory] = MainCategory.allCases
+//}
 

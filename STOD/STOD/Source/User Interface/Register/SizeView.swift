@@ -16,19 +16,19 @@ struct SizeView: View {
             Text("어떤 사이즈를 구매하셨나요?")
                 .foregroundColor(.white)
                 .font(.StodHeadline)
-                .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 16))
+                .padding(EdgeInsets(top: 54, leading: 16, bottom: 0, trailing: 0))
             
             if isAnimated {
                 TextField("ex) 스몰, XL, 240mm", text: $newCloth.size)
                     .keyboardType(.default)
                     .font(.StodTitle2)
-                    .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 16))
+                    .padding(EdgeInsets(top: 24 , leading: 16, bottom: 0, trailing: 0))
                     .opacity(isAnimated ? 1 : 0)
                 
                 Rectangle()
                     .fill(Color.stodGray100)
                     .frame(height: 1)
-                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                    .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 0))
                     .opacity(isAnimated ? 1 : 0)
                 
             }
@@ -36,21 +36,21 @@ struct SizeView: View {
             Text("이름")
                 .font(.StodBody)
                 .foregroundColor(.stodGray100)
-                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 16))
+                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 10, trailing: 0))
             
             Text(newCloth.name)
                 .font(.StodTitle2)
-                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 16))
+                .padding(EdgeInsets(top: 0 , leading: 16, bottom: 12, trailing: 0))
             
             Rectangle()
                 .fill(Color.stodGray100)
                 .frame(height: 1)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 16))
+                .padding(EdgeInsets(top: 0, leading: 16, bottom: 24, trailing: 0))
             Spacer()
             
             VStack{
                 if !newCloth.size.isEmpty{
-                    NavigationLink(destination: SubcategoryView()){
+                    NavigationLink(destination: SubcategoryView(newCloth: $newCloth)){
                         ZStack {
                             RoundedRectangle(cornerRadius: 0)
                                 .frame(width: 393, height: 48)

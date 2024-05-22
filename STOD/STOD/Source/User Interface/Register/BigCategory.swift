@@ -9,7 +9,7 @@ struct BigCategory: View {
     
     private func saveCloth() {
         modelContext.insert(newCloth)
-        newCloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "", selectedMainCategory: "")
+        newCloth = Cloth(name: "", size: "", numericalPhotoData: nil, mainPhotoData: nil, selectedSubCategory: "", selectedMainCategory: "", numericalUIImage: nil, mainUIImage: nil)
         dismiss()
     }
     
@@ -50,7 +50,7 @@ struct BigCategory: View {
 //                .padding(.bottom, 80)
             Spacer()
             HStack{
-                categoryButton(categoryName: "아우터", imageName: "Outer_character")
+                categoryButton(categoryName: "outer", imageName: "Outer_character")
                 Spacer()
                 categoryButton(categoryName: "상의", imageName: "Clothes_character")
             }.padding(.bottom, 40)
