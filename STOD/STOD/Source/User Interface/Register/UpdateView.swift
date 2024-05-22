@@ -1,15 +1,33 @@
+<<<<<<< HEAD
 import SwiftUI
 import SwiftData
 import UIKit
+=======
+//
+//  UpdateView.swift
+//  STOD
+//
+//  Created by SOOKYUNG CHO on 5/19/24.
+//
+
+
+import SwiftUI
+import SwiftData
+>>>>>>> Design/#16
 
 struct UpdateView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+<<<<<<< HEAD
     @Binding var selectedCloth: Cloth
     @State private var selectedMainCategory: MainCategory?
     @State private var isMainCategoryExpanded = false
     
     
+=======
+    @State var cloth: Cloth
+
+>>>>>>> Design/#16
     func updateCloth() {
         do {
             try modelContext.save()
@@ -19,6 +37,7 @@ struct UpdateView: View {
             print("Failed to update cloth: \(error)")
         }
     }
+<<<<<<< HEAD
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -41,6 +60,16 @@ struct UpdateView: View {
             Image(uiImage: selectedCloth.numericalUIImage ?? UIImage(resource: .imageEditorBasic))
             
             Spacer()
+=======
+
+    var body: some View {
+        VStack {
+            Text("옷 수정 뷰입니다")
+            TextField("이름", text: $cloth.name)
+            TextField("사이즈", text: $cloth.size)
+            // 추가적인 필드나 UI 요소들을 여기 추가합니다.
+            TextField("옷 종류", text: $cloth.selectedSubCategory)
+>>>>>>> Design/#16
             
             Button(action: {
                 updateCloth()
