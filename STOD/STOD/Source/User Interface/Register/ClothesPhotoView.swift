@@ -70,7 +70,7 @@ struct ClothesPhotoView: View {
                     VStack{
                         
                         //확인 버튼 부분
-                        NavigationLink(destination: StartView()){
+                        NavigationLink(destination: StartView(name: .constant("sample name"))){
                             ZStack {
                                 RoundedRectangle(cornerRadius: 0)
                                     .frame(width: geometry.size.width, height: 48)
@@ -88,7 +88,7 @@ struct ClothesPhotoView: View {
                     .frame(height: geometry.size.height * 0.1)
                     
                     //나중에 할래요 버튼 부분
-                    NavigationLink(destination: StartView()) {
+                    NavigationLink(destination: StartView(name: .constant("sample name"))) {
                         Text("나중에 할래요")
                             .font(.StodTitle2)
                             .foregroundColor(.stodGray100)
