@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryButton: View {
-    @Binding var selectedCategory: MainCategory?
+    @Binding var selectedCategory: MainCategory
     let category: MainCategory
     
     var isSelected: Bool {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategorySection: View {
-    @Binding var selectedCategory: MainCategory?
+    @Binding var selectedCategory: MainCategory
     let isOnlyTap: Bool
     let config = ScrollOnlyWheelPicker.Config.init()
     

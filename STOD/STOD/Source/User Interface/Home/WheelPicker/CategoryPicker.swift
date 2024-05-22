@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoryPicker: View {
     @State private var config: WheelPicker.Config = .init()
-    @State var selectedCategory: MainCategory? = .recent
+    @State var selectedCategory: MainCategory = .recent
     @State var value: Int = 1
     
     var body: some View {

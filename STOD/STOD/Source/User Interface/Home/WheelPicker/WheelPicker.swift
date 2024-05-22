@@ -11,7 +11,7 @@ struct WheelPicker: View {
     /// Config
     var config: Config
     /// View Status
-    @Binding var selectedCategory: MainCategory?
+    @Binding var selectedCategory: MainCategory
     @Binding var value: Int
     @State var isLoaded: Bool = false
     

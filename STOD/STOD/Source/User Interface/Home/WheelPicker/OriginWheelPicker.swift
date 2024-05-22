@@ -11,7 +11,7 @@ struct OriginWheelPicker: View {
     /// Config
     var config: Config
     /// View Status
-    @Binding var selectedCategory: MainCategory?
+    @Binding var selectedCategory: MainCategory
     @State var value: Int = 15
     @State var isLoaded: Bool = false
     

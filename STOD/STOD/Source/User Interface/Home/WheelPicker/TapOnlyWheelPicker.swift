@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TapOnlyWheelPicker: View {
-    @Binding var selectedCategory: MainCategory?
+    @Binding var selectedCategory: MainCategory
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

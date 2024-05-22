@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OriginCategoryPicker: View {
     @State private var config: OriginWheelPicker.Config = .init()
-    @State var selectedCategory: MainCategory? = .recent
+    @State var selectedCategory: MainCategory = .recent
     
     var body: some View {
         NavigationStack {

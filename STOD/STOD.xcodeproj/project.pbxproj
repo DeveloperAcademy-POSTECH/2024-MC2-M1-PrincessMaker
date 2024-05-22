@@ -36,6 +36,8 @@
 		39DE8AC72BFDCA5B00882076 /* OriginCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */; };
 		39DE8ACD2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8ACC2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift */; };
 		39DE8ACF2BFE3E5C00882076 /* TapOnlyWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */; };
+		39DE8AD12BFE40F300882076 /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD02BFE40F300882076 /* ClothList.swift */; };
+		39DE8AD32BFE40FC00882076 /* ClothRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD22BFE40FC00882076 /* ClothRow.swift */; };
 		39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E43E2BF87CF30033FB89 /* Font+.swift */; };
 		39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */; };
 		39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4472BF9D2230033FB89 /* BrightroomEngine */; };
@@ -76,6 +78,8 @@
 		39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginCategoryPicker.swift; sourceTree = "<group>"; };
 		39DE8ACC2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOnlyWheelPicker.swift; sourceTree = "<group>"; };
 		39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapOnlyWheelPicker.swift; sourceTree = "<group>"; };
+		39DE8AD02BFE40F300882076 /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
+		39DE8AD22BFE40FC00882076 /* ClothRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothRow.swift; sourceTree = "<group>"; };
 		39E3E43D2BF875210033FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3E43E2BF87CF30033FB89 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 				3930F2E52BFAF1D000E5707E /* PIPSection.swift */,
 				3930F2E72BFAF5A300E5707E /* CategorySection.swift */,
 				3930F2E92BFAF68100E5707E /* CategoryButton.swift */,
+				39DE8AD02BFE40F300882076 /* ClothList.swift */,
+				39DE8AD22BFE40FC00882076 /* ClothRow.swift */,
 				39DE8AC82BFDCC4700882076 /* WheelPicker */,
 			);
 			path = Home;
@@ -363,6 +369,7 @@
 				397268422BF7E0E800C27F52 /* Item.swift in Sources */,
 				3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
+				39DE8AD32BFE40FC00882076 /* ClothRow.swift in Sources */,
 				398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
 				398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */,
@@ -377,6 +384,7 @@
 				39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */,
 				39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */,
 				3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */,
+				39DE8AD12BFE40F300882076 /* ClothList.swift in Sources */,
 				3972685D2BF7E30200C27F52 /* Home.swift in Sources */,
 				39DE8AC52BFD4C4C00882076 /* OriginWheelPicker.swift in Sources */,
 				3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */,

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RefCategoryPicker: View {
     @State private var config: RefWheelPicker.Config = .init()
-    @State var selectedCategory: MainCategory? = .recent
+    @State var selectedCategory: MainCategory = .recent
     @State var value: Int = 15
     
     var body: some View {
