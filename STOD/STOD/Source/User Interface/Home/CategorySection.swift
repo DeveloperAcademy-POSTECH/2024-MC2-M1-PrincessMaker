@@ -76,3 +76,5 @@ struct CategorySection: View {
 #Preview {
     CategorySection(selectedCategory: .constant(.recent))
 }
+
+
