@@ -32,7 +32,8 @@
 		398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8F22BFBAC6B00780D74 /* CategoryPicker.swift */; };
 		39DE8AC12BFD008F00882076 /* RefCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC02BFD008F00882076 /* RefCategoryPicker.swift */; };
 		39DE8AC32BFD00AA00882076 /* RefWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC22BFD00AA00882076 /* RefWheelPicker.swift */; };
-		39DE8AC52BFD4C4C00882076 /* TestWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC42BFD4C4C00882076 /* TestWheelPicker.swift */; };
+		39DE8AC52BFD4C4C00882076 /* OriginWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC42BFD4C4C00882076 /* OriginWheelPicker.swift */; };
+		39DE8AC72BFDCA5B00882076 /* OriginCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */; };
 		39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E43E2BF87CF30033FB89 /* Font+.swift */; };
 		39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */; };
 		39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4472BF9D2230033FB89 /* BrightroomEngine */; };
@@ -69,7 +70,8 @@
 		398DD8F22BFBAC6B00780D74 /* CategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPicker.swift; sourceTree = "<group>"; };
 		39DE8AC02BFD008F00882076 /* RefCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefCategoryPicker.swift; sourceTree = "<group>"; };
 		39DE8AC22BFD00AA00882076 /* RefWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefWheelPicker.swift; sourceTree = "<group>"; };
-		39DE8AC42BFD4C4C00882076 /* TestWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWheelPicker.swift; sourceTree = "<group>"; };
+		39DE8AC42BFD4C4C00882076 /* OriginWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginWheelPicker.swift; sourceTree = "<group>"; };
+		39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginCategoryPicker.swift; sourceTree = "<group>"; };
 		39E3E43D2BF875210033FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3E43E2BF87CF30033FB89 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -237,7 +239,8 @@
 				398DD8F02BFBAC0500780D74 /* WheelPicker.swift */,
 				39DE8AC02BFD008F00882076 /* RefCategoryPicker.swift */,
 				39DE8AC22BFD00AA00882076 /* RefWheelPicker.swift */,
-				39DE8AC42BFD4C4C00882076 /* TestWheelPicker.swift */,
+				39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */,
+				39DE8AC42BFD4C4C00882076 /* OriginWheelPicker.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -359,9 +362,10 @@
 				39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */,
 				3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */,
 				3972685D2BF7E30200C27F52 /* Home.swift in Sources */,
-				39DE8AC52BFD4C4C00882076 /* TestWheelPicker.swift in Sources */,
+				39DE8AC52BFD4C4C00882076 /* OriginWheelPicker.swift in Sources */,
 				3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */,
 				39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */,
+				39DE8AC72BFDCA5B00882076 /* OriginCategoryPicker.swift in Sources */,
 				3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */,
 				3972685F2BF7E30F00C27F52 /* Register.swift in Sources */,
 			);
