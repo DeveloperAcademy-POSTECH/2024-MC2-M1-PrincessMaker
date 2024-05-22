@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct BigCategory: View {
+    @State var selectedMainCategory: MainCategory = .상의
     var body: some View {
         
-        @State var selectedMainCategory: MainCategory = .상의
+        
         //view에서 margin 설정 어떻게 하는지?
         //텍스트 위치 마음대로 바꾸고 싶은데 어떻게 할지?
         //캐릭터 asset에 추가?

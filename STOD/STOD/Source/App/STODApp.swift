@@ -25,7 +25,7 @@ struct STODApp: App {
 
     var body: some Scene {
         WindowGroup {
-            BigCategory()
+            PullToRefreshView()
         }
         .modelContainer(sharedModelContainer)
     }
