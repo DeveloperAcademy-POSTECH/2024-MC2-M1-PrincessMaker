@@ -33,6 +33,7 @@
 		89E813272BFA546A0043E39F /* FirstSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E813262BFA546A0043E39F /* FirstSubmit.swift */; };
 		89E813292BFA54D60043E39F /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E813282BFA54D60043E39F /* UpdateView.swift */; };
 		89E8132D2BFAF9C20043E39F /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8132C2BFAF9C20043E39F /* ClothList.swift */; };
+		EE7C9C222BFDEE0B0016C053 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7C9C212BFDEE0B0016C053 /* PullToRefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +63,7 @@
 		89E813262BFA546A0043E39F /* FirstSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSubmit.swift; sourceTree = "<group>"; };
 		89E813282BFA54D60043E39F /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		89E8132C2BFAF9C20043E39F /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
-
+		EE7C9C212BFDEE0B0016C053 /* PullToRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +209,7 @@
 				39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */,
 				39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */,
 				39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */,
+				EE7C9C212BFDEE0B0016C053 /* PullToRefresh.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -324,6 +326,7 @@
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
 				397268422BF7E0E800C27F52 /* Cloth.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
+				EE7C9C222BFDEE0B0016C053 /* PullToRefresh.swift in Sources */,
 				89E813292BFA54D60043E39F /* UpdateView.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
