@@ -19,7 +19,7 @@ enum MainCategory: String, CaseIterable {
     var subcategories: [String] {
         switch self {
         case .최근:
-            return [""]
+            return []
         case .상의:
             return ["맨투맨/스웨트셔츠",
                     "셔츠/블라우스",

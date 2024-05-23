@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  Cloth.swift
 //  MC2
 //
 //  Created by 김이예은 on 5/18/24.
