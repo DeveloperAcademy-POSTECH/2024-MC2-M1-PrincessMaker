@@ -28,7 +28,7 @@ struct STODApp: App {
     var body: some Scene {
         WindowGroup {
             if firstLaunch {
-                Onboarding()
+                OnboardingView()
             } else {
                 ContentView()
             }
