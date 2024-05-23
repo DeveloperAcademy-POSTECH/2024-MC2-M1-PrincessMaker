@@ -12,7 +12,7 @@
 import SwiftUI
 
 struct PullToRefreshView: View {
-    
+    @Binding var newCloth: Cloth
     @State private var isRefreshing = false
     
     @State private var showAlternativeView = false
@@ -25,7 +25,7 @@ struct PullToRefreshView: View {
                 
                 if showAlternativeView {
                     
-                    AlternativeView()
+                    AlternativeView(newCloth: $newCloth)
                     
                 } else {
                     
@@ -67,7 +67,7 @@ struct PullToRefreshView: View {
 }
 
 struct AlternativeView: View {
-    
+    @Binding var newCloth: Cloth
     @State var selectedMainCategory: MainCategory = .상의
     
     var body: some View {
@@ -76,7 +76,8 @@ struct AlternativeView: View {
         
         NavigationStack{
             
-            NavigationLink(destination: NameView(selectedMainCategory: $selectedMainCategory)){
+
+            NavigationLink(destination: NameView(newCloth: $newCloth)){
                 
                 VStack(alignment: .leading){
                     
@@ -256,12 +257,12 @@ struct AlternativeView: View {
     
 }
 
-struct PullToRefresh_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        PullToRefreshView()
-        
-    }
-    
-}
+//struct PullToRefresh_Previews: PreviewProvider {
+//    
+//    static var previews: some View {
+//        
+//        PullToRefreshView(newCloth: .constant(Cloth(name: "ffadf", size: "dfdfd", numericalPhotoData: nil, mainPhotoData: nil, selectedSubCategory: "맨투맨", selectedMainCategory: "상의", numericalUIImage: nil, mainUIImage: nil)))
+//        
+//    }
+//    
+//}

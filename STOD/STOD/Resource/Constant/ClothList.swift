@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum MainCategory: String, CaseIterable {
+enum MainCategory: String, CaseIterable, Identifiable {
+    var id: String {rawValue}
+    
     case 최근
     case 아우터
     case 상의
@@ -16,10 +18,11 @@ enum MainCategory: String, CaseIterable {
     case 신발
     case 패션잡화
     
+    
     var subcategories: [String] {
         switch self {
         case .최근:
-            return []
+            return [""]
         case .상의:
             return ["맨투맨/스웨트셔츠",
                     "셔츠/블라우스",
