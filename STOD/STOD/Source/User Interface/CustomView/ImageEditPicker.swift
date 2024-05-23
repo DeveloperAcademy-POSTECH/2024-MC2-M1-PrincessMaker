@@ -17,7 +17,7 @@ struct ImageEditPicker: View {
         NavigationStack {
             ImagePicker(inputImageData: $inputImageData, resultImageData: $resultImageData)
             
-                .sheet(isPresented: $navigationMove) { PhotosCrop(inputImageData: $inputImageData, resultImageData: $resultImageData)
+                .navigationDestination(isPresented: $navigationMove) { PhotosCrop(inputImageData: $inputImageData, resultImageData: $resultImageData)
                 }
                 .onChange(of: resultImageData) { _, newValue in
                     if newValue != nil {

@@ -1,0 +1,56 @@
+//
+//  Cloth.swift
+//  STOD
+//
+//  Created by SOOKYUNG CHO on 5/19/24.
+//
+
+//
+//  Item.swift
+//  MC2
+//
+//  Created by 김이예은 on 5/18/24.
+//
+
+import Foundation
+import UIKit
+import SwiftData
+
+@Model
+final class Cloth {
+    @Attribute(.unique) var id: UUID
+    var name: String
+    var size: String
+//    @Attribute(.externalStorage)
+    var numericalPhotoPath: String?
+//    @Attribute(.externalStorage)
+    var mainPhotoPath: String?
+    var selectedSubCategory: String
+    var selectedMainCategory: String
+    
+    init(name: String, size: String, numericalPhotoPath: String?, mainPhotoPath: String?, selectedSubCategory: String, selectedMainCategory: String) {
+        self.id = UUID()
+        self.name = name
+        self.size = size
+        self.numericalPhotoPath = numericalPhotoPath
+        self.mainPhotoPath = mainPhotoPath
+        self.selectedSubCategory = selectedSubCategory
+        self.selectedMainCategory = selectedMainCategory
+    }
+    
+    var numericalUIImage: UIImage? {
+            if let path = numericalPhotoPath,
+               let image = UIImage(contentsOfFile: path) {
+                return image
+            }
+            return nil
+        }
+        
+        var mainUIImage: UIImage? {
+            if let path = mainPhotoPath,
+               let image = UIImage(contentsOfFile: path) {
+                return image
+            }
+            return nil
+        }
+}
