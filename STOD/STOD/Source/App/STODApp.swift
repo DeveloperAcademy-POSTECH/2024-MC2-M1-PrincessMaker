@@ -12,7 +12,7 @@ import SwiftData
 struct STODApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Cloth.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct STODApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BigCategory()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -1,12 +1,5 @@
 //
 //  Cloth.swift
-//  STOD
-//
-//  Created by SOOKYUNG CHO on 5/19/24.
-//
-
-//
-//  Item.swift
 //  MC2
 //
 //  Created by 김이예은 on 5/18/24.
@@ -17,7 +10,7 @@ import UIKit
 import SwiftData
 
 @Model
-final class Cloth {
+final class Cloth: ObservableObject, Identifiable {
     @Attribute(.unique) var id: UUID
     var name: String
     var size: String
@@ -53,4 +46,6 @@ final class Cloth {
             }
             return nil
         }
+    
+    
 }
