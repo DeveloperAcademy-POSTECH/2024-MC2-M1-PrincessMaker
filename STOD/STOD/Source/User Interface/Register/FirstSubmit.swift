@@ -2,8 +2,9 @@
 //  FirstSubmit.swift
 //  STOD
 //
-//  Created by 김이예은 on 5/19/24.
+//  Created by SOOKYUNG CHO on 5/19/24.
 //
+
 
 import SwiftUI
 import SwiftData
@@ -67,4 +68,3 @@ struct FirstSubmit: View {
         .padding()
     }
 }
-

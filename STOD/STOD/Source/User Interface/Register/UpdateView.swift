@@ -1,6 +1,14 @@
+//
+//  UpdateView.swift
+//  STOD
+//
+//  Created by SOOKYUNG CHO on 5/19/24.
+//
+
+
 import SwiftUI
 import SwiftData
-import UIKit
+
 
 struct UpdateView: View {
     @Environment(\.modelContext) private var modelContext
@@ -8,8 +16,6 @@ struct UpdateView: View {
     @Binding var selectedCloth: Cloth
     @State private var selectedMainCategory: MainCategory?
     @State private var isMainCategoryExpanded = false
-    
-    
     func updateCloth() {
         do {
             try modelContext.save()
@@ -19,7 +25,6 @@ struct UpdateView: View {
             print("Failed to update cloth: \(error)")
         }
     }
-    
     var body: some View {
         VStack(alignment: .leading) {
             Text("옷 수정 뷰입니다")
@@ -41,7 +46,6 @@ struct UpdateView: View {
             Image(uiImage: selectedCloth.numericalUIImage ?? UIImage(resource: .imageEditorBasic))
             
             Spacer()
-            
             Button(action: {
                 updateCloth()
             }) {
