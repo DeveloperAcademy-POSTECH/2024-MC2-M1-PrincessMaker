@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38A5D8772BFEE96E008A82FD /* ONBOARDING02.lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D8742BFEE96E008A82FD /* ONBOARDING02.lottie.json */; };
+		38A5D8782BFEE96E008A82FD /* ONBOARDING01.lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D8752BFEE96E008A82FD /* ONBOARDING01.lottie.json */; };
+		38A5D8792BFEE96E008A82FD /* ONBOARDING03.lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D8762BFEE96E008A82FD /* ONBOARDING03.lottie.json */; };
+		38A5D8812BFEE9DC008A82FD /* OnboardingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D87A2BFEE9DB008A82FD /* OnboardingCard.swift */; };
+		38A5D8822BFEE9DC008A82FD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D87B2BFEE9DB008A82FD /* OnboardingView.swift */; };
+		38A5D8832BFEE9DC008A82FD /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D87D2BFEE9DB008A82FD /* mock.json */; };
+		38A5D8842BFEE9DC008A82FD /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D87F2BFEE9DC008A82FD /* IndicatorView.swift */; };
+		38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 38A5D8872BFEEA0F008A82FD /* Lottie */; };
+		38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D8892BFEEA83008A82FD /* OnboardingButton.swift */; };
+		38A5D88C2BFEEBB9008A82FD /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D88B2BFEEBB9008A82FD /* Color+.swift */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268402BF7E0E800C27F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentView.swift */; };
 		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
 		397268472BF7E0E900C27F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268462BF7E0E900C27F52 /* Preview Assets.xcassets */; };
 		3972685D2BF7E30200C27F52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972685C2BF7E30200C27F52 /* Home.swift */; };
 		3972685F2BF7E30F00C27F52 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972685E2BF7E30F00C27F52 /* Register.swift */; };
-		397268612BF7E31700C27F52 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268602BF7E31700C27F52 /* Onboarding.swift */; };
 		397268632BF7E32900C27F52 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268622BF7E32900C27F52 /* CustomView.swift */; };
 		397268652BF7E33800C27F52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397268642BF7E33800C27F52 /* Launch Screen.storyboard */; };
 		397268672BF7E37600C27F52 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268662BF7E37600C27F52 /* View+.swift */; };
@@ -44,6 +53,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38A5D8742BFEE96E008A82FD /* ONBOARDING02.lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ONBOARDING02.lottie.json; sourceTree = "<group>"; };
+		38A5D8752BFEE96E008A82FD /* ONBOARDING01.lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ONBOARDING01.lottie.json; sourceTree = "<group>"; };
+		38A5D8762BFEE96E008A82FD /* ONBOARDING03.lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ONBOARDING03.lottie.json; sourceTree = "<group>"; };
+		38A5D87A2BFEE9DB008A82FD /* OnboardingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCard.swift; sourceTree = "<group>"; };
+		38A5D87B2BFEE9DB008A82FD /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		38A5D87C2BFEE9DB008A82FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = mock.json; sourceTree = "<group>"; };
+		38A5D87F2BFEE9DC008A82FD /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		38A5D8892BFEEA83008A82FD /* OnboardingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		38A5D88B2BFEEBB9008A82FD /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +69,6 @@
 		397268462BF7E0E900C27F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3972685C2BF7E30200C27F52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		3972685E2BF7E30F00C27F52 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
-		397268602BF7E31700C27F52 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		397268622BF7E32900C27F52 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		397268642BF7E33800C27F52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		397268662BF7E37600C27F52 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -87,12 +104,31 @@
 			files = (
 				39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */,
 				39E3E44A2BF9D2230033FB89 /* BrightroomUI in Frameworks */,
+				38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38A5D8732BFEE95D008A82FD /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				38A5D8752BFEE96E008A82FD /* ONBOARDING01.lottie.json */,
+				38A5D8742BFEE96E008A82FD /* ONBOARDING02.lottie.json */,
+				38A5D8762BFEE96E008A82FD /* ONBOARDING03.lottie.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		38A5D87E2BFEE9DB008A82FD /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				38A5D87D2BFEE9DB008A82FD /* mock.json */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
 		397268312BF7E0E800C27F52 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +167,7 @@
 		3972684D2BF7E0FB00C27F52 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				38A5D8732BFEE95D008A82FD /* Lottie */,
 				397268432BF7E0E900C27F52 /* Assets.xcassets */,
 				397268512BF7E15700C27F52 /* Font */,
 				397268522BF7E15C00C27F52 /* Constant */,
@@ -182,6 +219,7 @@
 			children = (
 				397268662BF7E37600C27F52 /* View+.swift */,
 				39E3E43E2BF87CF30033FB89 /* Font+.swift */,
+				38A5D88B2BFEEBB9008A82FD /* Color+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -238,7 +276,11 @@
 		3972685A2BF7E2A800C27F52 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				397268602BF7E31700C27F52 /* Onboarding.swift */,
+				38A5D87E2BFEE9DB008A82FD /* en.lproj */,
+				38A5D87F2BFEE9DC008A82FD /* IndicatorView.swift */,
+				38A5D87A2BFEE9DB008A82FD /* OnboardingCard.swift */,
+				38A5D87B2BFEE9DB008A82FD /* OnboardingView.swift */,
+				38A5D8892BFEEA83008A82FD /* OnboardingButton.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -280,6 +322,7 @@
 			packageProductDependencies = (
 				39E3E4472BF9D2230033FB89 /* BrightroomEngine */,
 				39E3E4492BF9D2230033FB89 /* BrightroomUI */,
+				38A5D8872BFEEA0F008A82FD /* Lottie */,
 			);
 			productName = STOD;
 			productReference = 3972683A2BF7E0E800C27F52 /* STOD.app */;
@@ -311,6 +354,7 @@
 			mainGroup = 397268312BF7E0E800C27F52;
 			packageReferences = (
 				39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */,
+				38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 3972683B2BF7E0E800C27F52 /* Products */;
 			projectDirPath = "";
@@ -327,9 +371,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				397268652BF7E33800C27F52 /* Launch Screen.storyboard in Resources */,
+				38A5D8782BFEE96E008A82FD /* ONBOARDING01.lottie.json in Resources */,
 				397268472BF7E0E900C27F52 /* Preview Assets.xcassets in Resources */,
 				397268702BF7E4BF00C27F52 /* Pretendard-Medium.ttf in Resources */,
 				3972686F2BF7E4BF00C27F52 /* Pretendard-Regular.ttf in Resources */,
+				38A5D8792BFEE96E008A82FD /* ONBOARDING03.lottie.json in Resources */,
+				38A5D8772BFEE96E008A82FD /* ONBOARDING02.lottie.json in Resources */,
+				38A5D8832BFEE9DC008A82FD /* mock.json in Resources */,
 				397268712BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf in Resources */,
 				3972686B2BF7E4AD00C27F52 /* Pretendard-Bold.ttf in Resources */,
 				397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */,
@@ -343,14 +391,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */,
+				38A5D88C2BFEEBB9008A82FD /* Color+.swift in Sources */,
 				EE2E72142BFA2B8F00CD3E7F /* ClothList.swift in Sources */,
 				EE2E72242BFB43F500CD3E7F /* SizeView.swift in Sources */,
-				397268612BF7E31700C27F52 /* Onboarding.swift in Sources */,
 				EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */,
 				EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */,
 				EE7C9BE02BFD8D9C0016C053 /* StartView.swift in Sources */,
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
+				38A5D8822BFEE9DC008A82FD /* OnboardingView.swift in Sources */,
 				EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */,
 				EE7C9BDE2BFD8ABE0016C053 /* ClothesPhotoView.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
@@ -358,7 +408,9 @@
 				EE2E721C2BFA395200CD3E7F /* BigCategory.swift in Sources */,
 				EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */,
 				397268632BF7E32900C27F52 /* CustomView.swift in Sources */,
+				38A5D8842BFEE9DC008A82FD /* IndicatorView.swift in Sources */,
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
+				38A5D8812BFEE9DC008A82FD /* OnboardingCard.swift in Sources */,
 				EE2E72182BFA2BC100CD3E7F /* FirstSubmit.swift in Sources */,
 				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
 				EE7C9BDA2BFCA8480016C053 /* MeasurementView.swift in Sources */,
@@ -372,6 +424,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38A5D87D2BFEE9DB008A82FD /* mock.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38A5D87C2BFEE9DB008A82FD /* en */,
+			);
+			name = mock.json;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		397268482BF7E0E900C27F52 /* Debug */ = {
@@ -501,7 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 8D32S9PLZ6;
+				DEVELOPMENT_TEAM = 89S2Z5S7CX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -535,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 8D32S9PLZ6;
+				DEVELOPMENT_TEAM = 89S2Z5S7CX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -585,6 +648,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FluidGroup/Brightroom";
@@ -596,6 +667,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		38A5D8872BFEEA0F008A82FD /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		39E3E4472BF9D2230033FB89 /* BrightroomEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */;
