@@ -38,6 +38,7 @@
 		39DE8ACF2BFE3E5C00882076 /* TapOnlyWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */; };
 		39DE8AD12BFE40F300882076 /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD02BFE40F300882076 /* ClothList.swift */; };
 		39DE8AD32BFE40FC00882076 /* ClothRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD22BFE40FC00882076 /* ClothRow.swift */; };
+		39DE8AD52BFE5CDC00882076 /* ClothListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */; };
 		39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E43E2BF87CF30033FB89 /* Font+.swift */; };
 		39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */; };
 		39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4472BF9D2230033FB89 /* BrightroomEngine */; };
@@ -80,6 +81,7 @@
 		39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapOnlyWheelPicker.swift; sourceTree = "<group>"; };
 		39DE8AD02BFE40F300882076 /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
 		39DE8AD22BFE40FC00882076 /* ClothRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothRow.swift; sourceTree = "<group>"; };
+		39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothListPageView.swift; sourceTree = "<group>"; };
 		39E3E43D2BF875210033FB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39E3E43E2BF87CF30033FB89 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				3930F2E52BFAF1D000E5707E /* PIPSection.swift */,
 				3930F2E72BFAF5A300E5707E /* CategorySection.swift */,
 				3930F2E92BFAF68100E5707E /* CategoryButton.swift */,
+				39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */,
 				39DE8AD02BFE40F300882076 /* ClothList.swift */,
 				39DE8AD22BFE40FC00882076 /* ClothRow.swift */,
 				39DE8AC82BFDCC4700882076 /* WheelPicker */,
@@ -363,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39DE8AD52BFE5CDC00882076 /* ClothListPageView.swift in Sources */,
 				39DE8ACF2BFE3E5C00882076 /* TapOnlyWheelPicker.swift in Sources */,
 				397268612BF7E31700C27F52 /* Onboarding.swift in Sources */,
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,

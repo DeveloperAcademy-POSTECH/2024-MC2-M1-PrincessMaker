@@ -8,14 +8,32 @@
 import SwiftUI
 
 struct ClothList: View {
-    @Binding var selectedCategory: MainCategory
+    let selectedCategory: MainCategory
     @State private var showAlternativeView = false
+    @Binding var clothes: [Cloth]
     
     var body: some View {
         ScrollView(.vertical) {
             VStack(spacing: 16) {
                 ForEach(filteredClothes) { cloth in
-                    ClothRow(selectedCategory: $selectedCategory, cloth: cloth)
+                    ClothRow(selectedCategory: selectedCategory, cloth: cloth)
+                        .contextMenu(ContextMenu(menuItems: {
+                            /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
+                            /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
+                            /*@START_MENU_TOKEN@*/Text("Menu Item 3")/*@END_MENU_TOKEN@*/
+                        }))
+                        .swipeActions(edge: .leading, allowsFullSwipe: false) {
+                            Button {  }
+                            label: { Label("Star", systemImage: "star.circle") } .tint(.green) }
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive){ }
+                        label: { Label("Trash", systemImage: "trash.circle") }
+                                .tint(.red)
+                            Button {  }
+                        label: { Label("Flag", systemImage: "flag.circle") }
+                                .tint(.blue)
+                        }
+                    
                 }
             }
         }
@@ -38,7 +56,7 @@ struct ClothList: View {
     
     var filteredClothes: [Cloth] {
         if selectedCategory == .recent {
-            let clothes = Cloth.dummy.sorted{ $0.date > $1.date}
+            let clothes = clothes.sorted{ $0.date > $1.date}
             
             if clothes.count > 10 {
                 return Array(clothes[0..<10])
@@ -46,7 +64,7 @@ struct ClothList: View {
                 return clothes
             }
         } else {
-            return Cloth.dummy.filter{ $0.mainCategory.contains(selectedCategory) }.sorted {
+            return clothes.filter{ $0.mainCategory.contains(selectedCategory) }.sorted {
                 if $0.isPinned == $1.isPinned {
                     return $0.title < $1.title
                 } else if $0.isPinned {
@@ -60,7 +78,7 @@ struct ClothList: View {
 }
 
 #Preview {
-    ClothList(selectedCategory: .constant(.top))
+    ClothList(selectedCategory: .top, clothes: .constant(Cloth.dummy))
 }
 
 struct Cloth: Identifiable {
@@ -71,10 +89,11 @@ struct Cloth: Identifiable {
     var size: String = "스몰"
     var subCategory: String = "니트"
     var isPinned: Bool = false
+    var isSelected: Bool = false
     var date: Date = Date().addingTimeInterval(-500)
     
     static var dummy: [Cloth] = [
-       
+        
         Cloth(mainCategory: [.top], title: "편한 후드티", size: "라지라지", subCategory: "배기팬츠", isPinned: false, date: Date().addingTimeInterval(-500)),
         Cloth(mainCategory: [.top], title: "똥싼 바지", size: "라지라지", subCategory: "배기팬츠", isPinned: true, date: Date().addingTimeInterval(-400)),
         Cloth(mainCategory: [.top], title: "똥싼 바지", size: "라지라지", subCategory: "배기팬츠", isPinned: false, date: Date().addingTimeInterval(-300)),

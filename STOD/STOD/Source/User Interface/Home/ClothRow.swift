@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ClothRow: View {
-    @State var isPinned: Bool = true
-    @Binding var selectedCategory: MainCategory
+    let selectedCategory: MainCategory
     let cloth: Cloth
     
     var body: some View {
@@ -45,5 +44,5 @@ struct ClothRow: View {
 }
 
 #Preview {
-    ClothRow(selectedCategory: .constant(.top), cloth: Cloth.dummy[1])
+    ClothRow(selectedCategory: .top, cloth: Cloth.dummy[1])
 }
