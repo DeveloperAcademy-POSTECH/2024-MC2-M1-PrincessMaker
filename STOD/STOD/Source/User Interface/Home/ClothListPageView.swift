@@ -21,7 +21,7 @@ struct ClothListPageView: View {
                     .gesture(DragGesture())
             }
         }
-        .animation(.snappy, value: selectedCategory)
+        //.animation(.snappy, value: selectedCategory)
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .ignoresSafeArea(.container, edges: .bottom)
     }
