@@ -17,6 +17,8 @@
 		38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 38A5D8872BFEEA0F008A82FD /* Lottie */; };
 		38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D8892BFEEA83008A82FD /* OnboardingButton.swift */; };
 		38A5D88C2BFEEBB9008A82FD /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D88B2BFEEBB9008A82FD /* Color+.swift */; };
+		38A5D8AF2BFF6E29008A82FD /* swift-video-generator in Frameworks */ = {isa = PBXBuildFile; productRef = 38A5D8AE2BFF6E29008A82FD /* swift-video-generator */; };
+		38A5D8B12BFF719F008A82FD /* ImageToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5D8B02BFF719F008A82FD /* ImageToVideo.swift */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268402BF7E0E800C27F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentView.swift */; };
 		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
@@ -62,6 +64,7 @@
 		38A5D87F2BFEE9DC008A82FD /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		38A5D8892BFEEA83008A82FD /* OnboardingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		38A5D88B2BFEEBB9008A82FD /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		38A5D8B02BFF719F008A82FD /* ImageToVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageToVideo.swift; sourceTree = "<group>"; };
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 			files = (
 				39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */,
 				39E3E44A2BF9D2230033FB89 /* BrightroomUI in Frameworks */,
+				38A5D8AF2BFF6E29008A82FD /* swift-video-generator in Frameworks */,
 				38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				EE2E72112BFA2B6500CD3E7F /* Cloth.swift */,
+				38A5D8B02BFF719F008A82FD /* ImageToVideo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				39E3E4472BF9D2230033FB89 /* BrightroomEngine */,
 				39E3E4492BF9D2230033FB89 /* BrightroomUI */,
 				38A5D8872BFEEA0F008A82FD /* Lottie */,
+				38A5D8AE2BFF6E29008A82FD /* swift-video-generator */,
 			);
 			productName = STOD;
 			productReference = 3972683A2BF7E0E800C27F52 /* STOD.app */;
@@ -355,6 +361,7 @@
 			packageReferences = (
 				39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */,
 				38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				38A5D8AD2BFF6E29008A82FD /* XCRemoteSwiftPackageReference "swift-video-generator" */,
 			);
 			productRefGroup = 3972683B2BF7E0E800C27F52 /* Products */;
 			projectDirPath = "";
@@ -393,6 +400,7 @@
 			files = (
 				38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */,
 				38A5D88C2BFEEBB9008A82FD /* Color+.swift in Sources */,
+				38A5D8B12BFF719F008A82FD /* ImageToVideo.swift in Sources */,
 				EE2E72142BFA2B8F00CD3E7F /* ClothList.swift in Sources */,
 				EE2E72242BFB43F500CD3E7F /* SizeView.swift in Sources */,
 				EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */,
@@ -656,6 +664,14 @@
 				minimumVersion = 4.4.3;
 			};
 		};
+		38A5D8AD2BFF6E29008A82FD /* XCRemoteSwiftPackageReference "swift-video-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dev-labs-bg/swift-video-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
 		39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FluidGroup/Brightroom";
@@ -671,6 +687,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		38A5D8AE2BFF6E29008A82FD /* swift-video-generator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38A5D8AD2BFF6E29008A82FD /* XCRemoteSwiftPackageReference "swift-video-generator" */;
+			productName = "swift-video-generator";
 		};
 		39E3E4472BF9D2230033FB89 /* BrightroomEngine */ = {
 			isa = XCSwiftPackageProductDependency;

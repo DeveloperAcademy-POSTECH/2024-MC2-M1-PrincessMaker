@@ -1,5 +1,5 @@
 {
-  "originHash" : "d87b695ccbbd58d549b98876ab0fe1c0f578de645df13aec7a2fa6bb9df308f1",
+  "originHash" : "e6b1751f45a6e615e4edefa73d9e6e70ae6f6fc0305003f11873c559fbb464d1",
   "pins" : [
     {
       "identity" : "brightroom",
@@ -53,6 +53,15 @@
       "state" : {
         "revision" : "340cf14e0282977deeeb436605d1810ce4f4fbc9",
         "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "swift-video-generator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dev-labs-bg/swift-video-generator",
+      "state" : {
+        "revision" : "0735b1ea6a9cd28e0fd952e4b1801367fddd5501",
+        "version" : "1.4.1"
       }
     },
     {
