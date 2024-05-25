@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ClothRow: View {
     let selectedCategory: MainCategory
@@ -21,12 +22,22 @@ struct ClothRow: View {
             selectedCloth = cloth
         } label: {
             HStack(spacing: 12) {
-                Image(uiImage: cloth.clothUIImage ?? UIImage(resource: .STOD))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 68, height: 48)
-                    .background(.stodWhite)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                if let uiImageName = cloth.clothUIImage {
+                    Image(uiImage: uiImageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 68, height: 48)
+                        .background(.stodWhite)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                } else if let category = MainCategory(rawValue: cloth.mainCategory) {
+                    category.image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 68, height: 48)
+                        .background(.stodGray100.opacity(0.6))
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                }
+                
                     
                 VStack(alignment: .leading, spacing: 11) {
                     Text(cloth.name)

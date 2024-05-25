@@ -9,13 +9,39 @@ import SwiftUI
 import SwiftData
 
 struct ClothList: View {
-    let selectedCategory: MainCategory
-    
     @Environment(\.modelContext) private var modelContext
     @Query var clothes: [Cloth]
+    let selectedCategory: MainCategory
+    //let filteredClothes: [Cloth]
     @Binding var showRegisterView: Bool
     @Binding var selectedCloth: Cloth?
     @State var isRefreshing: Bool = false
+    
+    func deleteCloth(cloth: Cloth) {
+        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+            withAnimation {
+                IndexSet(integer: index).map { clothes[$0] }.forEach(modelContext.delete)
+            }
+        }
+    }
+    
+    func pinCloth(cloth: Cloth) {
+        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+            withAnimation {
+                clothes[index].isPinned.toggle()
+                print (clothes[index].isPinned)
+            }
+            //updateCloth()
+        }
+    }
+    func updateCloth() {
+        do {
+            try modelContext.save()
+            print("Cloth updated successfully")
+        } catch {
+            print("Failed to update cloth: \(error)")
+        }
+    }
     
     var body: some View {
         List {
@@ -38,7 +64,7 @@ struct ClothList: View {
                     .contextMenu(
                         ContextMenu(menuItems: {
                             Button {
-                                
+                                pinCloth(cloth: cloth)
                             } label: {
                                 Label(cloth.isPinned ? "고정 해제" : "고정", systemImage: cloth.isPinned ? "pin.slash" : "pin")
                             }
@@ -50,7 +76,7 @@ struct ClothList: View {
                             }
                             
                             Button(role: .destructive){
-                                
+                                deleteCloth(cloth: cloth)
                             } label: {
                                 Label("삭제", systemImage: "trash")
                                     .font(.subheadline)
@@ -58,7 +84,7 @@ struct ClothList: View {
                         }))
                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive){
-                            
+                            deleteCloth(cloth: cloth)
                         } label: {
                             Label("Trash", systemImage: "trash")
                                 .font(.subheadline)
@@ -73,7 +99,7 @@ struct ClothList: View {
                         .tint(.orange)
                         
                         Button {
-                            
+                            pinCloth(cloth: cloth)
                         } label: {
                             Label("pin", systemImage: cloth.isPinned ? "pin.slash" : "pin")
                         }
@@ -99,7 +125,7 @@ struct ClothList: View {
                     Spacer()
                     Image(systemName: "plus")
                         .font(.StodHeadline)
-                        //.font(.system(size: 10, weight: .bold))
+                    //.font(.system(size: 10, weight: .bold))
                         .foregroundStyle(.stodGray100)
                     Spacer()
                 }
@@ -142,9 +168,9 @@ struct ClothList: View {
     }
 }
 
-#Preview {
-    ClothList(selectedCategory: .top, showRegisterView: .constant(false), selectedCloth: .constant(SampleCloth.contents[0]))
-}
+//#Preview {
+//    ClothList(selectedCategory: .top, filteredClothes: [], showRegisterView: .constant(false), selectedCloth: .constant(nil))
+//}
 
 //struct Cloth: Identifiable {
 //    var id: UUID = UUID()

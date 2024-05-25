@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Register: View {
+struct RegisterMainCategory: View {
     @Environment(\.dismiss) private var dismiss
     @State var cloth: Cloth = Cloth()
     @State var showNextView: Bool = false
@@ -48,7 +48,7 @@ struct Register: View {
                     }
                 }
                 .navigationDestination(isPresented: $showNextView) {
-                    EssentialInfoRegister(cloth: $cloth, showRegisterView: $showRegisterView)
+                    RegisterDetailInfo(cloth: $cloth, showRegisterView: $showRegisterView)
                         .navigationBarBackButtonHidden()
                 }
                 
@@ -79,5 +79,5 @@ struct Register: View {
 }
 
 #Preview {
-    Register()
+    RegisterMainCategory()
 }      

@@ -32,6 +32,6 @@ struct ClothListPageView: View {
     }
 }
 
-#Preview {
-    ClothListPageView(showRegisterView: .constant(false), selectedCategory: .constant(.accessory), selectedCloth: .constant(SampleCloth.contents[0]))
-}
+//#Preview {
+//    ClothListPageView(showRegisterView: .constant(false), selectedCategory: .constant(.accessory), selectedCloth: .constant(SampleCloth.contents[0]), filteredClothes: [:])
+//}

@@ -21,12 +21,14 @@ struct Home: View {
             PIPSection()
             CategorySection(selectedCategory: $selectedCategory,
                             isOnlyTap: false)
-            ClothListPageView(showRegisterView: $showRegisterView,
-                              selectedCategory: $selectedCategory,
-                              selectedCloth: $selectedCloth)
+            ClothList(selectedCategory: selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth)
+//            ClothListPageView(showRegisterView: $showRegisterView,
+//                              selectedCategory: $selectedCategory,
+//                              selectedCloth: $selectedCloth)
         }
+        .animation(.snappy, value: selectedCategory)
         .fullScreenCover(isPresented: $showRegisterView) {
-            Register()
+            RegisterMainCategory()
         }
     }
 }

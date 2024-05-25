@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct EssentialInfoRegister: View {
+struct RegisterDetailInfo: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Binding var cloth: Cloth
     @State private var registerState: Int = 0
     @FocusState private var focusField: Field?
     @GestureState private var isDragging: Bool = false
-    @State private var showStartView = false
+    @State private var showSuccessView = false
     @State private var showPicker = false
     @Binding var showRegisterView: Bool
     
@@ -48,42 +48,49 @@ struct EssentialInfoRegister: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 24) {
-                Color.black.frame(height: 14)
-                
-                Text(titleText)
-                    .font(.StodHeadline)
-                    .foregroundColor(.white)
-                
-                if registerState == 4 {
-                    ClothImageSection
+            VStack {
+                ScrollView(.vertical) {
+                    VStack(alignment: .leading, spacing: 24) {
+                        Color.black.frame(height: 14)
+                        
+                        Text(titleText)
+                            .font(.StodHeadline)
+                            .foregroundColor(.white)
+                        
+                        if registerState == 4 {
+                            ClothImageSection
+                        }
+                        
+                        if registerState >= 3 && registerState < 4 {
+                            MeasurementImageSection
+                        }
+                        
+                        if registerState >= 2 && registerState < 4 {
+                            SubCategorySection
+                        }
+                        
+                        if registerState >= 1 && registerState < 4 {
+                            SizeSection
+                        }
+                        
+                        if registerState >= 0 && registerState < 4 {
+                            NameSection
+                        }
+                        
+                        Color.black
+                        
+                        
+                    }
+                    .padding()
                 }
-                
-                if registerState >= 3 && registerState < 4 {
-                    MeasurementImageSection
-                }
-                
-                if registerState >= 2 && registerState < 4 {
-                    SubCategorySection
-                }
-                
-                if registerState >= 1 && registerState < 4 {
-                    SizeSection
-                }
-                
-                if registerState >= 0 && registerState < 4 {
-                    NameSection
-                }
-                
-                Color.black
+                .scrollIndicators(.never)
                 
                 NextButton
-                
+                    .padding()
                 if registerState == 4 {
                     SkipButton
                 }
             }
-            .padding()
             .animation(.snappy, value: registerState)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -111,8 +118,9 @@ struct EssentialInfoRegister: View {
                         }
                     }
             )
-            .navigationDestination(isPresented: $showStartView) {
-                //StartView()
+            .navigationDestination(isPresented: $showSuccessView) {
+                RegisetSuccess(name: $cloth.name, showRegisterView: $showRegisterView)
+                    .navigationBarBackButtonHidden()
             }
             
         }
@@ -120,7 +128,7 @@ struct EssentialInfoRegister: View {
 }
 
 
-extension EssentialInfoRegister {
+extension RegisterDetailInfo {
     var NameSection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 1 {
@@ -129,7 +137,7 @@ extension EssentialInfoRegister {
                     .foregroundColor(.stodGray100)
                 Spacer().frame(height: 10)
             }
-            TextField("ex) 똥싼바지, 여리여리 블라우스", text: $cloth.name)
+            TextField("ex) 딱 복숭아뼈까지 오는 청바지, 여리여리 블라우스", text: $cloth.name)
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
@@ -195,23 +203,46 @@ extension EssentialInfoRegister {
             }
             
             if registerState == 2 {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], alignment: .leading, spacing: 12) {
-                    ForEach(MainCategory.top.subcategories, id: \.self) { subcategory in
-                        Text(subcategory)
-                            .font(.StodTitle1)
-                            .foregroundColor(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100)
-                            .padding(.vertical,5)
-                            .padding(.horizontal,10)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 2)
-                            )
-                            .onTapGesture {
-                                cloth.subCategory = subcategory
+                    VStack(alignment: .leading, spacing: 10) {
+                        ForEach(layoutButtons(in: UIScreen.main.bounds.width-32), id: \.self) { row in
+                            HStack {
+                                ForEach(row, id: \.self) { subcategory in
+                                    Button(action: {
+                                        cloth.subCategory = subcategory
+                                    }) {
+                                        Text(subcategory)
+                                            .lineLimit(1)
+                                            .fixedSize(horizontal: true, vertical: false)
+                                            .font(.StodTitle1)
+                                            .padding(.horizontal, 10)
+                                            .padding(.vertical, 5)
+                                            .foregroundColor(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 2)
+                                            )
+                                    }.padding(.vertical, 2)
+                                }
                             }
+                        }
                     }
-                }
             }
+            //                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], alignment: .leading, spacing: 12) {
+            //                    ForEach(MainCategory.top.subcategories, id: \.self) { subcategory in
+            //                        Text(subcategory)
+            //                            .font(.StodTitle1)
+            //                            .foregroundColor(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100)
+            //                            .padding(.vertical,5)
+            //                            .padding(.horizontal,10)
+            //                            .background(
+            //                                RoundedRectangle(cornerRadius: 10)
+            //                                    .stroke(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 2)
+            //                            )
+            //                            .onTapGesture {
+            //                                cloth.subCategory = subcategory
+            //                            }
+            //                    }
+            //                }
         }
     }
     
@@ -282,7 +313,7 @@ extension EssentialInfoRegister {
             registerState += 1
             if registerState == 5 {
                 saveCloth()
-                showStartView = true
+                showSuccessView = true
             }
         } label: {
             HStack {
@@ -315,7 +346,7 @@ extension EssentialInfoRegister {
             }
             Spacer()
         }
-       
+        
     }
     
     var BackButton: some View {
@@ -335,10 +366,63 @@ extension EssentialInfoRegister {
             dismiss()
         }
     }
+    
+    private var subcategories: [String] {
+        guard let mainCategory = MainCategory(rawValue: cloth.mainCategory) else {
+            return []
+        }
+        return mainCategory.subcategories
+    }
+    
+    private func calculateButtonWidth(text: String, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        let boundingBox = text.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+        return ceil(boundingBox.width) + 20
+    }
+    
+    private func layoutButtons(in width: CGFloat) -> [[String]] {
+        var rows: [[String]] = [[]]
+        var currentRowWidth: CGFloat = 0
+        let padding: CGFloat = 10
+        let font = UIFont.systemFont(ofSize: 17)
+        
+        for subcategory in subcategories {
+            let buttonWidth = calculateButtonWidth(text: subcategory, font: font)
+            if currentRowWidth + buttonWidth + padding > width {
+                rows.append([subcategory])
+                currentRowWidth = buttonWidth
+            } else {
+                rows[rows.count - 1].append(subcategory)
+                currentRowWidth += buttonWidth + padding
+            }
+        }
+        
+        return rows
+    }
+    
+    private func calculateHeight(in width: CGFloat) -> CGFloat {
+        var rows: [[String]] = [[]]
+        var currentRowWidth: CGFloat = 0
+        let padding: CGFloat = 10
+        let font = UIFont.systemFont(ofSize: 17)
+        
+        for subcategory in subcategories {
+            let buttonWidth = calculateButtonWidth(text: subcategory, font: font)
+            if currentRowWidth + buttonWidth + padding > width {
+                rows.append([subcategory])
+                currentRowWidth = buttonWidth
+            } else {
+                rows[rows.count - 1].append(subcategory)
+                currentRowWidth += buttonWidth + padding
+            }
+        }
+        
+        return CGFloat(rows.count * 36)
+    }
 }
 
 #Preview {
-    EssentialInfoRegister(cloth: .constant(Cloth()), showRegisterView: .constant(false))
+    RegisterDetailInfo(cloth: .constant(Cloth(mainCategory: "아우터")), showRegisterView: .constant(false))
 }
 
 
