@@ -1,5 +1,5 @@
 {
-  "originHash" : "d87b695ccbbd58d549b98876ab0fe1c0f578de645df13aec7a2fa6bb9df308f1",
+  "originHash" : "0f98bc6d9b0f5f0fedf18e584655c6c4b75df7857f6b2a5270e900f62a108a5e",
   "pins" : [
     {
       "identity" : "brightroom",
@@ -53,6 +53,15 @@
       "state" : {
         "revision" : "340cf14e0282977deeeb436605d1810ce4f4fbc9",
         "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "swiftui-pipify",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsidetrack/swiftui-pipify",
+      "state" : {
+        "revision" : "cca3701eaeca2f07a7203cb631beb4147ff84ce0",
+        "version" : "0.3.0"
       }
     },
     {

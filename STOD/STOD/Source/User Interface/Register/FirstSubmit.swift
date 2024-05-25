@@ -20,7 +20,7 @@ struct FirstSubmit: View {
     
     private func saveCloth() {
         modelContext.insert(newCloth)
-        newCloth = Cloth(name: "", size: "", numericalPhotoPath: nil, mainPhotoPath: nil, selectedSubCategory: "", selectedMainCategory: "")
+        newCloth = Cloth(name: "", size: "", numericalImageData: nil, clothImageData: nil, subCategory: "", mainCategory: "", isPinned: false)
         dismiss()
     }
     
@@ -44,8 +44,8 @@ struct FirstSubmit: View {
                 ForEach(selectedMainCategory.subcategories, id: \.self) { subcategory in
                     Button(action: {
                         selectedSubCategory = subcategory
-                        newCloth.selectedSubCategory = subcategory
-                        newCloth.selectedMainCategory = selectedMainCategory.rawValue
+                        newCloth.subCategory = subcategory
+                        newCloth.mainCategory = selectedMainCategory.rawValue
                     }) {
                         Text(subcategory)
                             .foregroundColor(selectedSubCategory == subcategory ? .yellow : .primary)
