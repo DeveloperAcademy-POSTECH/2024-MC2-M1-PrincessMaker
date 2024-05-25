@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38132D8D2C0187A60080F6A7 /* Pipify in Frameworks */ = {isa = PBXBuildFile; productRef = 38132D8C2C0187A60080F6A7 /* Pipify */; };
+		38132D932C0252260080F6A7 /* PipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38132D922C0252260080F6A7 /* PipView.swift */; };
 		38A5D8772BFEE96E008A82FD /* ONBOARDING02.lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D8742BFEE96E008A82FD /* ONBOARDING02.lottie.json */; };
 		38A5D8782BFEE96E008A82FD /* ONBOARDING01.lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D8752BFEE96E008A82FD /* ONBOARDING01.lottie.json */; };
 		38A5D8792BFEE96E008A82FD /* ONBOARDING03.lottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 38A5D8762BFEE96E008A82FD /* ONBOARDING03.lottie.json */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38132D922C0252260080F6A7 /* PipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipView.swift; sourceTree = "<group>"; };
 		38A5D8742BFEE96E008A82FD /* ONBOARDING02.lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ONBOARDING02.lottie.json; sourceTree = "<group>"; };
 		38A5D8752BFEE96E008A82FD /* ONBOARDING01.lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ONBOARDING01.lottie.json; sourceTree = "<group>"; };
 		38A5D8762BFEE96E008A82FD /* ONBOARDING03.lottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ONBOARDING03.lottie.json; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				3972685C2BF7E30200C27F52 /* Home.swift */,
+				38132D922C0252260080F6A7 /* PipView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */,
 				EE7C9BE02BFD8D9C0016C053 /* StartView.swift in Sources */,
 				397268402BF7E0E800C27F52 /* ContentView.swift in Sources */,
+				38132D932C0252260080F6A7 /* PipView.swift in Sources */,
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
 				38A5D8822BFEE9DC008A82FD /* OnboardingView.swift in Sources */,
 				EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */,
