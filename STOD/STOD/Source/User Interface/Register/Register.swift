@@ -9,7 +9,19 @@ import SwiftUI
 
 struct Register: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 160, height: 100)
+                .foregroundColor(.stodGray200)
+            HStack{
+                Text("아우터")
+                    .foregroundColor(.white)
+                Image("Outer_character")
+                    .resizable()
+                    .frame(width: 82, height: 95)
+            }
+            
+        }
     }
 }
 

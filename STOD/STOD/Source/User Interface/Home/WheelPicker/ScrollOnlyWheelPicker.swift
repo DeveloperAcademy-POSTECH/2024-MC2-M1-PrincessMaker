@@ -72,8 +72,6 @@ struct ScrollOnlyWheelPicker: View {
                 } else if inRange {
                     selectedCategory = MainCategory.allCases[(correctedValue)/config.steps]
                 }
-                print(value)
-                print("수정된 값: \(correctedValue)")
             }
         }
         

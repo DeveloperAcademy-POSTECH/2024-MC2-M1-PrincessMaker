@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct STODApp: App {
+    @AppStorage("firstLaunch") var firstLaunch: Bool = true
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Cloth.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +27,7 @@ struct STODApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Home()
+            ContentView()
         }
         .modelContainer(sharedModelContainer)
     }

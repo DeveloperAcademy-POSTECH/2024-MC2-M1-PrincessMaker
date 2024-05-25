@@ -32,6 +32,7 @@ struct CategoryButton: View {
             Text(category.rawValue)
                 .font(.StodBody)
                 .fixedSize()
+                .foregroundStyle(.white)
         }
         .opacity(isSelected ? 1 : 0.6)
     }

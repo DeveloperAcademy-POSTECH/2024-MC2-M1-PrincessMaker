@@ -6,16 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ClothListPageView: View {
+    @Environment(\.modelContext) private var modelContext
+    @Query var clothes: [Cloth]
+    @Binding var showRegisterView: Bool
     @Binding var selectedCategory: MainCategory
-    @State private var isSearching: Bool = false
-    @Binding var clothes: [Cloth]
+    @Binding var selectedCloth: Cloth?
     
     var body: some View {
         TabView(selection: $selectedCategory) {
             ForEach(MainCategory.allCases, id: \.self) { category in
-                ClothList(selectedCategory: category, clothes: $clothes)
+                ClothList(selectedCategory: category,
+                          showRegisterView: $showRegisterView,
+                          selectedCloth: $selectedCloth)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .contentShape(Rectangle())
                     .gesture(DragGesture())
@@ -28,5 +33,5 @@ struct ClothListPageView: View {
 }
 
 #Preview {
-    ClothListPageView(selectedCategory: .constant(.recent), clothes: .constant(Cloth.dummy))
+    ClothListPageView(showRegisterView: .constant(false), selectedCategory: .constant(.accessory), selectedCloth: .constant(SampleCloth.contents[0]))
 }
