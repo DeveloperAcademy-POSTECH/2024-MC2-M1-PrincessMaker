@@ -15,6 +15,7 @@ struct ClothList: View {
     //let filteredClothes: [Cloth]
     @Binding var showRegisterView: Bool
     @Binding var selectedCloth: Cloth?
+    @Binding var showPIP: Bool
     @State var isRefreshing: Bool = false
     @State var isEditing: Bool = false
     @State var editTargetIndex: Int = 0
@@ -57,7 +58,7 @@ struct ClothList: View {
             }
             
             ForEach(filteredClothes) { cloth in
-                ClothRow(selectedCategory: selectedCategory, cloth: cloth, selectedCloth: $selectedCloth)
+                ClothRow(selectedCategory: selectedCategory, cloth: cloth, selectedCloth: $selectedCloth, showPIP: $showPIP)
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                     .padding(.horizontal, 16)

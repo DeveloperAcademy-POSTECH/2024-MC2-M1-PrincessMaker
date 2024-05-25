@@ -12,6 +12,7 @@ struct ClothRow: View {
     let selectedCategory: MainCategory
     let cloth: Cloth
     @Binding var selectedCloth: Cloth?
+    @Binding var showPIP: Bool
     
     var isSelected: Bool {
         cloth == selectedCloth
@@ -20,6 +21,7 @@ struct ClothRow: View {
     var body: some View {
         Button {
             selectedCloth = cloth
+            showPIP = true
         } label: {
             HStack(spacing: 12) {
                 if let uiImageName = cloth.clothUIImage {
@@ -67,5 +69,5 @@ struct ClothRow: View {
 }
 
 #Preview {
-    ClothRow(selectedCategory: .top, cloth: SampleCloth.contents[0], selectedCloth: .constant(SampleCloth.contents[0]))
+    ClothRow(selectedCategory: .top, cloth: SampleCloth.contents[0], selectedCloth: .constant(SampleCloth.contents[0]), showPIP: .constant(false))
 }

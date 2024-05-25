@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Pipify
 
 struct Home: View {
     @Environment(\.modelContext) private var modelContext
@@ -15,13 +16,14 @@ struct Home: View {
     @State private var selectedCategory: MainCategory = .recent
     @State var showRegisterView: Bool = false
     @State private var selectedCloth: Cloth? = nil
+    @State private var showPIP: Bool = false
     
     var body: some View {
         VStack(spacing: 24) {
             PIPSection()
             CategorySection(selectedCategory: $selectedCategory,
                             isOnlyTap: false)
-            ClothList(selectedCategory: selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth)
+            ClothList(selectedCategory: selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
 //            ClothListPageView(showRegisterView: $showRegisterView,
 //                              selectedCategory: $selectedCategory,
 //                              selectedCloth: $selectedCloth)
@@ -29,6 +31,9 @@ struct Home: View {
         .animation(.snappy, value: selectedCategory)
         .fullScreenCover(isPresented: $showRegisterView) {
             RegisterMainCategory()
+        }
+        .pipify(isPresented: $showPIP) {
+            BasicExample()
         }
     }
 }
@@ -49,4 +54,33 @@ struct Home: View {
 
     return Home()
         .modelContainer(container)
+}
+
+extension Home {
+    
+    var PIPView: some View {
+        Text("Hello")
+//        ZStack {
+//            if let uiimage = selectedCloth?.numericalUIImage {
+//                 ZStack(alignment: .bottom) {
+//                    Image(uiImage: uiimage)
+//                    
+//                    HStack {
+//                        Text(selectedCloth?.size ?? "")
+//                        
+//                        Spacer()
+//                        
+//                        Image(.characterHome)
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 30)
+//                    }
+//                    .padding()
+//                }
+//                
+//            } else {
+//                 Image(.characterHome)
+//            }
+//        }
+    }
 }
