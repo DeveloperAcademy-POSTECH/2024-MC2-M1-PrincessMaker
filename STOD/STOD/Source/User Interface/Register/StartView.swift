@@ -10,6 +10,7 @@ import SwiftUI
 struct StartView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var name: String
+    //@Binding var dismissAll: Bool
     
     var body: some View {
         NavigationStack{

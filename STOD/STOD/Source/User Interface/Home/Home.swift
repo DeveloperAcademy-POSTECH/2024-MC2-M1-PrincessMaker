@@ -13,7 +13,7 @@ struct Home: View {
     @Query var clothes: [Cloth]
     
     @State private var selectedCategory: MainCategory = .recent
-    @State private var showRegisterView: Bool = false
+    @State var showRegisterView: Bool = false
     @State private var selectedCloth: Cloth? = nil
     
     var body: some View {

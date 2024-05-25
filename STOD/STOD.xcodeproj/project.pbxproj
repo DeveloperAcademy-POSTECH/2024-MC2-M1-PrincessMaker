@@ -20,12 +20,11 @@
 		392548A12BFF822800D761D7 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392548A02BFF822800D761D7 /* LaunchScreen.swift */; };
 		392548A32BFF901600D761D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392548A22BFF901600D761D7 /* ContentView.swift */; };
 		39285BC32C019A5A00710E73 /* RegisterCategoryButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC22C019A5A00710E73 /* RegisterCategoryButotn.swift */; };
-		39285BC72C01C0C800710E73 /* ClothRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC62C01C0C800710E73 /* ClothRegister.swift */; };
+		39285BC72C01C0C800710E73 /* EssentialInfoRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC62C01C0C800710E73 /* EssentialInfoRegister.swift */; };
 		3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E52BFAF1D000E5707E /* PIPSection.swift */; };
 		3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E72BFAF5A300E5707E /* CategorySection.swift */; };
 		3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E92BFAF68100E5707E /* CategoryButton.swift */; };
 		3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2EB2BFB146800E5707E /* MainCategory.swift */; };
-		396A02532C01C4DD0081FA5E /* RegisterNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396A02522C01C4DD0081FA5E /* RegisterNextButton.swift */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268402BF7E0E800C27F52 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
 		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
@@ -84,12 +83,11 @@
 		392548A02BFF822800D761D7 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		392548A22BFF901600D761D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39285BC22C019A5A00710E73 /* RegisterCategoryButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCategoryButotn.swift; sourceTree = "<group>"; };
-		39285BC62C01C0C800710E73 /* ClothRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothRegister.swift; sourceTree = "<group>"; };
+		39285BC62C01C0C800710E73 /* EssentialInfoRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialInfoRegister.swift; sourceTree = "<group>"; };
 		3930F2E52BFAF1D000E5707E /* PIPSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPSection.swift; sourceTree = "<group>"; };
 		3930F2E72BFAF5A300E5707E /* CategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySection.swift; sourceTree = "<group>"; };
 		3930F2E92BFAF68100E5707E /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		3930F2EB2BFB146800E5707E /* MainCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategory.swift; sourceTree = "<group>"; };
-		396A02522C01C4DD0081FA5E /* RegisterNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNextButton.swift; sourceTree = "<group>"; };
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewJane.swift; sourceTree = "<group>"; };
@@ -331,8 +329,7 @@
 			children = (
 				EE2E721B2BFA395200CD3E7F /* Register.swift */,
 				39285BC22C019A5A00710E73 /* RegisterCategoryButotn.swift */,
-				39285BC62C01C0C800710E73 /* ClothRegister.swift */,
-				396A02522C01C4DD0081FA5E /* RegisterNextButton.swift */,
+				39285BC62C01C0C800710E73 /* EssentialInfoRegister.swift */,
 				EE2E721D2BFA406D00CD3E7F /* NameView.swift */,
 				EE2E72232BFB43F500CD3E7F /* SizeView.swift */,
 				EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */,
@@ -458,7 +455,7 @@
 				398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */,
 				392548A12BFF822800D761D7 /* LaunchScreen.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
-				39285BC72C01C0C800710E73 /* ClothRegister.swift in Sources */,
+				39285BC72C01C0C800710E73 /* EssentialInfoRegister.swift in Sources */,
 				398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */,
 				3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */,
 				397268672BF7E37600C27F52 /* View+.swift in Sources */,
@@ -470,7 +467,6 @@
 				38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */,
 				38A5D88C2BFEEBB9008A82FD /* Color+.swift in Sources */,
 				EE2E72242BFB43F500CD3E7F /* SizeView.swift in Sources */,
-				396A02532C01C4DD0081FA5E /* RegisterNextButton.swift in Sources */,
 				EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */,
 				EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */,
 				EE7C9BE02BFD8D9C0016C053 /* StartView.swift in Sources */,

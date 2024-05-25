@@ -10,7 +10,8 @@ import SwiftUI
 struct Register: View {
     @Environment(\.dismiss) private var dismiss
     @State var cloth: Cloth = Cloth()
-    @State private var showNextView = false
+    @State var showNextView: Bool = false
+    @State var showRegisterView: Bool = true
     
     private var columns: [GridItem] = [
         GridItem(.flexible()),
@@ -31,13 +32,15 @@ struct Register: View {
                 
                 LazyVGrid(columns: columns) {
                     ForEach(0..<MainCategory.allCases.count) { index in
-                        let category = MainCategory.allCases[index]
-                        if category != .recent {
+                        if index != 3 {
+                            var correctedIndex = index < 3 ? index + 4 : index - 4
+                            
+                            let category = MainCategory.allCases[correctedIndex]
                             Button {
                                 cloth.mainCategory = category.rawValue
                                 showNextView = true
                             } label: {
-                                RegisterCategoryButton(category: MainCategory.allCases[index])
+                                RegisterCategoryButton(category: category)
                             }
                             .padding(.horizontal, 7)
                             .padding(.vertical, 12)
@@ -45,7 +48,7 @@ struct Register: View {
                     }
                 }
                 .navigationDestination(isPresented: $showNextView) {
-                    ClothRegister(cloth: $cloth)
+                    EssentialInfoRegister(cloth: $cloth, showRegisterView: $showRegisterView)
                         .navigationBarBackButtonHidden()
                 }
                 
@@ -66,11 +69,15 @@ struct Register: View {
             .onAppear {
                 cloth = Cloth()
             }
-            
+            .onChange(of: showRegisterView) { oldValue, newValue in
+                if !showRegisterView {
+                    dismiss()
+                }
+            }
         }
     }
 }
 
 #Preview {
     Register()
-}
+}      
