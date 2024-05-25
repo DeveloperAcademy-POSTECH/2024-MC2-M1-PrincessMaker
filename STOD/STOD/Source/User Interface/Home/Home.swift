@@ -25,11 +25,9 @@ struct Home: View {
                               selectedCategory: $selectedCategory,
                               selectedCloth: $selectedCloth)
         }
-        // fullCover로 변경 필요
-        .sheet(isPresented: $showRegisterView) {
-            PIPSection()
+        .fullScreenCover(isPresented: $showRegisterView) {
+            Register()
         }
-        .background(.stodBlack)
     }
 }
 

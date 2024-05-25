@@ -17,7 +17,7 @@ struct CategoryButton: View {
     
     var body: some View {
         VStack(spacing: 4) {
-            category.image
+            category.circleImage
                 .resizable()
                 .scaledToFill()
                 .overlay {

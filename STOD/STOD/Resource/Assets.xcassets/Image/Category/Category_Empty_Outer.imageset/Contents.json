@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Category_Empty_Outer@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Category_Empty_Outer@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Pants_character.png",
+      "filename" : "Category_Empty_Outer@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

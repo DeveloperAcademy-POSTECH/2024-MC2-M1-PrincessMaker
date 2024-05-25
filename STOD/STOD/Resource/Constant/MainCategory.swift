@@ -16,7 +16,7 @@ enum MainCategory: String, CaseIterable {
     case top = "상의"
     case bottom = "하의"
     
-    var image: Image {
+    var circleImage: Image {
         switch self {
         case .recent: return Image(.categoryCircleRecent)
         case .outer: return Image(.categoryCircleOuter)
@@ -25,6 +25,18 @@ enum MainCategory: String, CaseIterable {
         case .onepiece: return Image(.categoryCircleOnepiece)
         case .shoes: return Image(.categoryCircleShoes)
         case .accessory: return Image(.categoryCircleAccessory)
+        }
+    }
+    
+    var image: Image {
+        switch self {
+        case .recent: return Image(.categoryEmptyRecent)
+        case .outer: return Image(.categoryEmptyOuter)
+        case .top: return Image(.categoryEmptyTop)
+        case .bottom: return Image(.categoryEmptyBottom)
+        case .onepiece: return Image(.categoryEmptyOnepiece)
+        case .shoes: return Image(.categoryEmptyShoes)
+        case .accessory: return Image(.categoryEmptyAccessory)
         }
     }
     

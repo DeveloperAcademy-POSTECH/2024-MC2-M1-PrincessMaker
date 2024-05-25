@@ -28,7 +28,7 @@ final class Cloth {
     var isPinned: Bool
     var date: Date
     
-    init(name: String, size: String, numericalImageData: Data?, clothImageData: Data?, subCategory: String, mainCategory: String, isPinned: Bool) {
+    init(name: String = "", size: String = "", numericalImageData: Data? = nil, clothImageData: Data? = nil, subCategory: String = "", mainCategory: String = "", isPinned: Bool = false) {
         self.id = UUID()
         self.name = name
         self.size = size

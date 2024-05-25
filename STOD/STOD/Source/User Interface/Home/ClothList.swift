@@ -15,6 +15,7 @@ struct ClothList: View {
     @Query var clothes: [Cloth]
     @Binding var showRegisterView: Bool
     @Binding var selectedCloth: Cloth?
+    @State var isRefreshing: Bool = false
     
     var body: some View {
         List {
@@ -26,7 +27,6 @@ struct ClothList: View {
                 }
                 .listRowInsets(EdgeInsets())
                 .listRowSeparator(.hidden)
-                .background(.stodBlack)
             }
             
             ForEach(filteredClothes) { cloth in
@@ -46,7 +46,7 @@ struct ClothList: View {
                             Button {
                                 
                             } label: {
-                                Label("Edit", systemImage: "pencil")
+                                Label("수정", systemImage: "pencil")
                             }
                             
                             Button(role: .destructive){
@@ -79,17 +79,36 @@ struct ClothList: View {
                         }
                         .tint(.stodGray100)
                     }
-                    .background(.stodBlack)
             }
         }
         .listStyle(.plain)
         .scrollIndicators(.hidden)
         .animation(.linear(duration: 0.3), value: clothes)
         .refreshable {
+            withAnimation {
+                isRefreshing = true
+            }
             await refresh()
-            
+            withAnimation {
+                isRefreshing = false
+            }
         }
-        .background(.stodBlack)
+        .overlay(alignment: .top) {
+            if isRefreshing {
+                HStack {
+                    Spacer()
+                    Image(systemName: "plus")
+                        .font(.StodHeadline)
+                        //.font(.system(size: 10, weight: .bold))
+                        .foregroundStyle(.stodGray100)
+                    Spacer()
+                }
+                .padding()
+                .background(.stodBlack)
+                //.padding(.top, 24)
+            }
+        }
+        
     }
     
     private func refresh() async {
