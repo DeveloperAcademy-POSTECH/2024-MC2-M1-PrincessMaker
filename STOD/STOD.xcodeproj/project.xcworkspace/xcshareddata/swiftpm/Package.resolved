@@ -1,5 +1,5 @@
 {
-  "originHash" : "e6b1751f45a6e615e4edefa73d9e6e70ae6f6fc0305003f11873c559fbb464d1",
+  "originHash" : "0f98bc6d9b0f5f0fedf18e584655c6c4b75df7857f6b2a5270e900f62a108a5e",
   "pins" : [
     {
       "identity" : "brightroom",
@@ -56,12 +56,12 @@
       }
     },
     {
-      "identity" : "swift-video-generator",
+      "identity" : "swiftui-pipify",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/dev-labs-bg/swift-video-generator",
+      "location" : "https://github.com/getsidetrack/swiftui-pipify",
       "state" : {
-        "revision" : "0735b1ea6a9cd28e0fd952e4b1801367fddd5501",
-        "version" : "1.4.1"
+        "revision" : "cca3701eaeca2f07a7203cb631beb4147ff84ce0",
+        "version" : "0.3.0"
       }
     },
     {
