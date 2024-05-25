@@ -45,6 +45,7 @@ struct UpdateView: View {
         .onAppear {
             applyTargetData()
         }
+        .dismissKeyboard()
     }
 }
 
@@ -130,8 +131,8 @@ extension UpdateView {
                 }
                 .accentColor(.white)
                 .pickerStyle(MenuPickerStyle())
+                .offset(x: -4)
             }
-            
             Spacer().frame(height: 12)
             
             Rectangle()
@@ -196,13 +197,13 @@ extension UpdateView {
                     if let data = editCloth.clothImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .frame(height: 192, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         Image(systemName: "photo.badge.plus")
                             .resizable()
-                            .scaledToFill()
+                            .scaledToFit()
                             .frame(width: 30, height: 23)
                             .foregroundColor(.stodGray100)
                     }

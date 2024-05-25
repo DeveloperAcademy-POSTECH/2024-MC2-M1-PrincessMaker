@@ -119,9 +119,8 @@ struct RegisterDetailInfo: View {
                         }
                     }
             )
-            .navigationDestination(isPresented: $showSuccessView) {
+            .fullScreenCover(isPresented: $showSuccessView) {
                 RegisetSuccess(name: $cloth.name, showRegisterView: $showRegisterView)
-                    .navigationBarBackButtonHidden()
             }
             
         }
@@ -322,7 +321,7 @@ extension RegisterDetailInfo {
             Spacer()
             Button {
                 saveCloth()
-                showRegisterView = false
+                showSuccessView = true
             } label: {
                 Text("나중에 할래요")
                     .font(.StodTitle2)

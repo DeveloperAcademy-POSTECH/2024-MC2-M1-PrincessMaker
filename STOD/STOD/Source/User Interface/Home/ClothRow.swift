@@ -20,8 +20,13 @@ struct ClothRow: View {
     
     var body: some View {
         Button {
-            selectedCloth = cloth
-            showPIP = true
+            if selectedCloth == cloth {
+                selectedCloth = nil
+                showPIP = false
+            } else {
+                selectedCloth = cloth
+                showPIP = true
+            }
         } label: {
             HStack(spacing: 12) {
                 if let uiImageName = cloth.clothUIImage {

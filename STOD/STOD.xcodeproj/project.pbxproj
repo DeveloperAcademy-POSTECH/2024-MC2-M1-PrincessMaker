@@ -26,7 +26,6 @@
 		3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E92BFAF68100E5707E /* CategoryButton.swift */; };
 		3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2EB2BFB146800E5707E /* MainCategory.swift */; };
 		395A5B342C0264B80013E516 /* Pipify in Frameworks */ = {isa = PBXBuildFile; productRef = 395A5B332C0264B80013E516 /* Pipify */; };
-		395A5B362C026AC70013E516 /* PIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395A5B352C026AC70013E516 /* PIP.swift */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268402BF7E0E800C27F52 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
 		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
@@ -90,7 +89,6 @@
 		3930F2E72BFAF5A300E5707E /* CategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySection.swift; sourceTree = "<group>"; };
 		3930F2E92BFAF68100E5707E /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		3930F2EB2BFB146800E5707E /* MainCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategory.swift; sourceTree = "<group>"; };
-		395A5B352C026AC70013E516 /* PIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIP.swift; sourceTree = "<group>"; };
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewJane.swift; sourceTree = "<group>"; };
@@ -163,16 +161,33 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
-		395A5B312C02265E0013E516 /* LastVersion */ = {
+		39569DCB2C02729500ECC4F3 /* Remainder */ = {
 			isa = PBXGroup;
 			children = (
+				39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */,
+			);
+			path = Remainder;
+			sourceTree = "<group>";
+		};
+		39569DCC2C0274F600ECC4F3 /* Remainder */ = {
+			isa = PBXGroup;
+			children = (
+				3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */,
+			);
+			path = Remainder;
+			sourceTree = "<group>";
+		};
+		395A5B312C02265E0013E516 /* Remainder */ = {
+			isa = PBXGroup;
+			children = (
+				EE2E72172BFA2BC100CD3E7F /* FirstSubmit.swift */,
 				EE2E721D2BFA406D00CD3E7F /* NameView.swift */,
 				EE2E72232BFB43F500CD3E7F /* SizeView.swift */,
 				EE2E72252BFB856A00CD3E7F /* SubcategoryView.swift */,
 				EE7C9BD92BFCA8480016C053 /* MeasurementView.swift */,
 				EE7C9BDD2BFD8ABE0016C053 /* ClothesPhotoView.swift */,
 			);
-			path = LastVersion;
+			path = Remainder;
 			sourceTree = "<group>";
 		};
 		397268312BF7E0E800C27F52 = {
@@ -275,8 +290,8 @@
 		397268542BF7E1D600C27F52 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */,
 				392548A22BFF901600D761D7 /* ContentView.swift */,
+				39569DCC2C0274F600ECC4F3 /* Remainder */,
 				397268582BF7E29300C27F52 /* Home */,
 				3972685B2BF7E2AB00C27F52 /* Register */,
 				3972685A2BF7E2A800C27F52 /* Onboarding */,
@@ -318,14 +333,13 @@
 			isa = PBXGroup;
 			children = (
 				3972685C2BF7E30200C27F52 /* Home.swift */,
-				395A5B352C026AC70013E516 /* PIP.swift */,
 				3930F2E52BFAF1D000E5707E /* PIPSection.swift */,
 				3930F2E72BFAF5A300E5707E /* CategorySection.swift */,
 				3930F2E92BFAF68100E5707E /* CategoryButton.swift */,
-				39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */,
 				39DE8AD02BFE40F300882076 /* ClothList.swift */,
 				39DE8AD22BFE40FC00882076 /* ClothRow.swift */,
 				39DE8AC82BFDCC4700882076 /* WheelPicker */,
+				39569DCB2C02729500ECC4F3 /* Remainder */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -344,13 +358,12 @@
 		3972685B2BF7E2AB00C27F52 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				395A5B312C02265E0013E516 /* LastVersion */,
 				EE2E721B2BFA395200CD3E7F /* RegisterMainCategory.swift */,
 				39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */,
 				39285BC62C01C0C800710E73 /* RegisterDetailInfo.swift */,
 				EE7C9BDF2BFD8D9C0016C053 /* RegisetSuccess.swift */,
 				EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */,
-				EE2E72172BFA2BC100CD3E7F /* FirstSubmit.swift */,
+				395A5B312C02265E0013E516 /* Remainder */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -510,7 +523,6 @@
 				3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */,
 				39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */,
 				39285BC32C019A5A00710E73 /* MainCategoryButotn.swift in Sources */,
-				395A5B362C026AC70013E516 /* PIP.swift in Sources */,
 				39DE8AC72BFDCA5B00882076 /* OriginCategoryPicker.swift in Sources */,
 				3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */,
 			);
