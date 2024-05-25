@@ -16,6 +16,8 @@ struct ClothList: View {
     @Binding var showRegisterView: Bool
     @Binding var selectedCloth: Cloth?
     @State var isRefreshing: Bool = false
+    @State var isEditing: Bool = false
+    @State var editTargetIndex: Int = 0
     
     func deleteCloth(cloth: Cloth) {
         if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
@@ -34,12 +36,11 @@ struct ClothList: View {
             //updateCloth()
         }
     }
-    func updateCloth() {
-        do {
-            try modelContext.save()
-            print("Cloth updated successfully")
-        } catch {
-            print("Failed to update cloth: \(error)")
+    
+    func updateCloth(cloth: Cloth) {
+        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+            editTargetIndex = index
+            isEditing = true
         }
     }
     
@@ -70,7 +71,7 @@ struct ClothList: View {
                             }
                             
                             Button {
-                                
+                                updateCloth(cloth: cloth)
                             } label: {
                                 Label("수정", systemImage: "pencil")
                             }
@@ -92,7 +93,7 @@ struct ClothList: View {
                         .tint(.red)
                         
                         Button {
-                            
+                            updateCloth(cloth: cloth)
                         } label: {
                             Label("Edit", systemImage: "pencil")
                         }
@@ -105,6 +106,9 @@ struct ClothList: View {
                         }
                         .tint(.stodGray100)
                     }
+                    .sheet(isPresented: $isEditing, content: {
+                        UpdateView(targetIndex: $editTargetIndex)
+                    })
             }
         }
         .listStyle(.plain)

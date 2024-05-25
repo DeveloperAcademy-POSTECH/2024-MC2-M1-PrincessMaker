@@ -15,7 +15,8 @@ struct RegisterDetailInfo: View {
     @FocusState private var focusField: Field?
     @GestureState private var isDragging: Bool = false
     @State private var showSuccessView = false
-    @State private var showPicker = false
+    @State var showNumericalImagePicker = false
+    @State var showClothImagePicker = false
     @Binding var showRegisterView: Bool
     
     private func saveCloth() {
@@ -227,29 +228,13 @@ extension RegisterDetailInfo {
                         }
                     }
             }
-            //                LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], alignment: .leading, spacing: 12) {
-            //                    ForEach(MainCategory.top.subcategories, id: \.self) { subcategory in
-            //                        Text(subcategory)
-            //                            .font(.StodTitle1)
-            //                            .foregroundColor(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100)
-            //                            .padding(.vertical,5)
-            //                            .padding(.horizontal,10)
-            //                            .background(
-            //                                RoundedRectangle(cornerRadius: 10)
-            //                                    .stroke(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 2)
-            //                            )
-            //                            .onTapGesture {
-            //                                cloth.subCategory = subcategory
-            //                            }
-            //                    }
-            //                }
         }
     }
     
     var MeasurementImageSection: some View {
         HStack {
             Button {
-                showPicker = true
+                showNumericalImagePicker = true
             } label : {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -271,7 +256,7 @@ extension RegisterDetailInfo {
                 }
                 
             }
-            .fullScreenCover(isPresented: $showPicker) {
+            .fullScreenCover(isPresented: $showNumericalImagePicker) {
                 ImageEditPicker(inputImageData: $cloth.numericalImageData)
             }
         }
@@ -280,7 +265,7 @@ extension RegisterDetailInfo {
     var ClothImageSection: some View {
         HStack {
             Button {
-                showPicker = true
+                showClothImagePicker = true
             } label : {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
@@ -302,7 +287,7 @@ extension RegisterDetailInfo {
                 }
                 
             }
-            .fullScreenCover(isPresented: $showPicker) {
+            .fullScreenCover(isPresented: $showClothImagePicker) {
                 ImageEditPicker(inputImageData: $cloth.clothImageData)
             }
         }
