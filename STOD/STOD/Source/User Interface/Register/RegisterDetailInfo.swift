@@ -243,7 +243,7 @@ extension RegisterDetailInfo {
                     if let data = cloth.numericalImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .frame(height: 192, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {

@@ -1,5 +1,5 @@
 {
-  "originHash" : "0f98bc6d9b0f5f0fedf18e584655c6c4b75df7857f6b2a5270e900f62a108a5e",
+  "originHash" : "c9c0e74195156375687371e6286ac41440243db58eb25faf14bedb33129dc382",
   "pins" : [
     {
       "identity" : "brightroom",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "b06a8c8596e4c3e8e7788e08e720e3248563ce6a",
         "version" : "6.7.1"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
       }
     },
     {
@@ -65,12 +74,30 @@
       }
     },
     {
+      "identity" : "then",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devxoul/Then",
+      "state" : {
+        "revision" : "d41ef523faef0f911369f79c0b96815d9dbb6d7a",
+        "version" : "3.0.0"
+      }
+    },
+    {
       "identity" : "transitionpatch",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/FluidGroup/TransitionPatch.git",
       "state" : {
         "revision" : "88aac5305fe568ef62f73a3cf19f0b8392ffb52c",
         "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "uipipview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uakihir0/UIPiPView",
+      "state" : {
+        "branch" : "main",
+        "revision" : "55994ac410ec29d81958f689b22eae0917445da9"
       }
     },
     {
