@@ -30,7 +30,7 @@ struct Home: View {
             RegisterMainCategory()
         }
         .pipify(isPresented: $showPIP) {
-            PIPView
+            PIPView(selectedCloth: $selectedCloth)
         }
     }
 }
@@ -55,28 +55,28 @@ struct Home: View {
 
 extension Home {
     
-    var PIPView: some View {
-        ZStack {
-            if let uiimage = selectedCloth?.numericalUIImage {
-                 ZStack(alignment: .bottom) {
-                    Image(uiImage: uiimage)
-                    
-                    HStack {
-                        Text(selectedCloth?.size ?? "")
-                        
-                        Spacer()
-                        
-                        Image(.characterHome)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30)
-                    }
-                    .padding()
-                }
-                
-            } else {
-                 Image(.characterHome)
-            }
-        }
-    }
+//    var PIPView: some View {
+//        ZStack {
+//            if let uiimage = selectedCloth?.numericalUIImage {
+//                 ZStack(alignment: .bottom) {
+//                    Image(uiImage: uiimage)
+//                    
+//                    HStack {
+//                        Text(selectedCloth?.size ?? "")
+//                        
+//                        Spacer()
+//                        
+//                        Image(.characterHome)
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 30)
+//                    }
+//                    .padding()
+//                }
+//                
+//            } else {
+//                 Image(.characterHome)
+//            }
+//        }
+//    }
 }
