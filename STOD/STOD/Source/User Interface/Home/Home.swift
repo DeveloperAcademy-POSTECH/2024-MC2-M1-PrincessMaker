@@ -23,7 +23,7 @@ struct Home: View {
             PIPSection()
             CategorySection(selectedCategory: $selectedCategory,
                             isOnlyTap: false)
-            ClothList(selectedCategory: selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
+            ClothList(selectedCategory: $selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
 //            ClothListPageView(showRegisterView: $showRegisterView,
 //                              selectedCategory: $selectedCategory,
 //                              selectedCloth: $selectedCloth)
