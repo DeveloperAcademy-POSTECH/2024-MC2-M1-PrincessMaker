@@ -26,6 +26,10 @@
 		3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E72BFAF5A300E5707E /* CategorySection.swift */; };
 		3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E92BFAF68100E5707E /* CategoryButton.swift */; };
 		3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2EB2BFB146800E5707E /* MainCategory.swift */; };
+		394135BC2C03BC520005F371 /* PIPTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394135BB2C03BC520005F371 /* PIPTest.swift */; };
+		394135BF2C03BC7A0005F371 /* UIPiPView in Frameworks */ = {isa = PBXBuildFile; productRef = 394135BE2C03BC7A0005F371 /* UIPiPView */; };
+		394135C22C03C2690005F371 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 394135C12C03C2690005F371 /* SnapKit */; };
+		394135C52C03C2890005F371 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 394135C42C03C2890005F371 /* Then */; };
 		395A5B342C0264B80013E516 /* Pipify in Frameworks */ = {isa = PBXBuildFile; productRef = 395A5B332C0264B80013E516 /* Pipify */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268402BF7E0E800C27F52 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
@@ -91,6 +95,7 @@
 		3930F2E72BFAF5A300E5707E /* CategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySection.swift; sourceTree = "<group>"; };
 		3930F2E92BFAF68100E5707E /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		3930F2EB2BFB146800E5707E /* MainCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategory.swift; sourceTree = "<group>"; };
+		394135BB2C03BC520005F371 /* PIPTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPTest.swift; sourceTree = "<group>"; };
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewJane.swift; sourceTree = "<group>"; };
@@ -142,7 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */,
+				394135BF2C03BC7A0005F371 /* UIPiPView in Frameworks */,
 				39E3E44A2BF9D2230033FB89 /* BrightroomUI in Frameworks */,
+				394135C52C03C2890005F371 /* Then in Frameworks */,
+				394135C22C03C2690005F371 /* SnapKit in Frameworks */,
 				38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */,
 				395A5B342C0264B80013E516 /* Pipify in Frameworks */,
 			);
@@ -327,6 +335,7 @@
 				39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */,
 				39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */,
 				398DD8EC2BFB919300780D74 /* HapticManager.swift */,
+				394135BB2C03BC520005F371 /* PIPTest.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -407,6 +416,9 @@
 				39E3E4492BF9D2230033FB89 /* BrightroomUI */,
 				38A5D8872BFEEA0F008A82FD /* Lottie */,
 				395A5B332C0264B80013E516 /* Pipify */,
+				394135BE2C03BC7A0005F371 /* UIPiPView */,
+				394135C12C03C2690005F371 /* SnapKit */,
+				394135C42C03C2890005F371 /* Then */,
 			);
 			productName = STOD;
 			productReference = 3972683A2BF7E0E800C27F52 /* STOD.app */;
@@ -440,6 +452,9 @@
 				39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */,
 				38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */,
+				394135BD2C03BC7A0005F371 /* XCRemoteSwiftPackageReference "UIPiPView" */,
+				394135C02C03C2690005F371 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 3972683B2BF7E0E800C27F52 /* Products */;
 			projectDirPath = "";
@@ -509,6 +524,7 @@
 				EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */,
 				EE7C9BDE2BFD8ABE0016C053 /* ClothesPhotoView.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
+				394135BC2C03BC520005F371 /* PIPTest.swift in Sources */,
 				EE2E721C2BFA395200CD3E7F /* RegisterMainCategory.swift in Sources */,
 				EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */,
 				38A5D8842BFEE9DC008A82FD /* IndicatorView.swift in Sources */,
@@ -754,6 +770,30 @@
 				minimumVersion = 4.4.3;
 			};
 		};
+		394135BD2C03BC7A0005F371 /* XCRemoteSwiftPackageReference "UIPiPView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uakihir0/UIPiPView";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		394135C02C03C2690005F371 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/getsidetrack/swiftui-pipify";
@@ -777,6 +817,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		394135BE2C03BC7A0005F371 /* UIPiPView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 394135BD2C03BC7A0005F371 /* XCRemoteSwiftPackageReference "UIPiPView" */;
+			productName = UIPiPView;
+		};
+		394135C12C03C2690005F371 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 394135C02C03C2690005F371 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		394135C42C03C2890005F371 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 		395A5B332C0264B80013E516 /* Pipify */ = {
 			isa = XCSwiftPackageProductDependency;

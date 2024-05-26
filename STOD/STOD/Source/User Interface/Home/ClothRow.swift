@@ -20,14 +20,24 @@ struct ClothRow: View {
     
     var body: some View {
         Button {
-            //selectedCloth = nil
-//            showPIP = false
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if selectedCloth == cloth {
+                showPIP = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    selectedCloth = nil
+                }
+            } else {
                 selectedCloth = cloth
-           // }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                showPIP = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    showPIP = true
+                }
             }
+            
+            
+            //            selectedCloth = cloth
+            //
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                showPIP = true
+//            }
         } label: {
             HStack(spacing: 12) {
                 if let uiImageName = cloth.clothUIImage {
