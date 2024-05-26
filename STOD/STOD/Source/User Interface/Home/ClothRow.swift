@@ -20,11 +20,12 @@ struct ClothRow: View {
     
     var body: some View {
         Button {
-            if selectedCloth == cloth {
-                selectedCloth = nil
-                showPIP = false
-            } else {
+            //selectedCloth = nil
+//            showPIP = false
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 selectedCloth = cloth
+           // }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 showPIP = true
             }
         } label: {
@@ -45,7 +46,7 @@ struct ClothRow: View {
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                 }
                 
-                    
+                
                 VStack(alignment: .leading, spacing: 11) {
                     Text(cloth.name)
                         .font(.StodTitle1)

@@ -23,17 +23,14 @@ struct Home: View {
             PIPSection()
             CategorySection(selectedCategory: $selectedCategory,
                             isOnlyTap: false)
-            ClothList(selectedCategory: selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
-//            ClothListPageView(showRegisterView: $showRegisterView,
-//                              selectedCategory: $selectedCategory,
-//                              selectedCloth: $selectedCloth)
+            ClothList(selectedCategory: $selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
         }
         .animation(.snappy, value: selectedCategory)
         .fullScreenCover(isPresented: $showRegisterView) {
             RegisterMainCategory()
         }
         .pipify(isPresented: $showPIP) {
-            PIPView
+            PIPView(selectedCloth: $selectedCloth)
         }
     }
 }
@@ -58,28 +55,28 @@ struct Home: View {
 
 extension Home {
     
-    var PIPView: some View {
-        ZStack {
-            if let uiimage = selectedCloth?.numericalUIImage {
-                 ZStack(alignment: .bottom) {
-                    Image(uiImage: uiimage)
-                    
-                    HStack {
-                        Text(selectedCloth?.size ?? "")
-                        
-                        Spacer()
-                        
-                        Image(.characterHome)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30)
-                    }
-                    .padding()
-                }
-                
-            } else {
-                 Image(.characterHome)
-            }
-        }
-    }
+//    var PIPView: some View {
+//        ZStack {
+//            if let uiimage = selectedCloth?.numericalUIImage {
+//                 ZStack(alignment: .bottom) {
+//                    Image(uiImage: uiimage)
+//                    
+//                    HStack {
+//                        Text(selectedCloth?.size ?? "")
+//                        
+//                        Spacer()
+//                        
+//                        Image(.characterHome)
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 30)
+//                    }
+//                    .padding()
+//                }
+//                
+//            } else {
+//                 Image(.characterHome)
+//            }
+//        }
+//    }
 }

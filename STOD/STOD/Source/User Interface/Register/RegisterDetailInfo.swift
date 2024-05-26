@@ -90,6 +90,7 @@ struct RegisterDetailInfo: View {
                     .padding()
                 if registerState == 4 {
                     SkipButton
+                        .padding(.bottom, 16)
                 }
             }
             .animation(.snappy, value: registerState)

@@ -19,6 +19,7 @@
 		3925489F2BFF796A00D761D7 /* SampleCloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925489E2BFF796A00D761D7 /* SampleCloth.swift */; };
 		392548A12BFF822800D761D7 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392548A02BFF822800D761D7 /* LaunchScreen.swift */; };
 		392548A32BFF901600D761D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392548A22BFF901600D761D7 /* ContentView.swift */; };
+		3925AB642C03253200A686C9 /* PIPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925AB632C03253200A686C9 /* PIPView.swift */; };
 		39285BC32C019A5A00710E73 /* MainCategoryButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */; };
 		39285BC72C01C0C800710E73 /* RegisterDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC62C01C0C800710E73 /* RegisterDetailInfo.swift */; };
 		3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E52BFAF1D000E5707E /* PIPSection.swift */; };
@@ -83,6 +84,7 @@
 		3925489E2BFF796A00D761D7 /* SampleCloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCloth.swift; sourceTree = "<group>"; };
 		392548A02BFF822800D761D7 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		392548A22BFF901600D761D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3925AB632C03253200A686C9 /* PIPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPView.swift; sourceTree = "<group>"; };
 		39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryButotn.swift; sourceTree = "<group>"; };
 		39285BC62C01C0C800710E73 /* RegisterDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDetailInfo.swift; sourceTree = "<group>"; };
 		3930F2E52BFAF1D000E5707E /* PIPSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPSection.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				3972685C2BF7E30200C27F52 /* Home.swift */,
+				3925AB632C03253200A686C9 /* PIPView.swift */,
 				3930F2E52BFAF1D000E5707E /* PIPSection.swift */,
 				3930F2E72BFAF5A300E5707E /* CategorySection.swift */,
 				3930F2E92BFAF68100E5707E /* CategoryButton.swift */,
@@ -359,9 +362,9 @@
 			isa = PBXGroup;
 			children = (
 				EE2E721B2BFA395200CD3E7F /* RegisterMainCategory.swift */,
-				39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */,
 				39285BC62C01C0C800710E73 /* RegisterDetailInfo.swift */,
 				EE7C9BDF2BFD8D9C0016C053 /* RegisetSuccess.swift */,
+				39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */,
 				EE2E72192BFA2BDE00CD3E7F /* UpdateView.swift */,
 				395A5B312C02265E0013E516 /* Remainder */,
 			);
@@ -502,6 +505,7 @@
 				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
 				38A5D8822BFEE9DC008A82FD /* OnboardingView.swift in Sources */,
 				392548A32BFF901600D761D7 /* ContentView.swift in Sources */,
+				3925AB642C03253200A686C9 /* PIPView.swift in Sources */,
 				EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */,
 				EE7C9BDE2BFD8ABE0016C053 /* ClothesPhotoView.swift in Sources */,
 				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
