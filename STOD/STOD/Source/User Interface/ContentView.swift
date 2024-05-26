@@ -15,7 +15,7 @@ struct ContentView: View {
         if isLoading {
             LaunchScreen()
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                         withAnimation {
                             isLoading = false
                         }
