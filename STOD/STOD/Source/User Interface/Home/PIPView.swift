@@ -26,16 +26,18 @@ struct PIPView: View {
             }
             HStack(alignment: .bottom) {
                 Text(selectedCloth?.size ?? "")
-                    .font(Font.custom("Pretendard-Bold", size: 40))
+                    .font(Font.custom("Pretendard-Bold", size: 48))
                     .foregroundStyle(.stodWhite)
                     .padding(25)
                     .background(.stodGray200.opacity(0.6))
                     .clipShape(RoundedRectangle(cornerRadius: 30))
                 
                 Spacer()
-                Text("STOD")
-                    .font(Font.custom("Pretendard-Bold", size: 30))
-                    .foregroundStyle(.stodBlack)
+                Image(.STOD)
+                    .resizable()
+                    .scaledToFit()
+                    .clipped()
+                    .frame(width: 120)
             }
             .padding(36)
         }
