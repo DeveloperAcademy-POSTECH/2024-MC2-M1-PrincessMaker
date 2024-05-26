@@ -23,6 +23,7 @@ struct OnboardingCard: View {
             
             LottieView(animation: .named(lottie))
                 .looping()
+                .animationSpeed(2)
                 .resizable()
                 .scaledToFill()
                 .shadow(radius: 20)

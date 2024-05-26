@@ -32,7 +32,7 @@ struct OnboardingView: View {
                                 Image("Onboarding_O")
                                     .offset(x:130, y:70)
                                 
-                                OnboardingCard(title: "아래로 끌어당겨 \n새로운 옷 정보 등록하세요.",
+                                OnboardingCard(title: "아래로 끌어당겨 \n새로운 옷 정보를 등록하세요.",
                                                lottie: "ONBOARDING02.lottie")
                             }
                         }
