@@ -13,7 +13,7 @@ enum PhotosCropError: Error {
     case imageDataMissing
 }
 
-struct PhotosCrop: UIViewControllerRepresentable {
+struct ImageEditor: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var inputImageData: Data?
     @Binding var resultImageData: Data?

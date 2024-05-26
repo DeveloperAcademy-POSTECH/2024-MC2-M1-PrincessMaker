@@ -8,27 +8,29 @@
 import SwiftUI
 
 struct PipView: View {
-    @Binding var selectedCloth: Cloth
+    @Binding var selectedCloth: Cloth?
     
     var body: some View {
         ZStack {
-            Image(selectedCloth.mainPhotoPath!)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 300, height: 200)
-            VStack {
-                Spacer()
-                HStack {
-                    ZStack {
-                        Circle()
-                            .frame(width:35, height: 35)
-                            .foregroundStyle(.black)
-                            .opacity(0.4)
-                        Text(selectedCloth.size)
-                            .foregroundStyle(.white)
-                    }
-                    .padding(15)
+            if let uiImage = selectedCloth?.numericalUIImage {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 300, height: 200)
+                VStack {
                     Spacer()
+                    HStack {
+                        ZStack {
+                            Circle()
+                                .frame(width:35, height: 35)
+                                .foregroundStyle(.black)
+                                .opacity(0.4)
+                            Text(selectedCloth?.size ?? "")
+                                .foregroundStyle(.white)
+                        }
+                        .padding(15)
+                        Spacer()
+                    }
                 }
             }
         }

@@ -21,36 +21,40 @@ final class Cloth {
     @Attribute(.unique) var id: UUID
     var name: String
     var size: String
-//    @Attribute(.externalStorage)
-    var numericalPhotoPath: String?
-//    @Attribute(.externalStorage)
-    var mainPhotoPath: String?
-    var selectedSubCategory: String
-    var selectedMainCategory: String
+    var numericalImageData: Data?
+    var clothImageData: Data?
+    var subCategory: String
+    var mainCategory: String
+    var isPinned: Bool
+    var date: Date
     
-    init(name: String, size: String, numericalPhotoPath: String?, mainPhotoPath: String?, selectedSubCategory: String, selectedMainCategory: String) {
+    init(name: String = "", size: String = "", numericalImageData: Data? = nil, clothImageData: Data? = nil, subCategory: String = "", mainCategory: String = "", isPinned: Bool = false) {
         self.id = UUID()
         self.name = name
         self.size = size
-        self.numericalPhotoPath = numericalPhotoPath
-        self.mainPhotoPath = mainPhotoPath
-        self.selectedSubCategory = selectedSubCategory
-        self.selectedMainCategory = selectedMainCategory
+        self.numericalImageData = numericalImageData
+        self.clothImageData = clothImageData
+        self.subCategory = subCategory
+        self.mainCategory = mainCategory
+        self.isPinned = isPinned
+        self.date = .now
     }
     
     var numericalUIImage: UIImage? {
-            if let path = numericalPhotoPath,
-               let image = UIImage(contentsOfFile: path) {
-                return image
-            }
-            return nil
+        if let data = numericalImageData,
+           let image = UIImage(data: data) {
+            return image
         }
-        
-        var mainUIImage: UIImage? {
-            if let path = mainPhotoPath,
-               let image = UIImage(contentsOfFile: path) {
-                return image
-            }
-            return nil
+        return nil
+    }
+    
+    var clothUIImage: UIImage? {
+        if let data = clothImageData,
+           let image = UIImage(data: data) {
+            return image
         }
+        return nil
+    }
+    
+    
 }

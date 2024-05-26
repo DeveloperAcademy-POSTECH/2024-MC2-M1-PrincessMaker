@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "rulerLine.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "RulerLine@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "rulerLine.png",
+      "filename" : "RulerLine@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
