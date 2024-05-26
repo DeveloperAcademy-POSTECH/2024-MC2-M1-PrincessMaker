@@ -12,7 +12,6 @@ struct ClothList: View {
     @Environment(\.modelContext) private var modelContext
     @Query var clothes: [Cloth]
     @Binding var selectedCategory: MainCategory
-    //let filteredClothes: [Cloth]
     @Binding var showRegisterView: Bool
     @Binding var selectedCloth: Cloth?
     @Binding var showPIP: Bool
@@ -21,30 +20,6 @@ struct ClothList: View {
     @State var editTargetIndex: Int = 0
     @State var isDeleting: Bool = false
     @State var deleteTargetIndex: Int = 0
-    
-    func deleteCloth(cloth: Cloth) {
-        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
-            withAnimation {
-                deleteTargetIndex = index
-                isDeleting = true
-            }
-        }
-    }
-    
-    func pinCloth(cloth: Cloth) {
-        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
-            withAnimation {
-                clothes[index].isPinned.toggle()
-            }
-        }
-    }
-    
-    func updateCloth(cloth: Cloth) {
-        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
-            editTargetIndex = index
-            isEditing = true
-        }
-    }
     
     var body: some View {
         List {
@@ -86,7 +61,7 @@ struct ClothList: View {
         .sheet(isPresented: $isEditing, content: {
             UpdateView(targetIndex: $editTargetIndex)
         })
-        .confirmationDialog("이 항목이 삭제됩니다.", isPresented: $isDeleting) {
+        .confirmationDialog("이 항목이 삭제됩니다.", isPresented: $isDeleting, titleVisibility: .visible) {
             Button("삭제", role: .destructive) { IndexSet(integer: deleteTargetIndex).map { clothes[$0] }.forEach(modelContext.delete) }
         }
         .refreshable {
@@ -116,13 +91,66 @@ struct ClothList: View {
         
     }
     
+   
+}
+
+extension ClothList {
+    private func DeleteButton(cloth: Cloth) -> some View {
+        Button(role: .destructive){
+            deleteCloth(cloth: cloth)
+        } label: {
+            Label("삭제", systemImage: "trash")
+                .font(.subheadline)
+        }
+    }
+    
+    private func EditButton(cloth: Cloth) -> some View {
+        Button {
+            updateCloth(cloth: cloth)
+        } label: {
+            Label("수정", systemImage: "pencil")
+        }
+    }
+    
+    private func PinButton(cloth: Cloth) -> some View {
+        Button {
+            pinCloth(cloth: cloth)
+        } label: {
+            Label(cloth.isPinned ? "고정 해제" : "고정", systemImage: cloth.isPinned ? "pin.slash" : "pin")
+        }
+    }
+    
+    private func deleteCloth(cloth: Cloth) {
+        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+            withAnimation {
+                deleteTargetIndex = index
+                isDeleting = true
+            }
+        }
+    }
+    
+    private func pinCloth(cloth: Cloth) {
+        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+            withAnimation {
+                clothes[index].isPinned.toggle()
+            }
+        }
+    }
+    
+    private func updateCloth(cloth: Cloth) {
+        if let index = clothes.firstIndex(where: { $0.id == cloth.id }) {
+            editTargetIndex = index
+            isEditing = true
+        }
+    }
+    
     private func refresh() async {
         // Pull to refresh가 호출되었을 때 0.5초 지연 후 다른 뷰를 표시
-        try? await Task.sleep(nanoseconds: 1 * 500_000_000)
+        try? await Task.sleep(nanoseconds: 1 * 300_000_000)
         showRegisterView = true
     }
     
-    var filteredClothes: [Cloth] {
+    private var filteredClothes: [Cloth] {
         if selectedCategory == .recent {
             let clothes = clothes.sorted{ $0.date > $1.date}
             
@@ -143,33 +171,6 @@ struct ClothList: View {
                         return false
                     }
                 }
-        }
-    }
-}
-
-extension ClothList {
-    func DeleteButton(cloth: Cloth) -> some View {
-        Button(role: .destructive){
-            deleteCloth(cloth: cloth)
-        } label: {
-            Label("삭제", systemImage: "trash")
-                .font(.subheadline)
-        }
-    }
-    
-    func EditButton(cloth: Cloth) -> some View {
-        Button {
-            updateCloth(cloth: cloth)
-        } label: {
-            Label("수정", systemImage: "pencil")
-        }
-    }
-    
-    func PinButton(cloth: Cloth) -> some View {
-        Button {
-            pinCloth(cloth: cloth)
-        } label: {
-            Label(cloth.isPinned ? "고정 해제" : "고정", systemImage: cloth.isPinned ? "pin.slash" : "pin")
         }
     }
 }

@@ -24,9 +24,6 @@ struct Home: View {
             CategorySection(selectedCategory: $selectedCategory,
                             isOnlyTap: false)
             ClothList(selectedCategory: $selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
-//            ClothListPageView(showRegisterView: $showRegisterView,
-//                              selectedCategory: $selectedCategory,
-//                              selectedCloth: $selectedCloth)
         }
         .animation(.snappy, value: selectedCategory)
         .fullScreenCover(isPresented: $showRegisterView) {
