@@ -47,6 +47,7 @@ struct PIPViewRepresentable: UIViewControllerRepresentable {
         func startPIP(for viewController: PIPViewController) {
             viewController.updateView()
             viewController.startPIP()
+            viewController.pipView.render()
         }
     }
 }
@@ -143,7 +144,7 @@ class PIPViewController: UIViewController {
     
     func startPIP() {
         if (!pipView.isPictureInPictureActive()) {
-            pipView.startPictureInPicture(withRefreshInterval: (0.1 / 60.0))
+            pipView.startPictureInPictureWithManualCallRender()
         }
     }
 }
