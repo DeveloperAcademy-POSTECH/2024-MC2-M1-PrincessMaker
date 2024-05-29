@@ -22,7 +22,7 @@ struct Home: View {
     var body: some View {
         ZStack(alignment: .top) {
             PIPViewRepresentable(showPipView: $showPIP, selectedCloth: $selectedCloth)
-                .frame(width: 343, height: 192)
+                .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/16*9)
             Color.black
                 .frame(width: .infinity, height: 600)
             VStack(spacing: 24) {
@@ -33,7 +33,7 @@ struct Home: View {
                 
             }
         }
-        .animation(.snappy, value: selectedCategory)
+        //.animation(.snappy(duration: 0.15), value: selectedCategory)
         .fullScreenCover(isPresented: $showRegisterView) {
             RegisterMainCategory()
         }

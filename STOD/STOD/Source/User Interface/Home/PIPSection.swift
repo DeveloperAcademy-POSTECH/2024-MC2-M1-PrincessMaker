@@ -25,7 +25,7 @@ struct PIPSection: View {
             }
         }
         .padding(.horizontal, 16)
-        .frame(height: 200)
+        .frame(height: (UIScreen.main.bounds.width-32)/16*9)
     }
 }
 

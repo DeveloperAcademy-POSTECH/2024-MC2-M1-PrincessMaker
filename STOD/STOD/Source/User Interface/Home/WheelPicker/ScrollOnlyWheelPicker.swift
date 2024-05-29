@@ -54,10 +54,11 @@ struct ScrollOnlyWheelPicker: View {
             .overlay(alignment: .top) {
                 Rectangle()
                     .foregroundStyle(.accent)
-                    .frame(width: 1, height: 20, alignment: .center)
+                    .frame(width: 1.5, height: 20, alignment: .center)
                     .frame(maxHeight: 20, alignment: .top)
             }
-            .safeAreaPadding(.horizontal, -horizontalPadding)
+            // 19 or 1
+            .safeAreaPadding(.horizontal, (UIScreen.main.bounds.width-393+2)/2)
             .onAppear {
                 if !isLoaded { isLoaded = true }
             }
