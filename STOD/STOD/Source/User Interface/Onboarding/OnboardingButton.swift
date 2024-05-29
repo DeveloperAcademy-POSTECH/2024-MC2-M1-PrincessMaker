@@ -10,13 +10,14 @@ import SwiftUI
 struct OnboardingButton: View {
     
     @Binding var isSet: Int
-    @AppStorage("firstLaunch") var firstLaunch: Bool = true
+    @Binding var onboarding: Bool
+    //@AppStorage("firstLaunch") var firstLaunch: Bool = true
     
     var body: some View {
         Button {
             print("Button is clicked")
-            firstLaunch = false
-            
+            //firstLaunch = false
+            onboarding = false
         } label: {
             HStack {
                 Spacer()

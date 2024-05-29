@@ -14,12 +14,12 @@ struct RegisetSuccess: View {
     
     var body: some View {
         VStack{
-            ZStack{
+            ZStack {
                 Image(.rulerLine)
                     .resizable()
                 
                 VStack(alignment: .center){
-                    Spacer().frame(height: 130)
+                    Spacer()
                     
                     Image(.colorCharacter)
                     

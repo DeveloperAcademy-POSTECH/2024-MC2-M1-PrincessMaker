@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    
+    @Binding var onboarding: Bool
     @State private var tabSelection: Int = 0
     
     var body: some View {
@@ -49,7 +49,7 @@ struct OnboardingView: View {
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 
                 IndicatorView(tabSelection: $tabSelection)
-                OnboardingButton(isSet: $tabSelection)
+                OnboardingButton(isSet: $tabSelection, onboarding: $onboarding)
             }
             .background(Color(hex: "#363636"))
         }
@@ -57,5 +57,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(onboarding: .constant(false))
 }

@@ -239,12 +239,12 @@ extension RegisterDetailInfo {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: 192)
+                        .frame(height: (UIScreen.main.bounds.width-32)/16*9)
                     if let data = cloth.numericalImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: 192, alignment: .center)
+                            .frame(height: (UIScreen.main.bounds.width-32)/16*9, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         Image(systemName: "photo.badge.plus")
@@ -270,12 +270,12 @@ extension RegisterDetailInfo {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: 192)
+                        .frame(height: (UIScreen.main.bounds.width-32)/16*9)
                     if let data = cloth.clothImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: 192, alignment: .center)
+                            .frame(height: (UIScreen.main.bounds.width-32)/16*9, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         Image(systemName: "photo.badge.plus")

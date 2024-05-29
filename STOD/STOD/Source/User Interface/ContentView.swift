@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("firstLaunch") var firstLaunch: Bool = true
+    //@AppStorage("firstLaunch") var firstLaunch: Bool = true
     @State var isLoading: Bool = true
+    @State var onboarding: Bool = true
     
     var body: some View {
         if isLoading {
@@ -22,8 +23,8 @@ struct ContentView: View {
                     }
                 }
         } else {
-            if firstLaunch {
-                OnboardingView()
+            if onboarding {
+                OnboardingView(onboarding: $onboarding)
             } else {
                 Home()
             }
