@@ -58,12 +58,6 @@ struct ClothList: View {
         .listStyle(.plain)
         .scrollIndicators(.hidden)
         .animation(.linear(duration: 0.3), value: clothes)
-        .sheet(isPresented: $isEditing, content: {
-            UpdateView(targetIndex: $editTargetIndex)
-        })
-        .confirmationDialog("이 항목이 삭제됩니다.", isPresented: $isDeleting, titleVisibility: .visible) {
-            Button("삭제", role: .destructive) { IndexSet(integer: deleteTargetIndex).map { clothes[$0] }.forEach(modelContext.delete) }
-        }
         .refreshable {
             withAnimation {
                 isRefreshing = true
@@ -72,6 +66,12 @@ struct ClothList: View {
             withAnimation {
                 isRefreshing = false
             }
+        }
+        .sheet(isPresented: $isEditing, content: {
+            UpdateView(targetIndex: $editTargetIndex)
+        })
+        .confirmationDialog("이 항목이 삭제됩니다.", isPresented: $isDeleting, titleVisibility: .visible) {
+            Button("삭제", role: .destructive) { IndexSet(integer: deleteTargetIndex).map { clothes[$0] }.forEach(modelContext.delete) }
         }
         .overlay(alignment: .top) {
             if isRefreshing {
@@ -90,8 +90,6 @@ struct ClothList: View {
         }
         
     }
-    
-   
 }
 
 extension ClothList {
