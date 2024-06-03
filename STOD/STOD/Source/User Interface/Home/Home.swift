@@ -21,10 +21,12 @@ struct Home: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            PIPViewRepresentable(showPipView: $showPIP, selectedCloth: $selectedCloth)
-                .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/16*9)
+            UIPIPView(showPipView: $showPIP,
+                      selectedCloth: $selectedCloth,
+                      showRegisterView: $showRegisterView)
+                .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3)
             Color.black
-                .frame(width: .infinity, height: 600)
+                .frame(height: 600)
             VStack(spacing: 24) {
                 PIPSection()
                 CategorySection(selectedCategory: $selectedCategory,

@@ -12,9 +12,10 @@ import SnapKit
 import Then
 
 
-struct PIPViewRepresentable: UIViewControllerRepresentable {
+struct UIPIPView: UIViewControllerRepresentable {
     @Binding var showPipView: Bool
     @Binding var selectedCloth: Cloth?
+    @Binding var showRegisterView: Bool
     
     func makeUIViewController(context: Context) -> PIPViewController {
         let pipView = PIPViewController()
@@ -24,11 +25,10 @@ struct PIPViewRepresentable: UIViewControllerRepresentable {
     
     func updateUIViewController(_ uiViewController: PIPViewController, context: Context) {
         uiViewController.selectedCloth = selectedCloth
-        if selectedCloth == nil {
-            uiViewController.pipView.stopPictureInPicture()
-        }
-        if !showPipView && uiViewController.pipView.isPictureInPictureActive() {
-            uiViewController.pipView.stopPictureInPicture()
+        if selectedCloth == nil || showRegisterView {
+            context.coordinator.stopPIP(for: uiViewController)
+        } else if !showPipView && uiViewController.pipView.isPictureInPictureActive() {
+            context.coordinator.stopPIP(for: uiViewController)
         } else if showPipView {
             context.coordinator.startPIP(for: uiViewController)
         }
@@ -39,9 +39,13 @@ struct PIPViewRepresentable: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject {
-        var parent: PIPViewRepresentable
-        init(_ parent: PIPViewRepresentable) {
+        var parent: UIPIPView
+        init(_ parent: UIPIPView) {
             self.parent = parent
+        }
+        
+        func stopPIP(for viewController: PIPViewController) {
+            viewController.pipView.stopPictureInPicture()
         }
         
         func startPIP(for viewController: PIPViewController) {
@@ -96,9 +100,6 @@ class PIPViewController: UIViewController {
         sizeLabel.do {
             $0.font = UIFont(name: "Pretendard-Bold", size: 12)
             $0.textColor = UIColor.stodWhite
-            //            $0.numberOfLines = 1
-            //            $0.adjustsFontSizeToFitWidth = true
-            //            $0.minimumScaleFactor = 0.5
         }
         
         view.addSubview(pipView)

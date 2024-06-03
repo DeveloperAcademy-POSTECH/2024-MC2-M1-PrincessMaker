@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PIPView: View {
+struct PIPSwiftUIView: View {
     @Binding var selectedCloth: Cloth?
     
     var body: some View {
@@ -46,5 +46,5 @@ struct PIPView: View {
 }
 
 #Preview {
-    PIPView(selectedCloth: .constant(Cloth(size: "Large", numericalImageData: UIImage(resource: .onboardingT).pngData())))
+    PIPSwiftUIView(selectedCloth: .constant(Cloth(size: "Large", numericalImageData: UIImage(resource: .onboardingT).pngData())))
 }
