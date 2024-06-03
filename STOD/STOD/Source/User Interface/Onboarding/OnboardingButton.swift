@@ -9,15 +9,13 @@ import SwiftUI
 
 struct OnboardingButton: View {
     
-    @Binding var isSet: Int
-    @Binding var onboarding: Bool
-    //@AppStorage("firstLaunch") var firstLaunch: Bool = true
+    @Binding var tabSelection: Int
+    @AppStorage("firstLaunch") var firstLaunch: Bool = true
     
     var body: some View {
         Button {
             print("Button is clicked")
-            //firstLaunch = false
-            onboarding = false
+            firstLaunch = false
         } label: {
             HStack {
                 Spacer()
@@ -30,11 +28,11 @@ struct OnboardingButton: View {
         }
         .background {
             RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(isSet == 2 ? .accentColor : .stodGray100)
+                .foregroundColor(tabSelection == 2 ? .accentColor : .stodGray100)
                 .frame(height: 50)
         }
         .padding(EdgeInsets(top: 0, leading: 16, bottom: 30, trailing: 16))
-        .disabled(isSet != 2)
+        .disabled(tabSelection != 2)
     }
 }
 
