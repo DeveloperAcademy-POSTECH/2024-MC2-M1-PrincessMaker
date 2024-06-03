@@ -12,7 +12,7 @@ struct ScrollOnlyWheelPicker: View {
     var config: Config
     /// View Status
     @Binding var selectedCategory: MainCategory
-    @State var value: Int = -15
+    @State var value: Int = -30
     @State var isLoaded: Bool = false
     
     var body: some View {
