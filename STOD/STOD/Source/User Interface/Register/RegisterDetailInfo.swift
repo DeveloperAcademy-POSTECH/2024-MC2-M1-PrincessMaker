@@ -85,6 +85,7 @@ struct RegisterDetailInfo: View {
                     .padding()
                 }
                 .scrollIndicators(.never)
+                .contentMargins(.bottom, 20, for: .scrollContent)
                 
                 NextButton
                     .padding()
@@ -123,6 +124,7 @@ struct RegisterDetailInfo: View {
             .fullScreenCover(isPresented: $showSuccessView) {
                 RegisetSuccess(name: $cloth.name, showRegisterView: $showRegisterView)
             }
+            .dismissKeyboard()
             
         }
     }
@@ -142,7 +144,7 @@ extension RegisterDetailInfo {
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
-                .disabled(registerState >= 1)
+                //.disabled(registerState >= 1)
                 .focused($focusField, equals: .name)
             
             Spacer().frame(height: 12)
@@ -169,7 +171,7 @@ extension RegisterDetailInfo {
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
-                .disabled(registerState >= 2)
+                //.disabled(registerState >= 2)
                 .focused($focusField, equals: .size)
             
             Spacer().frame(height: 12)
@@ -239,19 +241,26 @@ extension RegisterDetailInfo {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: (UIScreen.main.bounds.width-32)/16*9)
+                        .frame(height: (UIScreen.main.bounds.width-32)/5*4)
                     if let data = cloth.numericalImageData {
+                        
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: (UIScreen.main.bounds.width-32)/16*9, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/5*4, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
-                        Image(systemName: "photo.badge.plus")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 30, height: 23)
-                            .foregroundColor(.stodGray100)
+                        VStack(spacing: 12) {
+                            Image(systemName: "photo.badge.plus")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 30, height: 23)
+                                .foregroundColor(.stodGray100)
+                            Text("이곳에 보이는 대로 저장됩니다.")
+                                .font(.StodBody)
+                                .foregroundStyle(.stodGray100)
+                        }
+                        
                     }
                 }
                 
@@ -270,12 +279,12 @@ extension RegisterDetailInfo {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: (UIScreen.main.bounds.width-32)/16*9)
+                        .frame(height: (UIScreen.main.bounds.width-32)/5*4)
                     if let data = cloth.clothImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: (UIScreen.main.bounds.width-32)/16*9, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/5*4, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         Image(systemName: "photo.badge.plus")

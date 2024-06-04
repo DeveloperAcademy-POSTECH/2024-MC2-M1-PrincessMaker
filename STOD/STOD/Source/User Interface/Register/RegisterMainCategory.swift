@@ -32,10 +32,8 @@ struct RegisterMainCategory: View {
                 
                 LazyVGrid(columns: columns) {
                     ForEach(0..<MainCategory.allCases.count) { index in
-                        if index != 3 {
-                            var correctedIndex = index < 3 ? index + 4 : index - 4
-                            
-                            let category = MainCategory.allCases[correctedIndex]
+                        let category = MainCategory.allCases[index]
+                        if category != .recent {
                             Button {
                                 cloth.mainCategory = category.rawValue
                                 showNextView = true
@@ -80,4 +78,4 @@ struct RegisterMainCategory: View {
 
 #Preview {
     RegisterMainCategory()
-}      
+}
