@@ -79,7 +79,7 @@ struct ClothRow: View {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(isSelected ? .accent : .stodGray200)
             }
-            .animation(.easeInOut(duration: 0.2), value: selectedCloth)
+            .animation(.easeInOut(duration: 0.05), value: selectedCloth)
         }
     }
 }

@@ -241,13 +241,13 @@ extension RegisterDetailInfo {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: (UIScreen.main.bounds.width-32)/5*4)
+                        .frame(height: (UIScreen.main.bounds.width-32)/4*3)
                     if let data = cloth.numericalImageData {
                         
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/5*4, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         VStack(spacing: 12) {
@@ -279,12 +279,12 @@ extension RegisterDetailInfo {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: (UIScreen.main.bounds.width-32)/5*4)
+                        .frame(height: (UIScreen.main.bounds.width-32)/4*3)
                     if let data = cloth.clothImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/5*4, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         Image(systemName: "photo.badge.plus")
