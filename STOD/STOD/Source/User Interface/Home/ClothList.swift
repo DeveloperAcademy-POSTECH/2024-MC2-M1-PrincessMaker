@@ -20,13 +20,23 @@ struct ClothList: View {
     @State var editTargetIndex: Int = 0
     @State var isDeleting: Bool = false
     @State var deleteTargetIndex: Int = 0
+    var swipeText = "스크롤을 당겨서\n옷을 추가할 수 있어요"
     
     var body: some View {
         List {
             if filteredClothes.isEmpty {
                 HStack {
                     Spacer()
-                    Image(.emptyList)
+                    VStack(alignment: .center, spacing: 16) {
+                        Image(systemName: "arrow.down")
+                            .foregroundColor(.stodGray100)
+                            .padding(.top, 47)
+                        Text(LocalizedStringKey("swipeText"))
+                            .font(.StodTitle1)
+                            .foregroundColor(.stodGray100)
+                            .multilineTextAlignment(.center)
+                    }
+//                    Image(.emptyList)
                     Spacer()
                 }
                 .listRowInsets(EdgeInsets())

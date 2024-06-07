@@ -18,6 +18,15 @@ struct ClothRow: View {
         cloth == selectedCloth
     }
     
+    var localizedSubCategory: LocalizedStringKey {
+        if let mainCategory = MainCategory(rawValue: cloth.mainCategory),
+           let index = mainCategory.subcategories.firstIndex(of: cloth.subCategory) {
+            return mainCategory.localizedSubcategories[index]
+        } else {
+            return LocalizedStringKey(cloth.subCategory)
+        }
+    }
+    
     var body: some View {
         Button {
             if selectedCloth == cloth {
@@ -31,13 +40,6 @@ struct ClothRow: View {
                     showPIP = true
                 }
             }
-            
-            
-            //            selectedCloth = cloth
-            //
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//                showPIP = true
-//            }
         } label: {
             HStack(spacing: 12) {
                 if let uiImageName = cloth.clothUIImage {
@@ -56,18 +58,23 @@ struct ClothRow: View {
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                 }
                 
-                
                 VStack(alignment: .leading, spacing: 11) {
                     Text(cloth.name)
                         .font(.StodTitle1)
-                    Text("\(cloth.subCategory) . \(cloth.size)")
-                        .font(.StodBody)
+                    HStack{
+                        Text(localizedSubCategory)
+                            .font(.StodBody)
+                        Text(".")
+                            .font(.StodBody)
+                        Text(cloth.size)
+                            .font(.StodBody)
+                    }
                 }
                 .foregroundStyle(isSelected ? Color.stodBlack : Color.stodWhite)
                 
                 Spacer()
                 
-                if cloth.isPinned && selectedCategory != .recent{
+                if cloth.isPinned && selectedCategory != .recent {
                     Image(systemName: "pin.fill")
                         .font(.StodTitle1)
                         .foregroundStyle(isSelected ? Color.stodBlack : Color.stodWhite)

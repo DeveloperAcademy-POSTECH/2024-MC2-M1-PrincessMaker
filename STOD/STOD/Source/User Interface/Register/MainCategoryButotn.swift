@@ -10,9 +10,13 @@ import SwiftUI
 struct RegisterCategoryButton: View {
     let category: MainCategory
     
+    var localizedMainCategoryRegister: LocalizedStringKey {
+        return LocalizedStringKey(category.rawValue)
+    }
+    
     var body: some View {
         HStack(alignment: .top) {
-            Text(category.rawValue)
+            Text(localizedMainCategoryRegister)
                 .foregroundColor(.white)
                 .font(.StodTitle1)
                 .fixedSize()

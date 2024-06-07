@@ -23,6 +23,10 @@ struct RegisterDetailInfo: View {
         modelContext.insert(cloth)
     }
     
+    private var localizedString: LocalizedStringKey {
+        return LocalizedStringKey(cloth.subCategory)
+    }
+    
     var buttonEnable: Bool {
         if registerState == 0 {
             return !cloth.name.isEmpty

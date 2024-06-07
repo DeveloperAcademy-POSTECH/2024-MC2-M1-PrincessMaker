@@ -23,21 +23,32 @@
         }
       }
     },
+    "." : {
+
+    },
     "%@" : {
 
     },
-    "%@ . %@" : {
+    "%lld" : {
+
+    },
+    "clothImageTitle" : {
+      "comment" : "clothImageTitle",
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ . %2$@"
+            "state" : "translated",
+            "value" : "Please choose a picture that shows the clothes"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옷 사진을 올려주세요"
           }
         }
       }
-    },
-    "%lld" : {
-
     },
     "ex) 딱 복숭아뼈까지 오는 청바지, 여리여리 블라우스" : {
       "localizations" : {
@@ -81,12 +92,148 @@
         }
       }
     },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "measurementImageTitle" : {
+      "comment" : "measurementImageTitle",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select a picture that contains the figures"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수치 사진을 올려주세요"
+          }
+        }
+      }
+    },
+    "nameTitle" : {
+      "comment" : "nameTitle",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Write the name of clothes you want to register"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옷 이름을 알려주세요"
+          }
+        }
+      }
+    },
+    "sizeTitle" : {
+      "comment" : "sizeTitle",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What size did you buy?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어떤 사이즈를 구매하셨나요?"
+          }
+        }
+      }
+    },
+    "subCategoryTitle" : {
+      "comment" : "subCategoryTitle",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select a sub-category of clothes"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "옷 종류를 알려주세요"
+          }
+        }
+      }
+    },
+    "swipeText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe to register a new clothes"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스크롤을 당겨서\\n옷을 추가할 수 있어요"
+          }
+        }
+      }
+    },
     "Wheel Picker" : {
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wheel Picker"
+          }
+        }
+      }
+    },
+    "가방" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가방"
+          }
+        }
+      }
+    },
+    "겨울_기타_코트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "겨울 기타 코트"
+          }
+        }
+      }
+    },
+    "겨울_더블_코트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "겨울 더블 코트"
+          }
+        }
+      }
+    },
+    "겨울_싱글_코트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "겨울 싱글 코트"
           }
         }
       }
@@ -123,6 +270,105 @@
         }
       }
     },
+    "구두" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구두"
+          }
+        }
+      }
+    },
+    "기타_바지" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기타 바지"
+          }
+        }
+      }
+    },
+    "기타_상의" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기타 상의"
+          }
+        }
+      }
+    },
+    "기타_스커트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기타 스커트"
+          }
+        }
+      }
+    },
+    "기타_신발" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기타 신발"
+          }
+        }
+      }
+    },
+    "기타_아우터" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기타 아우터"
+          }
+        }
+      }
+    },
+    "기타_원피스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기타 원피스"
+          }
+        }
+      }
+    },
+    "긴소매_티셔츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "긴소매 티셔츠"
+          }
+        }
+      }
+    },
+    "나일론_코치_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나일론/코치 재킷"
+          }
+        }
+      }
+    },
     "나중에 할래요" : {
       "localizations" : {
         "en" : {
@@ -135,6 +381,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "나중에 할래요"
+          }
+        }
+      }
+    },
+    "니트_스웨터" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweater"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "니트/스웨터"
+          }
+        }
+      }
+    },
+    "데님_팬츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데님 팬츠"
           }
         }
       }
@@ -155,6 +429,232 @@
         }
       }
     },
+    "레깅스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "레깅스"
+          }
+        }
+      }
+    },
+    "레더_라이더스_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "레더/라이더스 재킷"
+          }
+        }
+      }
+    },
+    "로퍼" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로퍼"
+          }
+        }
+      }
+    },
+    "롱_스커트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "롱 스커트"
+          }
+        }
+      }
+    },
+    "롱패딩_롱헤비_아우터" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "롱패딩/롱헤비 아우터"
+          }
+        }
+      }
+    },
+    "맥시_원피스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맥시 원피스"
+          }
+        }
+      }
+    },
+    "맨투맨_스웨트셔츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sweatshirt"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맨투맨/스웨트셔츠"
+          }
+        }
+      }
+    },
+    "모자" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모자"
+          }
+        }
+      }
+    },
+    "모카신_보트_슈즈" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모카신/보트 슈즈"
+          }
+        }
+      }
+    },
+    "무스탕_퍼" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무스탕/퍼"
+          }
+        }
+      }
+    },
+    "미니_스커트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미니 스커트"
+          }
+        }
+      }
+    },
+    "미니_원피스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미니 원피스"
+          }
+        }
+      }
+    },
+    "미디_스커트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미디 스커트"
+          }
+        }
+      }
+    },
+    "미디_원피스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미디 원피스"
+          }
+        }
+      }
+    },
+    "민소매_티셔츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "민소매 티셔츠"
+          }
+        }
+      }
+    },
+    "반소매_티셔츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "반소매 티셔츠"
+          }
+        }
+      }
+    },
+    "베스트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "베스트"
+          }
+        }
+      }
+    },
+    "부츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "부츠"
+          }
+        }
+      }
+    },
+    "블로퍼" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블로퍼"
+          }
+        }
+      }
+    },
+    "블루종" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "블루종"
+          }
+        }
+      }
+    },
     "사이즈" : {
       "localizations" : {
         "en" : {
@@ -167,6 +667,17 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "사이즈"
+          }
+        }
+      }
+    },
+    "사파리_헌팅_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사파리/헌팅 재킷"
           }
         }
       }
@@ -187,18 +698,96 @@
         }
       }
     },
+    "상의" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "상의"
+          }
+        }
+      }
+    },
+    "샌들" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "샌들"
+          }
+        }
+      }
+    },
+    "선글라스_안경테" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선글라스/안경테"
+          }
+        }
+      }
+    },
     "선택한 옷이 뜨는 곳이에요" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "It's where the clothes you choose come up"
+            "value" : "It's where the clothes \\nyou choose come up"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "선택한 옷이 뜨는 곳이에요"
+          }
+        }
+      }
+    },
+    "셔츠_블라우스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shirts, Blouse"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "셔츠/블라우스"
+          }
+        }
+      }
+    },
+    "숏패딩_숏헤비_아우터" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "숏패딩/숏헤비 아우터"
+          }
+        }
+      }
+    },
+    "숏팬츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "숏팬츠"
           }
         }
       }
@@ -235,24 +824,6 @@
         }
       }
     },
-    "수치 사진을 올려주세요" : {
-      "comment" : "measurementImageTitle",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please select a picture that contains the figures"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "수치 사진을 올려주세요"
-          }
-        }
-      }
-    },
     "쉽게 비교하자, STOD" : {
       "localizations" : {
         "en" : {
@@ -265,6 +836,94 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "쉽게 비교하자, STOD"
+          }
+        }
+      }
+    },
+    "슈트_블레이저_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "슈트/블레이저 재킷"
+          }
+        }
+      }
+    },
+    "슈트_팬츠_슬랙스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "슈트 팬츠/슬랙스"
+          }
+        }
+      }
+    },
+    "스타디움_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스타디움 재킷"
+          }
+        }
+      }
+    },
+    "스포츠 스니커즈" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스포츠 스니커즈"
+          }
+        }
+      }
+    },
+    "스포츠_상의" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스포츠 상의"
+          }
+        }
+      }
+    },
+    "스포츠_하의" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스포츠 하의"
+          }
+        }
+      }
+    },
+    "슬리퍼" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "슬리퍼"
+          }
+        }
+      }
+    },
+    "시계" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시계"
           }
         }
       }
@@ -285,23 +944,75 @@
         }
       }
     },
-    "어떤 사이즈를 구매하셨나요?" : {
-      "comment" : "sizeTitle",
+    "신발" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "What size did you buy?"
+            "value" : "Shoes"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "어떤 사이즈를 구매하셨나요?"
+            "state" : "needs_review",
+            "value" : "신발"
           }
         }
       }
+    },
+    "아노락_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아노락 재킷"
+          }
+        }
+      }
+    },
+    "아우터" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Outer"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "아우터"
+          }
+        }
+      }
+    },
+    "액세서리" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "액세서리"
+          }
+        }
+      }
+    },
+    "양말_레그워머" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "양말/레그워머"
+          }
+        }
+      }
+    },
+    "어떤 사이즈를 구매하셨나요?" : {
+
     },
     "어떤 옷을 찾고 계신가요?" : {
       "localizations" : {
@@ -315,6 +1026,17 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "어떤 옷을 찾고 계신가요?"
+          }
+        }
+      }
+    },
+    "언더웨어" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "언더웨어"
           }
         }
       }
@@ -335,34 +1057,8 @@
         }
       }
     },
-    "옷 사진을 올려주세요" : {
-      "comment" : "clothImageTitle",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please choose a picture that shows the clothes"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "옷 사진을 올려주세요"
-          }
-        }
-      }
-    },
     "옷 이름을 알려주세요" : {
-      "comment" : "nameTitle",
-      "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Write the name of clothes you want to register"
-          }
-        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -372,22 +1068,7 @@
       }
     },
     "옷 종류를 알려주세요" : {
-      "comment" : "subCategoryTitle",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select a sub-category of clothes"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "옷 종류를 알려주세요"
-          }
-        }
-      }
+
     },
     "옷의 카테고리를 선택해주세요" : {
       "localizations" : {
@@ -401,6 +1082,23 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "옷의 카테고리를 선택해주세요"
+          }
+        }
+      }
+    },
+    "원피스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dress"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "원피스"
           }
         }
       }
@@ -453,6 +1151,17 @@
         }
       }
     },
+    "점프_슈트_오버올" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점프 슈트/오버올"
+          }
+        }
+      }
+    },
     "정보를 수정해주세요." : {
       "localizations" : {
         "en" : {
@@ -485,6 +1194,189 @@
         }
       }
     },
+    "주얼리" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "주얼리"
+          }
+        }
+      }
+    },
+    "청재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "청재킷"
+          }
+        }
+      }
+    },
+    "최근" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "최근"
+          }
+        }
+      }
+    },
+    "카디건" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "카디건"
+          }
+        }
+      }
+    },
+    "캔버스_단화" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "캔버스/단화"
+          }
+        }
+      }
+    },
+    "코튼_팬츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "코튼 팬츠"
+          }
+        }
+      }
+    },
+    "트레이닝_재킷" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트레이닝 재킷"
+          }
+        }
+      }
+    },
+    "트레이닝_조거_팬츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트레이닝/조거 팬츠"
+          }
+        }
+      }
+    },
+    "패딩_베스트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패딩 베스트"
+          }
+        }
+      }
+    },
+    "패션_스니커즈화" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "패션 스니커즈화"
+          }
+        }
+      }
+    },
+    "패션잡화" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessory"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "패션잡화"
+          }
+        }
+      }
+    },
+    "플랫_슈즈" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "플랫 슈즈"
+          }
+        }
+      }
+    },
+    "플리스_뽀글이" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "플리스/뽀글이"
+          }
+        }
+      }
+    },
+    "피케_카라_티셔츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "피케, 카라 티셔츠"
+          }
+        }
+      }
+    },
+    "하의" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bottom"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "하의"
+          }
+        }
+      }
+    },
     "확인" : {
       "localizations" : {
         "en" : {
@@ -497,6 +1389,56 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "확인"
+          }
+        }
+      }
+    },
+    "환절기_코트" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "환절기 코트"
+          }
+        }
+      }
+    },
+    "후드_집업" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "후드 집업"
+          }
+        }
+      }
+    },
+    "후드_티셔츠" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoodie"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "후드 티셔츠"
+          }
+        }
+      }
+    },
+    "힐_펌프스" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "힐/펌프스"
           }
         }
       }
