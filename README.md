@@ -1,7 +1,8 @@
 # :iphone: STOD - Size Table On Display
 <div align="center">
 
-<img src="https://github.com/DeveloperAcademy-POSTECH/2024-MC2-M1-PrincessMaker/assets/125838606/5cae25d0-a9e2-40a4-84a7-72b93bfa65e3" width="300" height="250"/>
+![STOD_LOGO](https://github.com/DeveloperAcademy-POSTECH/2024-MC2-M1-PrincessMaker/assets/125838606/45ca20ca-0204-4560-9f71-4c52146dee3e)
+
 
 
 ### _**💃✨ STOD - Size Table On Display ✨🧚**_
