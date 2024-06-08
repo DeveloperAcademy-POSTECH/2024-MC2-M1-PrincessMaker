@@ -52,13 +52,12 @@ struct RegisterDetailInfo: View {
             VStack {
                 ProgressBar(progressStage: $registerState)
                 ScrollView(.vertical) {
-                    VStack(alignment: .leading, spacing: 0) {
+                    VStack(alignment: .leading, spacing: 24) {
                         Color.black.frame(height: 14)
                         
                         Text(titleText)
                             .font(.StodHeadline)
                             .foregroundColor(.white)
-                        Spacer().frame(height: 24)
                         
                         if registerState == 4 {
                             ClothImageSection

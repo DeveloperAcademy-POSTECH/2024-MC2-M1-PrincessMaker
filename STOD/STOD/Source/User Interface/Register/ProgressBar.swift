@@ -1,38 +1,60 @@
 //
-//  ProgressBar.swift
+//  ProgressBarTest.swift
 //  STOD
 //
-//  Created by kim kanghyeok on 6/7/24.
+//  Created by kim kanghyeok on 6/8/24.
 //
 
 import SwiftUI
 
 struct ProgressBar: View {
-    @Binding var progressStage: Int
-    @State private var progressSet: [String] = ["ProgressOne", "ProgressTwo", "ProgressThree", "ProgressFour"]
+    
     @State private var progressText: [String] = ["옷 이름", "사이즈", "옷 종류", "사진 등록"]
+    @Binding var progressStage: Int
     
     var body: some View {
         VStack {
-            Image(progressSet[progressStage])
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 335, height: 15)
-                .padding(EdgeInsets(top: 24, leading: 0, bottom: 12, trailing: 0))
-            HStack {
-                ForEach(0..<progressText.count) { stage in
-                    Spacer()
-                    Text(progressText[stage])
-                        .font(.StodBody)
-                        .foregroundStyle(progressStage == stage ? Color(hex:"#FFFFFF") : Color(hex: "#2B2B2B"))
-                        .frame(minWidth: 91, minHeight: 17)
-                    Spacer()
+            
+            HStack(spacing: 0) {
+                Circle()
+                    .frame(width: 9, height: 9)
+                    .foregroundStyle(.accent)
+                    .overlay(progressStage == 0 ? Circle().frame(width: 14, height: 14).foregroundStyle(.accent).opacity(0.5) : nil)
+                
+                ForEach(1..<progressText.count) { stage in
+                    Rectangle()
+                        .frame(width: 100, height: 1)
+                        .foregroundStyle(progressStage >= stage ? .accent : Color(hex: "#2B2B2B"))
+                    VStack {
+                        Circle()
+                            .frame(width: 9, height: 9)
+                            .foregroundStyle(progressStage >= stage ? .accent : Color(hex:"#2B2B2B"))
+                            .overlay(progressStage <= stage ? Circle().frame(width:14, height: 14).foregroundStyle(progressStage == stage ? .accent : Color(hex: "#2B2B2B")).opacity(progressStage == stage ? 0.5 : 1) : nil)
+                    }
                 }
+            }
+            .padding(EdgeInsets(top: 24, leading: 0, bottom: 12, trailing: 0))
+            
+            HStack(spacing: 55) {
+                Text(progressText[0])
+                    .font(.StodBody)
+                    .frame(width: 40)
+                Text(progressText[1])
+                    .font(.StodBody)
+                    .frame(width:37)
+                    .padding(.leading, 15)
+                Text(progressText[2])
+                    .font(.StodBody)
+                    .frame(width: 40)
+                    .padding(.leading)
+                Text(progressText[3])
+                    .font(.StodBody)
+                    .frame(width: 52)
             }
         }
     }
 }
 
 //#Preview {
-//    ProgressBar()
+//    ProgressBarTest()
 //}
