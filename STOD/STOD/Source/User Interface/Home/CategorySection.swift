@@ -10,7 +10,7 @@ import SwiftUI
 struct CategorySection: View {
     @Binding var selectedCategory: MainCategory
     let isOnlyTap: Bool
-    let config = ScrollOnlyWheelPicker.Config.init()
+    let config = ScrollTapWheelPicker.Config.init()
     
     var body: some View {
         if isOnlyTap {
@@ -34,7 +34,7 @@ struct CategorySection: View {
                 Text("어떤 옷을 찾고 계신가요?")
                     .font(.StodHeadline)
                     .padding(.horizontal, 16)
-                ScrollOnlyWheelPicker(config: config, selectedCategory: $selectedCategory)
+                ScrollTapWheelPicker(config: config, selectedCategory: $selectedCategory)
                     .frame(height: 96, alignment: .top)
             }
         }   

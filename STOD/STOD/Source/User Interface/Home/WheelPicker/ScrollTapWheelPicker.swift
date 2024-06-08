@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScrollOnlyWheelPicker: View {
+struct ScrollTapWheelPicker: View {
     /// Config
     var config: Config
     /// View Status
@@ -19,7 +19,6 @@ struct ScrollOnlyWheelPicker: View {
         GeometryReader {
             let size = $0.size
             let spacing = size.width/30
-            let horizontalPadding = size.width / 2
             let totalSteps = config.steps * config.count
             
             ScrollView(.horizontal) {
@@ -117,5 +116,5 @@ struct ScrollOnlyWheelPicker: View {
 }
 
 #Preview {
-    ScrollOnlyWheelPicker(config: ScrollOnlyWheelPicker.Config(), selectedCategory: .constant(.recent))
+    ScrollTapWheelPicker(config: ScrollTapWheelPicker.Config(), selectedCategory: .constant(.recent))
 }

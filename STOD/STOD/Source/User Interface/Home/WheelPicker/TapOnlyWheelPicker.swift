@@ -35,9 +35,9 @@ struct TapOnlyWheelPicker: View {
                     }
                 }
                 .onChange(of: selectedCategory) { oldValue, newValue in
-                    let oldIndex = MainCategory.allCases.firstIndex(of: oldValue ?? .recent) ?? 0
+                    let oldIndex = MainCategory.allCases.firstIndex(of: oldValue) ?? 0
                     
-                    let newIndex = MainCategory.allCases.firstIndex(of: newValue ?? .accessory) ?? 4
+                    let newIndex = MainCategory.allCases.firstIndex(of: newValue) ?? 4
                     
                     let duration = Double(abs(newIndex - oldIndex))*0.2
                     

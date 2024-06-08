@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-import Pipify
 import UIPiPView
 
 struct Home: View {
@@ -26,16 +25,18 @@ struct Home: View {
                       showRegisterView: $showRegisterView)
                 .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3)
             Color.black
-                .frame(height: 600)
+                .frame(width: UIScreen.main.bounds.width, height: 600)
             VStack(spacing: 24) {
                 PIPSection()
                 CategorySection(selectedCategory: $selectedCategory,
                                 isOnlyTap: false)
-                ClothList(selectedCategory: $selectedCategory, showRegisterView: $showRegisterView, selectedCloth: $selectedCloth, showPIP: $showPIP)
+                ClothList(selectedCategory: $selectedCategory,
+                          showRegisterView: $showRegisterView,
+                          selectedCloth: $selectedCloth,
+                          showPIP: $showPIP)
                 
             }
         }
-        //.animation(.snappy(duration: 0.15), value: selectedCategory)
         .fullScreenCover(isPresented: $showRegisterView) {
             RegisterMainCategory()
         }
@@ -43,10 +44,6 @@ struct Home: View {
             print(showPIP)
         }
     }
-    
-    //        .pipify(isPresented: $showPIP) {
-    //            PIPView(selectedCloth: $selectedCloth)
-    //        }
 }
 
 #Preview {
@@ -54,43 +51,15 @@ struct Home: View {
 }
 
 //SwiftData 프리뷰
-#Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Cloth.self, configurations: config)
-    
-    for i in 1..<10 {
-        let cloth = Cloth(name: "Helllo", size: "S", numericalImageData: nil, clothImageData: nil, subCategory: "후드티", mainCategory: "상의", isPinned: false)
-        container.mainContext.insert(cloth)
-    }
-    
-    return Home()
-        .modelContainer(container)
-}
-
-extension Home {
-    
-    //    var PIPView: some View {
-    //        ZStack {
-    //            if let uiimage = selectedCloth?.numericalUIImage {
-    //                 ZStack(alignment: .bottom) {
-    //                    Image(uiImage: uiimage)
-    //
-    //                    HStack {
-    //                        Text(selectedCloth?.size ?? "")
-    //
-    //                        Spacer()
-    //
-    //                        Image(.characterHome)
-    //                            .resizable()
-    //                            .scaledToFit()
-    //                            .frame(width: 30)
-    //                    }
-    //                    .padding()
-    //                }
-    //
-    //            } else {
-    //                 Image(.characterHome)
-    //            }
-    //        }
-    //    }
-}
+//#Preview {
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: Cloth.self, configurations: config)
+//    
+//    for i in 1..<10 {
+//        let cloth = Cloth(name: "Helllo", size: "S", numericalImageData: nil, clothImageData: nil, subCategory: "후드티", mainCategory: "상의", isPinned: false)
+//        container.mainContext.insert(cloth)
+//    }
+//    
+//    return Home()
+//        .modelContainer(container)
+//}
