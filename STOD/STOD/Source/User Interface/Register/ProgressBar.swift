@@ -17,7 +17,7 @@ struct ProgressBar: View {
             Image(progressSet[progressStage])
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 340, height: 15)
+                .frame(width: 335, height: 15)
                 .padding(EdgeInsets(top: 24, leading: 0, bottom: 12, trailing: 0))
             HStack {
                 ForEach(0..<progressText.count) { stage in
