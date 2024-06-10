@@ -197,7 +197,7 @@ extension RegisterDetailInfo {
                 
                 Spacer().frame(height: 10)
                 
-                Text(cloth.subCategory)
+                Text(LocalizedStringKey(cloth.subCategory))
                     .font(.StodTitle2)
                 
                 Spacer().frame(height: 12)
@@ -208,29 +208,29 @@ extension RegisterDetailInfo {
             }
             
             if registerState == 2 {
-                    VStack(alignment: .leading, spacing: 10) {
-                        ForEach(layoutButtons(in: UIScreen.main.bounds.width-32), id: \.self) { row in
-                            HStack {
-                                ForEach(row, id: \.self) { subcategory in
-                                    Button(action: {
-                                        cloth.subCategory = subcategory
-                                    }) {
-                                        Text(subcategory)
-                                            .lineLimit(1)
-                                            .fixedSize(horizontal: true, vertical: false)
-                                            .font(.StodTitle1)
-                                            .padding(.horizontal, 10)
-                                            .padding(.vertical, 5)
-                                            .foregroundColor(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100)
-                                            .background(
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .stroke(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 2)
-                                            )
-                                    }.padding(.vertical, 2)
-                                }
+                VStack(alignment: .leading, spacing: 10) {
+                    ForEach(layoutButtons(in: UIScreen.main.bounds.width-32), id: \.self) { row in
+                        HStack {
+                            ForEach(row, id: \.self) { subcategory in
+                                Button(action: {
+                                    cloth.subCategory = subcategory
+                                }) {
+                                    Text(LocalizedStringKey(subcategory))
+                                        .lineLimit(1)
+                                        .fixedSize(horizontal: true, vertical: false)
+                                        .font(.StodTitle1)
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 5)
+                                        .foregroundColor(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .stroke(cloth.subCategory == subcategory ? Color.accentColor : Color.stodGray100, lineWidth: 2)
+                                        )
+                                }.padding(.vertical, 2)
                             }
                         }
                     }
+                }
             }
         }
     }
