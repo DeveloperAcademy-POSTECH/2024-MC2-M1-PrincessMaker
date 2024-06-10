@@ -87,7 +87,7 @@ enum MainCategory: String, CaseIterable {
             return [
                 "데님_팬츠",
                 "코튼_팬츠",
-                "슈트_팬트_슬랙스",
+                "슈트_팬츠_슬랙스",
                 "트레이닝_조거_팬츠",
                 "숏팬츠",
                 "레깅스",

@@ -95,23 +95,8 @@
     "Key" : {
       "extractionState" : "manual"
     },
-    "measurementImageTitle" : {
-      "comment" : "measurementImageTitle",
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please select a picture that contains the figures"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "수치 사진을 올려주세요"
-          }
-        }
-      }
+    "Key 1" : {
+      "extractionState" : "manual"
     },
     "nameTitle" : {
       "comment" : "nameTitle",
@@ -130,6 +115,9 @@
           }
         }
       }
+    },
+    "out_of_range" : {
+
     },
     "sizeTitle" : {
       "comment" : "sizeTitle",
@@ -958,7 +946,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "It's where the clothes \\nyou choose come up"
+            "value" : "It's where the clothes you choose come up"
           }
         },
         "ko" : {
@@ -1052,6 +1040,24 @@
         }
       }
     },
+    "수치 사진을 올려주세요" : {
+      "comment" : "measurementImageTitle",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select a picture that contains the figures"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수치 사진을 올려주세요"
+          }
+        }
+      }
+    },
     "쉽게 비교하자, STOD" : {
       "localizations" : {
         "en" : {
@@ -1119,23 +1125,6 @@
         }
       }
     },
-    "스포츠 스니커즈" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sports Sneakers"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "스포츠 스니커즈"
-          }
-        }
-      }
-    },
     "스포츠_상의" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1149,6 +1138,23 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "스포츠 상의"
+          }
+        }
+      }
+    },
+    "스포츠_스니커즈" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sports Sneakers"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "스포츠 스니커즈"
           }
         }
       }
@@ -1360,6 +1366,23 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "옷 사진"
+          }
+        }
+      }
+    },
+    "옷 사진을 올려주세요" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please choose a picture of your clothes."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "옷 사진을 올려주세요"
           }
         }
       }

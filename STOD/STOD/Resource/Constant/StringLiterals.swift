@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum StringLiterals {
     enum Register: String, CaseIterable {
@@ -15,4 +16,6 @@ enum StringLiterals {
         case measurementImageTitle = "수치 사진을 올려주세요"
         case clothImageTitle = "옷 사진을 올려주세요"
     }
+    
+    
 }

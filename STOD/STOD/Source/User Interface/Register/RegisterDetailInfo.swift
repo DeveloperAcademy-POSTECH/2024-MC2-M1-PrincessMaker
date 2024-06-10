@@ -43,11 +43,15 @@ struct RegisterDetailInfo: View {
         }
     }
     
-    var titleText: String {
+//    var localizedTitle: LocalizedStringKey {
+//        return LocalizedStringKey(StringLiterals.Register)
+//    }
+    
+    var localizedTitle: LocalizedStringKey {
         if registerState < StringLiterals.Register.allCases.count {
-            return StringLiterals.Register.allCases[registerState].rawValue
+            return LocalizedStringKey(StringLiterals.Register.allCases[registerState].rawValue)
         } else {
-            return "Out of Range"
+            return LocalizedStringKey("out_of_range")
         }
     }
     
@@ -58,7 +62,7 @@ struct RegisterDetailInfo: View {
                     VStack(alignment: .leading, spacing: 24) {
                         Color.black.frame(height: 14)
                         
-                        Text(titleText)
+                        Text(localizedTitle)
                             .font(.StodHeadline)
                             .foregroundColor(.white)
                         
