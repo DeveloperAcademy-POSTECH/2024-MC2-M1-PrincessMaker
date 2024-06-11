@@ -23,9 +23,13 @@ struct RegisterDetailInfo: View {
         modelContext.insert(cloth)
     }
     
-    private var localizedString: LocalizedStringKey {
-        return LocalizedStringKey(cloth.subCategory)
+    private var localizedSubcategories: [String] {
+        guard let mainCategory = MainCategory(rawValue: cloth.mainCategory) else {
+            return []
+        }
+        return mainCategory.localizedSubcategories.map { $0.stringValue }
     }
+    
     
     var buttonEnable: Bool {
         if registerState == 0 {
@@ -43,9 +47,6 @@ struct RegisterDetailInfo: View {
         }
     }
     
-//    var localizedTitle: LocalizedStringKey {
-//        return LocalizedStringKey(StringLiterals.Register)
-//    }
     
     var localizedTitle: LocalizedStringKey {
         if registerState < StringLiterals.Register.allCases.count {
@@ -141,12 +142,12 @@ extension RegisterDetailInfo {
     var NameSection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 1 {
-                Text("이름")
+                Text("Name")
                     .font(.StodBody)
                     .foregroundColor(.stodGray100)
                 Spacer().frame(height: 10)
             }
-            TextField("ex) 딱 복숭아뼈까지 오는 청바지, 여리여리 블라우스", text: $cloth.name)
+            TextField("ex) Blue Jeans, Flowy Blouse", text: $cloth.name)
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
@@ -168,12 +169,12 @@ extension RegisterDetailInfo {
     var SizeSection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 2 {
-                Text("사이즈")
+                Text("Size")
                     .font(.StodBody)
                     .foregroundColor(.stodGray100)
                 Spacer().frame(height: 10)
             }
-            TextField("ex) 스몰, XL, 240mm", text: $cloth.size)
+            TextField("ex) Small, XL, 240mm", text: $cloth.size)
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
@@ -195,7 +196,7 @@ extension RegisterDetailInfo {
     var SubCategorySection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 3 {
-                Text("종류")
+                Text("Category")
                     .font(.StodBody)
                     .foregroundColor(.stodGray100)
                 
@@ -311,7 +312,7 @@ extension RegisterDetailInfo {
         } label: {
             HStack {
                 Spacer()
-                Text("확인")
+                Text("Confirm")
                     .font(.StodTitle1)
                     .foregroundColor(.black)
                 Spacer()
@@ -332,7 +333,7 @@ extension RegisterDetailInfo {
                 saveCloth()
                 showSuccessView = true
             } label: {
-                Text("나중에 할래요")
+                Text("Do it later")
                     .font(.StodTitle2)
                     .foregroundColor(.stodGray100)
                     .underline()
@@ -360,16 +361,10 @@ extension RegisterDetailInfo {
         }
     }
     
-    private var subcategories: [String] {
-        guard let mainCategory = MainCategory(rawValue: cloth.mainCategory) else {
-            return []
-        }
-        return mainCategory.subcategories
-    }
-    
     private func calculateButtonWidth(text: String, font: UIFont) -> CGFloat {
-        let constraintRect = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
-        let boundingBox = text.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+        let nsText = text as NSString
+        let attributes = [NSAttributedString.Key.font: font]
+        let boundingBox = nsText.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
         return ceil(boundingBox.width) + 20
     }
     
@@ -378,44 +373,33 @@ extension RegisterDetailInfo {
         var currentRowWidth: CGFloat = 0
         let padding: CGFloat = 10
         let font = UIFont.systemFont(ofSize: 17)
-        
-        for subcategory in subcategories {
+
+        for subcategory in localizedSubcategories {
             let buttonWidth = calculateButtonWidth(text: subcategory, font: font)
-            if currentRowWidth + buttonWidth + padding > width {
+            if currentRowWidth + buttonWidth + padding > UIScreen.main.bounds.width {
+                // 현재 줄에 버튼이 들어가지 않는 경우 새로운 줄 생성
                 rows.append([subcategory])
                 currentRowWidth = buttonWidth
             } else {
+                // 현재 줄에 버튼이 들어가는 경우 현재 줄에 추가
                 rows[rows.count - 1].append(subcategory)
                 currentRowWidth += buttonWidth + padding
             }
         }
-        
+
         return rows
     }
-    
-    private func calculateHeight(in width: CGFloat) -> CGFloat {
-        var rows: [[String]] = [[]]
-        var currentRowWidth: CGFloat = 0
-        let padding: CGFloat = 10
-        let font = UIFont.systemFont(ofSize: 17)
-        
-        for subcategory in subcategories {
-            let buttonWidth = calculateButtonWidth(text: subcategory, font: font)
-            if currentRowWidth + buttonWidth + padding > width {
-                rows.append([subcategory])
-                currentRowWidth = buttonWidth
-            } else {
-                rows[rows.count - 1].append(subcategory)
-                currentRowWidth += buttonWidth + padding
-            }
-        }
-        
-        return CGFloat(rows.count * 36)
-    }
+
 }
 
 #Preview {
-    RegisterDetailInfo(cloth: .constant(Cloth(mainCategory: "아우터")), showRegisterView: .constant(false))
+    RegisterDetailInfo(cloth: .constant(Cloth(mainCategory: "Outerwear")), showRegisterView: .constant(false))
+}
+
+extension LocalizedStringKey {
+    var stringValue: String {
+        Mirror(reflecting: self).children.first { $0.label == "key" }?.value as? String ?? ""
+    }
 }
 
 
@@ -423,3 +407,4 @@ enum Field {
     case name
     case size
 }
+
