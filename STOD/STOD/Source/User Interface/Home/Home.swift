@@ -13,6 +13,7 @@ struct Home: View {
     @Environment(\.modelContext) private var modelContext
     @Query var clothes: [Cloth]
     
+    @AppStorage("firstPIP") var firstPIP: Bool = true
     @State private var selectedCategory: MainCategory = .recent
     @State var showRegisterView: Bool = false
     @State private var selectedCloth: Cloth? = nil
@@ -37,6 +38,13 @@ struct Home: View {
                           selectedCloth: $selectedCloth,
                           showPIP: $showPIP)
                 
+            }
+            
+            if firstPIP && (selectedCloth != nil) {
+                Color.black
+                    .opacity(0.6)
+                    .ignoresSafeArea()
+                // 팝업뷰 들어올 자리
             }
         }
         .fullScreenCover(isPresented: $showRegisterView) {
