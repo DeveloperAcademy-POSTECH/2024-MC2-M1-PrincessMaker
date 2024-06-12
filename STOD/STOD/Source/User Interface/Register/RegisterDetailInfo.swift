@@ -50,9 +50,10 @@ struct RegisterDetailInfo: View {
     var body: some View {
         NavigationStack {
             VStack {
+                ProgressBar(progressStage: $registerState)
                 ScrollView(.vertical) {
                     VStack(alignment: .leading, spacing: 24) {
-                        Color.black.frame(height: 14)
+//                        Color.black.frame(height: 14)
                         
                         Text(titleText)
                             .font(.StodHeadline)
