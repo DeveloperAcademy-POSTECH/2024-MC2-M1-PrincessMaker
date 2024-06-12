@@ -81,7 +81,6 @@ extension Home {
             }
             .padding(16)
         }
-        //.background(.ultraThinMaterial.opacity(0.6))
         .background {
             BackdropBlurView(radius: 5)
         }
