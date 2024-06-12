@@ -38,7 +38,6 @@
 		39577AA12C147B4D0079A425 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
 		395A5B342C0264B80013E516 /* Pipify in Frameworks */ = {isa = PBXBuildFile; productRef = 395A5B332C0264B80013E516 /* Pipify */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
-		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
 		397268472BF7E0E900C27F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268462BF7E0E900C27F52 /* Preview Assets.xcassets */; };
 		3972685D2BF7E30200C27F52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972685C2BF7E30200C27F52 /* Home.swift */; };
 		397268652BF7E33800C27F52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397268642BF7E33800C27F52 /* Launch Screen.storyboard */; };
@@ -46,6 +45,8 @@
 		3972686F2BF7E4BF00C27F52 /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */; };
 		397268702BF7E4BF00C27F52 /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */; };
 		397268712BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */; };
+		3980D1D82C1A0781008B9B18 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3980D1D72C1A0781008B9B18 /* UIImage+.swift */; };
+		3980D1DA2C1A16DD008B9B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3980D1D92C1A16DD008B9B18 /* Assets.xcassets */; };
 		398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8EC2BFB919300780D74 /* HapticManager.swift */; };
 		398DD8F12BFBAC0500780D74 /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8F02BFBAC0500780D74 /* WheelPicker.swift */; };
 		398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8F22BFBAC6B00780D74 /* CategoryPicker.swift */; };
@@ -101,7 +102,6 @@
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewJane.swift; sourceTree = "<group>"; };
-		397268432BF7E0E900C27F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		397268462BF7E0E900C27F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3972685C2BF7E30200C27F52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		397268642BF7E33800C27F52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -111,6 +111,8 @@
 		3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
 		3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
 		3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
+		3980D1D72C1A0781008B9B18 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		3980D1D92C1A16DD008B9B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		398DD8EC2BFB919300780D74 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		398DD8F02BFBAC0500780D74 /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
 		398DD8F22BFBAC6B00780D74 /* CategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPicker.swift; sourceTree = "<group>"; };
@@ -241,8 +243,8 @@
 		3972684D2BF7E0FB00C27F52 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3980D1D92C1A16DD008B9B18 /* Assets.xcassets */,
 				38A5D8732BFEE95D008A82FD /* Lottie */,
-				397268432BF7E0E900C27F52 /* Assets.xcassets */,
 				397268512BF7E15700C27F52 /* Font */,
 				397268522BF7E15C00C27F52 /* Constant */,
 				397268532BF7E16800C27F52 /* Extension */,
@@ -296,6 +298,7 @@
 				397268662BF7E37600C27F52 /* View+.swift */,
 				39E3E43E2BF87CF30033FB89 /* Font+.swift */,
 				38A5D88B2BFEEBB9008A82FD /* Color+.swift */,
+				3980D1D72C1A0781008B9B18 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -483,8 +486,8 @@
 				38A5D8772BFEE96E008A82FD /* ONBOARDING02.lottie.json in Resources */,
 				39A3E7B42C002DBB007E7186 /* Splash_Black.json in Resources */,
 				397268712BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf in Resources */,
+				3980D1DA2C1A16DD008B9B18 /* Assets.xcassets in Resources */,
 				3972686B2BF7E4AD00C27F52 /* Pretendard-Bold.ttf in Resources */,
-				397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +515,7 @@
 				3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */,
 				39DE8AC12BFD008F00882076 /* RefCategoryPicker.swift in Sources */,
 				39DE8ACD2BFDDF4600882076 /* ScrollTapWheelPicker.swift in Sources */,
+				3980D1D82C1A0781008B9B18 /* UIImage+.swift in Sources */,
 				398DD8F12BFBAC0500780D74 /* WheelPicker.swift in Sources */,
 				39DE8AC32BFD00AA00882076 /* RefWheelPicker.swift in Sources */,
 				38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */,

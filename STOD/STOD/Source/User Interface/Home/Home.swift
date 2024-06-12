@@ -24,9 +24,9 @@ struct Home: View {
             UIPIPView(showPipView: $showPIP,
                       selectedCloth: $selectedCloth,
                       showRegisterView: $showRegisterView)
-                .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3)
+            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3)
             Color.black
-                .frame(width: UIScreen.main.bounds.width, height: 600)
+                .frame(width: UIScreen.main.bounds.width, height: (UIScreen.main.bounds.width-32)/4*3)
             VStack(spacing: 0) {
                 PIPSection()
                 Spacer().frame(height: 24)
@@ -40,11 +40,8 @@ struct Home: View {
                 
             }
             
-            if firstPIP && (selectedCloth != nil) {
-                Color.black
-                    .opacity(0.6)
-                    .ignoresSafeArea()
-                // 팝업뷰 들어올 자리
+            if firstPIP && (selectedCloth != nil) && showPIP {
+                firstPIPGuidingView
             }
         }
         .fullScreenCover(isPresented: $showRegisterView) {
@@ -53,6 +50,44 @@ struct Home: View {
         .onChange(of: showPIP) { oldValue, newValue in
             print(showPIP)
         }
+        .animation(.easeInOut(duration: 0.2), value: firstPIP)
+    }
+}
+
+extension Home {
+    var firstPIPGuidingView: some View {
+        VStack(spacing: 0) {
+            Spacer()
+                .frame(height: (UIScreen.main.bounds.width-32)/4*3)
+            Spacer()
+            Image(.firstPIPMessage)
+            Spacer()
+            
+            Button {
+                firstPIP = false
+            } label: {
+                HStack {
+                    Spacer()
+                    Text("확인")
+                        .font(.StodTitle1)
+                        .foregroundColor(.black)
+                    Spacer()
+                }
+                .padding(.vertical, 15)
+                .background {
+                    RoundedRectangle(cornerRadius: 10.0)
+                        .fill(.accent)
+                }
+            }
+            .padding(16)
+        }
+        //.background(.ultraThinMaterial.opacity(0.6))
+        .background {
+            BackdropBlurView(radius: 6)
+        }
+        .background {
+            Color.stodBlack.opacity(0.6)
+        }
     }
 }
 
@@ -60,16 +95,45 @@ struct Home: View {
     Home()
 }
 
+
 //SwiftData 프리뷰
 //#Preview {
 //    let config = ModelConfiguration(isStoredInMemoryOnly: true)
 //    let container = try! ModelContainer(for: Cloth.self, configurations: config)
-//    
+//
 //    for i in 1..<10 {
 //        let cloth = Cloth(name: "Helllo", size: "S", numericalImageData: nil, clothImageData: nil, subCategory: "후드티", mainCategory: "상의", isPinned: false)
 //        container.mainContext.insert(cloth)
 //    }
-//    
+//
 //    return Home()
 //        .modelContainer(container)
 //}
+/// A View in which content reflects all behind it
+struct BackdropView: UIViewRepresentable {
+
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        let view = UIVisualEffectView()
+        let blur = UIBlurEffect()
+        let animator = UIViewPropertyAnimator()
+        animator.addAnimations { view.effect = blur }
+        animator.fractionComplete = 0
+        animator.stopAnimation(false)
+        animator.finishAnimation(at: .current)
+        return view
+    }
+    
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) { }
+    
+}
+
+/// A transparent View that blurs its background
+struct BackdropBlurView: View {
+    
+    let radius: CGFloat
+    
+    @ViewBuilder
+    var body: some View {
+        BackdropView().blur(radius: radius)
+    }
+}

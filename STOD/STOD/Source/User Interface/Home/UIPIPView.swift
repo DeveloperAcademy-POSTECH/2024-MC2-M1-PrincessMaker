@@ -150,3 +150,28 @@ class PIPViewController: UIViewController {
     }
 }
 
+struct BlurView: UIViewRepresentable {
+    var blurRadius: CGFloat
+
+    func makeUIView(context: Context) -> UIView {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = UIColor(.stodBlack.opacity(0.6))
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(blurEffectView)
+        NSLayoutConstraint.activate([
+            blurEffectView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            blurEffectView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {
+        guard let blurEffectView = uiView.subviews.first as? UIVisualEffectView else { return }
+        let blurFilter = CIFilter(name: "CIGaussianBlur")
+        blurFilter?.setValue(blurRadius, forKey: kCIInputRadiusKey)
+        let blurEffect = blurEffectView.effect as? UIBlurEffect
+        blurEffectView.effect = blurEffect
+    }
+}
