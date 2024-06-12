@@ -26,8 +26,9 @@ struct Home: View {
                 .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3)
             Color.black
                 .frame(width: UIScreen.main.bounds.width, height: 600)
-            VStack(spacing: 24) {
+            VStack(spacing: 15) {
                 PIPSection()
+                Spacer().frame(height: 9)
                 CategorySection(selectedCategory: $selectedCategory,
                                 isOnlyTap: false)
                 ClothList(selectedCategory: $selectedCategory,
