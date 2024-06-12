@@ -503,7 +503,6 @@
 				39DE8AD52BFE5CDC00882076 /* ClothListPageView.swift in Sources */,
 				39DE8ACF2BFE3E5C00882076 /* TapOnlyWheelPicker.swift in Sources */,
 				3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */,
-				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
 				38B133412C14905F00922A86 /* ProgressBar.swift in Sources */,
 				39DE8AD32BFE40FC00882076 /* ClothRow.swift in Sources */,
 				398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */,
@@ -678,7 +677,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 89S2Z5S7CX;
+				DEVELOPMENT_TEAM = D23XDL6TZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -712,7 +711,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 89S2Z5S7CX;
+				DEVELOPMENT_TEAM = D23XDL6TZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";

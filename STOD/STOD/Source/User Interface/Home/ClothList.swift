@@ -29,7 +29,7 @@ struct ClothList: View {
                     Image(.emptyList)
                     Spacer()
                 }
-                .listRowInsets(EdgeInsets())
+                .listRowInsets(EdgeInsets(top: 12, leading: 0, bottom: 0, trailing: 0))
                 .listRowSeparator(.hidden)
             }
             
