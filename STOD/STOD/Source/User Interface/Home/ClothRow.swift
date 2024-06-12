@@ -60,7 +60,7 @@ struct ClothRow: View {
                 VStack(alignment: .leading, spacing: 11) {
                     Text(cloth.name)
                         .font(.StodTitle1)
-                    Text("\(cloth.subCategory) . \(cloth.size)")
+                    Text("\(cloth.subCategory)")
                         .font(.StodBody)
                 }
                 .foregroundStyle(isSelected ? Color.stodBlack : Color.stodWhite)
