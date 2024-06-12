@@ -83,7 +83,7 @@ extension Home {
         }
         //.background(.ultraThinMaterial.opacity(0.6))
         .background {
-            BackdropBlurView(radius: 6)
+            BackdropBlurView(radius: 5)
         }
         .background {
             Color.stodBlack.opacity(0.6)
@@ -134,6 +134,6 @@ struct BackdropBlurView: View {
     
     @ViewBuilder
     var body: some View {
-        BackdropView().blur(radius: radius)
+        BackdropView().blur(radius: radius, opaque: true)
     }
 }
