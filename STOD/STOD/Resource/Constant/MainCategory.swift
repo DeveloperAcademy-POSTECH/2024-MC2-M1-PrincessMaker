@@ -136,6 +136,6 @@ enum MainCategory: String, CaseIterable {
         }
     }
     var localizedSubcategories: [LocalizedStringKey] {
-        return subcategories.map {LocalizedStringKey($0)}
+        return subcategories.map { LocalizedStringKey($0) }
     }
 }

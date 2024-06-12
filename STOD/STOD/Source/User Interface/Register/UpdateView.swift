@@ -113,6 +113,7 @@ extension UpdateView {
         }
     }
     
+    
     var SubCategorySection: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("종류")
@@ -124,7 +125,7 @@ extension UpdateView {
             if let mainCategory = MainCategory(rawValue: editCloth.mainCategory) {
                 Picker("종류", selection: $editCloth.subCategory) {
                     ForEach(mainCategory.subcategories, id: \.self) { subcategory in
-                        Text(subcategory).tag(subcategory)
+                        Text(LocalizedStringKey(subcategory)).tag(subcategory)
                             .font(.StodTitle1)
                         
                     }

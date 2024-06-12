@@ -20,7 +20,7 @@ struct ClothList: View {
     @State var editTargetIndex: Int = 0
     @State var isDeleting: Bool = false
     @State var deleteTargetIndex: Int = 0
-    var swipeText = "스크롤을 당겨서\n옷을 추가할 수 있어요"
+    var swipeText = "스크롤을 당겨서 옷을 추가할 수 있어요"
     
     var body: some View {
         List {
@@ -36,7 +36,6 @@ struct ClothList: View {
                             .foregroundColor(.stodGray100)
                             .multilineTextAlignment(.center)
                     }
-//                    Image(.emptyList)
                     Spacer()
                 }
                 .listRowInsets(EdgeInsets())

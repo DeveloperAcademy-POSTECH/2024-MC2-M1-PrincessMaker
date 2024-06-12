@@ -32,9 +32,6 @@
     "%lld" : {
 
     },
-    "Category" : {
-
-    },
     "clothImageTitle" : {
       "comment" : "clothImageTitle",
       "extractionState" : "manual",
@@ -53,24 +50,12 @@
         }
       }
     },
-    "Confirm" : {
-
-    },
-    "Do it later" : {
-
-    },
-    "ex) Blue Jeans, Flowy Blouse" : {
-
-    },
-    "ex) Small, XL, 240mm" : {
-
-    },
     "ex) 딱 복숭아뼈까지 오는 청바지, 여리여리 블라우스" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ex) Cropped jeans that reach the ankle, Looks like slender blouse"
+            "value" : "ex) Blue Jeans, Flowy Blouse"
           }
         },
         "ko" : {
@@ -113,9 +98,6 @@
     "Key 1" : {
       "extractionState" : "manual"
     },
-    "Name" : {
-
-    },
     "nameTitle" : {
       "comment" : "nameTitle",
       "extractionState" : "manual",
@@ -135,9 +117,6 @@
       }
     },
     "out_of_range" : {
-
-    },
-    "Size" : {
 
     },
     "sizeTitle" : {
@@ -188,7 +167,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "스크롤을 당겨서\\n옷을 추가할 수 있어요"
+            "value" : "스크롤을 당겨서 옷을 추가할 수 있어요"
           }
         }
       }
@@ -457,7 +436,6 @@
       }
     },
     "나중에 할래요" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1305,7 +1283,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Accessory"
+            "value" : "Acc"
           }
         },
         "ko" : {
@@ -1741,7 +1719,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Accessory"
+            "value" : "Acc"
           }
         },
         "ko" : {

@@ -1,11 +1,5 @@
-//
-//  ClothRegister.swift
-//  STOD
-//
-//  Created by 이윤학 on 5/25/24.
-//
-
 import SwiftUI
+import SwiftData
 
 struct RegisterDetailInfo: View {
     @Environment(\.modelContext) private var modelContext
@@ -30,23 +24,22 @@ struct RegisterDetailInfo: View {
         return mainCategory.localizedSubcategories.map { $0.stringValue }
     }
     
-    
     var buttonEnable: Bool {
-        if registerState == 0 {
+        switch registerState {
+        case 0:
             return !cloth.name.isEmpty
-        } else if registerState == 1 {
+        case 1:
             return !cloth.size.isEmpty
-        } else if registerState == 2 {
-            return cloth.subCategory != ""
-        } else if registerState == 3 {
+        case 2:
+            return !cloth.subCategory.isEmpty
+        case 3:
             return cloth.numericalImageData != nil
-        } else if registerState == 4 {
+        case 4:
             return cloth.clothImageData != nil
-        } else {
+        default:
             return true
         }
     }
-    
     
     var localizedTitle: LocalizedStringKey {
         if registerState < StringLiterals.Register.allCases.count {
@@ -88,8 +81,6 @@ struct RegisterDetailInfo: View {
                         }
                         
                         Color.black
-                        
-                        
                     }
                     .padding()
                 }
@@ -124,7 +115,6 @@ struct RegisterDetailInfo: View {
                     }
                     .onEnded { value in
                         if value.translation.width > 100 {
-                            // 임계값을 넘으면 registerState를 -1로 설정
                             back()
                         }
                     }
@@ -132,22 +122,18 @@ struct RegisterDetailInfo: View {
             .fullScreenCover(isPresented: $showSuccessView) {
                 RegisetSuccess(name: $cloth.name, showRegisterView: $showRegisterView)
             }
-            
         }
     }
-}
-
-
-extension RegisterDetailInfo {
+    
     var NameSection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 1 {
-                Text("Name")
+                Text("이름")
                     .font(.StodBody)
                     .foregroundColor(.stodGray100)
                 Spacer().frame(height: 10)
             }
-            TextField("ex) Blue Jeans, Flowy Blouse", text: $cloth.name)
+            TextField("ex) 딱 복숭아뼈까지 오는 청바지, 여리여리 블라우스", text: $cloth.name)
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
@@ -169,12 +155,12 @@ extension RegisterDetailInfo {
     var SizeSection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 2 {
-                Text("Size")
+                Text("사이즈")
                     .font(.StodBody)
                     .foregroundColor(.stodGray100)
                 Spacer().frame(height: 10)
             }
-            TextField("ex) Small, XL, 240mm", text: $cloth.size)
+            TextField("ex) 스몰, XL, 240mm", text: $cloth.size)
                 .keyboardType(.default)
                 .font(.StodTitle2)
                 .padding(.leading, 4)
@@ -196,7 +182,7 @@ extension RegisterDetailInfo {
     var SubCategorySection: some View {
         VStack(alignment: .leading, spacing: 0) {
             if registerState >= 3 {
-                Text("Category")
+                Text("종류")
                     .font(.StodBody)
                     .foregroundColor(.stodGray100)
                 
@@ -244,7 +230,7 @@ extension RegisterDetailInfo {
         HStack {
             Button {
                 showNumericalImagePicker = true
-            } label : {
+            } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
@@ -263,7 +249,6 @@ extension RegisterDetailInfo {
                             .foregroundColor(.stodGray100)
                     }
                 }
-                
             }
             .fullScreenCover(isPresented: $showNumericalImagePicker) {
                 ImageEditPicker(inputImageData: $cloth.numericalImageData)
@@ -275,7 +260,7 @@ extension RegisterDetailInfo {
         HStack {
             Button {
                 showClothImagePicker = true
-            } label : {
+            } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
@@ -294,7 +279,6 @@ extension RegisterDetailInfo {
                             .foregroundColor(.stodGray100)
                     }
                 }
-                
             }
             .fullScreenCover(isPresented: $showClothImagePicker) {
                 ImageEditPicker(inputImageData: $cloth.clothImageData)
@@ -312,7 +296,7 @@ extension RegisterDetailInfo {
         } label: {
             HStack {
                 Spacer()
-                Text("Confirm")
+                Text("확인")
                     .font(.StodTitle1)
                     .foregroundColor(.black)
                 Spacer()
@@ -320,7 +304,7 @@ extension RegisterDetailInfo {
             .padding(.vertical, 15)
             .background {
                 RoundedRectangle(cornerRadius: 10.0)
-                    .fill(buttonEnable ? .accent : .stodGray100)
+                    .fill(buttonEnable ? Color.accentColor : Color.stodGray100)
             }
         }
         .disabled(!buttonEnable)
@@ -333,14 +317,13 @@ extension RegisterDetailInfo {
                 saveCloth()
                 showSuccessView = true
             } label: {
-                Text("Do it later")
+                Text("나중에 할래요")
                     .font(.StodTitle2)
                     .foregroundColor(.stodGray100)
                     .underline()
             }
             Spacer()
         }
-        
     }
     
     var BackButton: some View {
@@ -376,12 +359,10 @@ extension RegisterDetailInfo {
 
         for subcategory in localizedSubcategories {
             let buttonWidth = calculateButtonWidth(text: subcategory, font: font)
-            if currentRowWidth + buttonWidth + padding > UIScreen.main.bounds.width {
-                // 현재 줄에 버튼이 들어가지 않는 경우 새로운 줄 생성
+            if currentRowWidth + buttonWidth + padding > width {
                 rows.append([subcategory])
                 currentRowWidth = buttonWidth
             } else {
-                // 현재 줄에 버튼이 들어가는 경우 현재 줄에 추가
                 rows[rows.count - 1].append(subcategory)
                 currentRowWidth += buttonWidth + padding
             }
@@ -389,22 +370,21 @@ extension RegisterDetailInfo {
 
         return rows
     }
-
 }
 
-#Preview {
-    RegisterDetailInfo(cloth: .constant(Cloth(mainCategory: "Outerwear")), showRegisterView: .constant(false))
-}
+//#Preview {
+//    RegisterDetailInfo(cloth: .constant(Cloth(mainCategory: "Outerwear")), showRegisterView: .constant(false))
+//}
 
 extension LocalizedStringKey {
     var stringValue: String {
-        Mirror(reflecting: self).children.first { $0.label == "key" }?.value as? String ?? ""
+        let mirror = Mirror(reflecting: self)
+        let key = mirror.children.first { $0.label == "key" }?.value as? String
+        return key ?? ""
     }
 }
-
 
 enum Field {
     case name
     case size
 }
-
