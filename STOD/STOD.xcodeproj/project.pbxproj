@@ -36,7 +36,6 @@
 		39577A9F2C147B390079A425 /* ImageEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */; };
 		39577AA02C147B450079A425 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268682BF7E3F000C27F52 /* StringLiterals.swift */; };
 		39577AA12C147B4D0079A425 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
-		395A5B342C0264B80013E516 /* Pipify in Frameworks */ = {isa = PBXBuildFile; productRef = 395A5B332C0264B80013E516 /* Pipify */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
 		397268472BF7E0E900C27F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268462BF7E0E900C27F52 /* Preview Assets.xcassets */; };
 		3972685D2BF7E30200C27F52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972685C2BF7E30200C27F52 /* Home.swift */; };
@@ -156,7 +155,6 @@
 				394135C52C03C2890005F371 /* Then in Frameworks */,
 				394135C22C03C2690005F371 /* SnapKit in Frameworks */,
 				38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */,
-				395A5B342C0264B80013E516 /* Pipify in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +419,6 @@
 				39E3E4472BF9D2230033FB89 /* BrightroomEngine */,
 				39E3E4492BF9D2230033FB89 /* BrightroomUI */,
 				38A5D8872BFEEA0F008A82FD /* Lottie */,
-				395A5B332C0264B80013E516 /* Pipify */,
 				394135BE2C03BC7A0005F371 /* UIPiPView */,
 				394135C12C03C2690005F371 /* SnapKit */,
 				394135C42C03C2890005F371 /* Then */,
@@ -457,7 +454,6 @@
 			packageReferences = (
 				39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */,
 				38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */,
 				394135BD2C03BC7A0005F371 /* XCRemoteSwiftPackageReference "UIPiPView" */,
 				394135C02C03C2690005F371 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */,
@@ -797,14 +793,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsidetrack/swiftui-pipify";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
 		39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FluidGroup/Brightroom";
@@ -835,11 +823,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
-		};
-		395A5B332C0264B80013E516 /* Pipify */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */;
-			productName = Pipify;
 		};
 		39E3E4472BF9D2230033FB89 /* BrightroomEngine */ = {
 			isa = XCSwiftPackageProductDependency;
