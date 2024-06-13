@@ -8,13 +8,13 @@ import SwiftUI
 
 enum MainCategory: String, CaseIterable {
     
-    case onepiece = "원피스"
-    case shoes = "신발"
-    case accessory = "패션잡화"
     case recent = "최근"
     case outer = "아우터"
     case top = "상의"
     case bottom = "하의"
+    case onepiece = "원피스"
+    case shoes = "신발"
+    case accessory = "패션잡화"
     
     var circleImage: Image {
         switch self {

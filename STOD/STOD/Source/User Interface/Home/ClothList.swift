@@ -29,7 +29,7 @@ struct ClothList: View {
                     Image(.emptyList)
                     Spacer()
                 }
-                .listRowInsets(EdgeInsets())
+                .listRowInsets(EdgeInsets(top: 12, leading: 0, bottom: 0, trailing: 0))
                 .listRowSeparator(.hidden)
             }
             
@@ -162,9 +162,16 @@ extension ClothList {
                 .filter{ $0.mainCategory == selectedCategory.rawValue }
                 .sorted {
                     if $0.isPinned == $1.isPinned {
-                        return $0.name < $1.name
+                        return $0.subCategory < $1.subCategory
                     } else if $0.isPinned {
                         return true
+                    } else {
+                        return false
+                    }
+                }
+                .sorted {
+                    if $0.subCategory == $1.subCategory {
+                        return $0.name < $1.name
                     } else {
                         return false
                     }

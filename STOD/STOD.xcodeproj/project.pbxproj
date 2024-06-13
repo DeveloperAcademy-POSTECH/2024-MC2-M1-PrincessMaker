@@ -20,30 +20,32 @@
 		3925489F2BFF796A00D761D7 /* SampleCloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925489E2BFF796A00D761D7 /* SampleCloth.swift */; };
 		392548A12BFF822800D761D7 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392548A02BFF822800D761D7 /* LaunchScreen.swift */; };
 		392548A32BFF901600D761D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392548A22BFF901600D761D7 /* ContentView.swift */; };
-		3925AB642C03253200A686C9 /* PIPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925AB632C03253200A686C9 /* PIPView.swift */; };
+		3925AB642C03253200A686C9 /* PIPSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925AB632C03253200A686C9 /* PIPSwiftUIView.swift */; };
 		39285BC32C019A5A00710E73 /* MainCategoryButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */; };
 		39285BC72C01C0C800710E73 /* RegisterDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39285BC62C01C0C800710E73 /* RegisterDetailInfo.swift */; };
 		3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E52BFAF1D000E5707E /* PIPSection.swift */; };
 		3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E72BFAF5A300E5707E /* CategorySection.swift */; };
 		3930F2EA2BFAF68100E5707E /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2E92BFAF68100E5707E /* CategoryButton.swift */; };
 		3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3930F2EB2BFB146800E5707E /* MainCategory.swift */; };
-		394135BC2C03BC520005F371 /* PIPTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394135BB2C03BC520005F371 /* PIPTest.swift */; };
+		394135BC2C03BC520005F371 /* UIPIPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394135BB2C03BC520005F371 /* UIPIPView.swift */; };
 		394135BF2C03BC7A0005F371 /* UIPiPView in Frameworks */ = {isa = PBXBuildFile; productRef = 394135BE2C03BC7A0005F371 /* UIPiPView */; };
 		394135C22C03C2690005F371 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 394135C12C03C2690005F371 /* SnapKit */; };
 		394135C52C03C2890005F371 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 394135C42C03C2890005F371 /* Then */; };
-		395A5B342C0264B80013E516 /* Pipify in Frameworks */ = {isa = PBXBuildFile; productRef = 395A5B332C0264B80013E516 /* Pipify */; };
+		39577A9D2C147B150079A425 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E43E2BF87CF30033FB89 /* Font+.swift */; };
+		39577A9E2C147B260079A425 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268662BF7E37600C27F52 /* View+.swift */; };
+		39577A9F2C147B390079A425 /* ImageEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */; };
+		39577AA02C147B450079A425 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268682BF7E3F000C27F52 /* StringLiterals.swift */; };
+		39577AA12C147B4D0079A425 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
 		3972683E2BF7E0E800C27F52 /* STODApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683D2BF7E0E800C27F52 /* STODApp.swift */; };
-		397268402BF7E0E800C27F52 /* ContentViewJane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */; };
-		397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268432BF7E0E900C27F52 /* Assets.xcassets */; };
 		397268472BF7E0E900C27F52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397268462BF7E0E900C27F52 /* Preview Assets.xcassets */; };
 		3972685D2BF7E30200C27F52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972685C2BF7E30200C27F52 /* Home.swift */; };
 		397268652BF7E33800C27F52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397268642BF7E33800C27F52 /* Launch Screen.storyboard */; };
-		397268672BF7E37600C27F52 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268662BF7E37600C27F52 /* View+.swift */; };
-		397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397268682BF7E3F000C27F52 /* StringLiterals.swift */; };
 		3972686B2BF7E4AD00C27F52 /* Pretendard-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686A2BF7E4AD00C27F52 /* Pretendard-Bold.ttf */; };
 		3972686F2BF7E4BF00C27F52 /* Pretendard-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */; };
 		397268702BF7E4BF00C27F52 /* Pretendard-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */; };
 		397268712BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */; };
+		3980D1D82C1A0781008B9B18 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3980D1D72C1A0781008B9B18 /* UIImage+.swift */; };
+		3980D1DA2C1A16DD008B9B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3980D1D92C1A16DD008B9B18 /* Assets.xcassets */; };
 		398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8EC2BFB919300780D74 /* HapticManager.swift */; };
 		398DD8F12BFBAC0500780D74 /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8F02BFBAC0500780D74 /* WheelPicker.swift */; };
 		398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398DD8F22BFBAC6B00780D74 /* CategoryPicker.swift */; };
@@ -53,16 +55,14 @@
 		39DE8AC32BFD00AA00882076 /* RefWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC22BFD00AA00882076 /* RefWheelPicker.swift */; };
 		39DE8AC52BFD4C4C00882076 /* OriginWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC42BFD4C4C00882076 /* OriginWheelPicker.swift */; };
 		39DE8AC72BFDCA5B00882076 /* OriginCategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */; };
-		39DE8ACD2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8ACC2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift */; };
+		39DE8ACD2BFDDF4600882076 /* ScrollTapWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8ACC2BFDDF4600882076 /* ScrollTapWheelPicker.swift */; };
 		39DE8ACF2BFE3E5C00882076 /* TapOnlyWheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */; };
 		39DE8AD12BFE40F300882076 /* ClothList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD02BFE40F300882076 /* ClothList.swift */; };
 		39DE8AD32BFE40FC00882076 /* ClothRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD22BFE40FC00882076 /* ClothRow.swift */; };
 		39DE8AD52BFE5CDC00882076 /* ClothListPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */; };
-		39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E43E2BF87CF30033FB89 /* Font+.swift */; };
 		39E3E4452BF9D03F0033FB89 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */; };
 		39E3E4482BF9D2230033FB89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4472BF9D2230033FB89 /* BrightroomEngine */; };
 		39E3E44A2BF9D2230033FB89 /* BrightroomUI in Frameworks */ = {isa = PBXBuildFile; productRef = 39E3E4492BF9D2230033FB89 /* BrightroomUI */; };
-		39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */; };
 		39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44D2BF9FB040033FB89 /* ImageEditPicker.swift */; };
 		39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3E44F2BFA0D290033FB89 /* TestView.swift */; };
 		EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E72112BFA2B6500CD3E7F /* Cloth.swift */; };
@@ -90,18 +90,17 @@
 		3925489E2BFF796A00D761D7 /* SampleCloth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCloth.swift; sourceTree = "<group>"; };
 		392548A02BFF822800D761D7 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		392548A22BFF901600D761D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3925AB632C03253200A686C9 /* PIPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPView.swift; sourceTree = "<group>"; };
+		3925AB632C03253200A686C9 /* PIPSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPSwiftUIView.swift; sourceTree = "<group>"; };
 		39285BC22C019A5A00710E73 /* MainCategoryButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryButotn.swift; sourceTree = "<group>"; };
 		39285BC62C01C0C800710E73 /* RegisterDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDetailInfo.swift; sourceTree = "<group>"; };
 		3930F2E52BFAF1D000E5707E /* PIPSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPSection.swift; sourceTree = "<group>"; };
 		3930F2E72BFAF5A300E5707E /* CategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySection.swift; sourceTree = "<group>"; };
 		3930F2E92BFAF68100E5707E /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		3930F2EB2BFB146800E5707E /* MainCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCategory.swift; sourceTree = "<group>"; };
-		394135BB2C03BC520005F371 /* PIPTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIPTest.swift; sourceTree = "<group>"; };
+		394135BB2C03BC520005F371 /* UIPIPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPIPView.swift; sourceTree = "<group>"; };
 		3972683A2BF7E0E800C27F52 /* STOD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3972683D2BF7E0E800C27F52 /* STODApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STODApp.swift; sourceTree = "<group>"; };
 		3972683F2BF7E0E800C27F52 /* ContentViewJane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewJane.swift; sourceTree = "<group>"; };
-		397268432BF7E0E900C27F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		397268462BF7E0E900C27F52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3972685C2BF7E30200C27F52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		397268642BF7E33800C27F52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -111,6 +110,8 @@
 		3972686C2BF7E4BF00C27F52 /* Pretendard-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.ttf"; sourceTree = "<group>"; };
 		3972686D2BF7E4BF00C27F52 /* Pretendard-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.ttf"; sourceTree = "<group>"; };
 		3972686E2BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.ttf"; sourceTree = "<group>"; };
+		3980D1D72C1A0781008B9B18 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		3980D1D92C1A16DD008B9B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		398DD8EC2BFB919300780D74 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		398DD8F02BFBAC0500780D74 /* WheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
 		398DD8F22BFBAC6B00780D74 /* CategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPicker.swift; sourceTree = "<group>"; };
@@ -120,7 +121,7 @@
 		39DE8AC22BFD00AA00882076 /* RefWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefWheelPicker.swift; sourceTree = "<group>"; };
 		39DE8AC42BFD4C4C00882076 /* OriginWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginWheelPicker.swift; sourceTree = "<group>"; };
 		39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginCategoryPicker.swift; sourceTree = "<group>"; };
-		39DE8ACC2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOnlyWheelPicker.swift; sourceTree = "<group>"; };
+		39DE8ACC2BFDDF4600882076 /* ScrollTapWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollTapWheelPicker.swift; sourceTree = "<group>"; };
 		39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapOnlyWheelPicker.swift; sourceTree = "<group>"; };
 		39DE8AD02BFE40F300882076 /* ClothList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothList.swift; sourceTree = "<group>"; };
 		39DE8AD22BFE40FC00882076 /* ClothRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothRow.swift; sourceTree = "<group>"; };
@@ -154,7 +155,6 @@
 				394135C52C03C2890005F371 /* Then in Frameworks */,
 				394135C22C03C2690005F371 /* SnapKit in Frameworks */,
 				38A5D8882BFEEA0F008A82FD /* Lottie in Frameworks */,
-				395A5B342C0264B80013E516 /* Pipify in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +176,7 @@
 		39569DCB2C02729500ECC4F3 /* Remainder */ = {
 			isa = PBXGroup;
 			children = (
+				3925AB632C03253200A686C9 /* PIPSwiftUIView.swift */,
 				39DE8AD42BFE5CDC00882076 /* ClothListPageView.swift */,
 			);
 			path = Remainder;
@@ -240,8 +241,8 @@
 		3972684D2BF7E0FB00C27F52 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3980D1D92C1A16DD008B9B18 /* Assets.xcassets */,
 				38A5D8732BFEE95D008A82FD /* Lottie */,
-				397268432BF7E0E900C27F52 /* Assets.xcassets */,
 				397268512BF7E15700C27F52 /* Font */,
 				397268522BF7E15C00C27F52 /* Constant */,
 				397268532BF7E16800C27F52 /* Extension */,
@@ -295,6 +296,7 @@
 				397268662BF7E37600C27F52 /* View+.swift */,
 				39E3E43E2BF87CF30033FB89 /* Font+.swift */,
 				38A5D88B2BFEEBB9008A82FD /* Color+.swift */,
+				3980D1D72C1A0781008B9B18 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -337,7 +339,6 @@
 				39E3E4442BF9D03F0033FB89 /* ImagePicker.swift */,
 				39E3E44B2BF9FA6F0033FB89 /* ImageEditer.swift */,
 				398DD8EC2BFB919300780D74 /* HapticManager.swift */,
-				394135BB2C03BC520005F371 /* PIPTest.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -346,12 +347,12 @@
 			isa = PBXGroup;
 			children = (
 				3972685C2BF7E30200C27F52 /* Home.swift */,
-				3925AB632C03253200A686C9 /* PIPView.swift */,
 				3930F2E52BFAF1D000E5707E /* PIPSection.swift */,
 				3930F2E72BFAF5A300E5707E /* CategorySection.swift */,
 				3930F2E92BFAF68100E5707E /* CategoryButton.swift */,
 				39DE8AD02BFE40F300882076 /* ClothList.swift */,
 				39DE8AD22BFE40FC00882076 /* ClothRow.swift */,
+				394135BB2C03BC520005F371 /* UIPIPView.swift */,
 				39DE8AC82BFDCC4700882076 /* WheelPicker */,
 				39569DCB2C02729500ECC4F3 /* Remainder */,
 			);
@@ -392,7 +393,7 @@
 				39DE8AC22BFD00AA00882076 /* RefWheelPicker.swift */,
 				39DE8AC62BFDCA5B00882076 /* OriginCategoryPicker.swift */,
 				39DE8AC42BFD4C4C00882076 /* OriginWheelPicker.swift */,
-				39DE8ACC2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift */,
+				39DE8ACC2BFDDF4600882076 /* ScrollTapWheelPicker.swift */,
 				39DE8ACE2BFE3E5C00882076 /* TapOnlyWheelPicker.swift */,
 			);
 			path = WheelPicker;
@@ -418,7 +419,6 @@
 				39E3E4472BF9D2230033FB89 /* BrightroomEngine */,
 				39E3E4492BF9D2230033FB89 /* BrightroomUI */,
 				38A5D8872BFEEA0F008A82FD /* Lottie */,
-				395A5B332C0264B80013E516 /* Pipify */,
 				394135BE2C03BC7A0005F371 /* UIPiPView */,
 				394135C12C03C2690005F371 /* SnapKit */,
 				394135C42C03C2890005F371 /* Then */,
@@ -454,7 +454,6 @@
 			packageReferences = (
 				39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */,
 				38A5D8862BFEEA0F008A82FD /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */,
 				394135BD2C03BC7A0005F371 /* XCRemoteSwiftPackageReference "UIPiPView" */,
 				394135C02C03C2690005F371 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */,
@@ -483,8 +482,8 @@
 				38A5D8772BFEE96E008A82FD /* ONBOARDING02.lottie.json in Resources */,
 				39A3E7B42C002DBB007E7186 /* Splash_Black.json in Resources */,
 				397268712BF7E4BF00C27F52 /* Pretendard-SemiBold.ttf in Resources */,
+				3980D1DA2C1A16DD008B9B18 /* Assets.xcassets in Resources */,
 				3972686B2BF7E4AD00C27F52 /* Pretendard-Bold.ttf in Resources */,
-				397268442BF7E0E900C27F52 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,23 +494,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39577AA12C147B4D0079A425 /* ContentViewJane.swift in Sources */,
+				39577AA02C147B450079A425 /* StringLiterals.swift in Sources */,
+				39577A9F2C147B390079A425 /* ImageEditer.swift in Sources */,
+				39577A9E2C147B260079A425 /* View+.swift in Sources */,
+				39577A9D2C147B150079A425 /* Font+.swift in Sources */,
 				39DE8AD52BFE5CDC00882076 /* ClothListPageView.swift in Sources */,
 				39DE8ACF2BFE3E5C00882076 /* TapOnlyWheelPicker.swift in Sources */,
-				397268402BF7E0E800C27F52 /* ContentViewJane.swift in Sources */,
 				3930F2E82BFAF5A300E5707E /* CategorySection.swift in Sources */,
-				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
 				38B133412C14905F00922A86 /* ProgressBar.swift in Sources */,
 				39DE8AD32BFE40FC00882076 /* ClothRow.swift in Sources */,
 				398DD8F32BFBAC6B00780D74 /* CategoryPicker.swift in Sources */,
 				392548A12BFF822800D761D7 /* LaunchScreen.swift in Sources */,
-				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
 				39285BC72C01C0C800710E73 /* RegisterDetailInfo.swift in Sources */,
 				398DD8ED2BFB919300780D74 /* HapticManager.swift in Sources */,
 				3930F2E62BFAF1D000E5707E /* PIPSection.swift in Sources */,
-				397268672BF7E37600C27F52 /* View+.swift in Sources */,
 				39DE8AC12BFD008F00882076 /* RefCategoryPicker.swift in Sources */,
-				39DE8ACD2BFDDF4600882076 /* ScrollOnlyWheelPicker.swift in Sources */,
-				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
+				39DE8ACD2BFDDF4600882076 /* ScrollTapWheelPicker.swift in Sources */,
+				3980D1D82C1A0781008B9B18 /* UIImage+.swift in Sources */,
 				398DD8F12BFBAC0500780D74 /* WheelPicker.swift in Sources */,
 				39DE8AC32BFD00AA00882076 /* RefWheelPicker.swift in Sources */,
 				38A5D88A2BFEEA83008A82FD /* OnboardingButton.swift in Sources */,
@@ -520,26 +520,21 @@
 				EE2E721E2BFA406D00CD3E7F /* NameView.swift in Sources */,
 				EE2E72262BFB856A00CD3E7F /* SubcategoryView.swift in Sources */,
 				EE7C9BE02BFD8D9C0016C053 /* RegisetSuccess.swift in Sources */,
-				397268402BF7E0E800C27F52 /* ContentViewJane.swift in Sources */,
-				397268692BF7E3F000C27F52 /* StringLiterals.swift in Sources */,
 				38A5D8822BFEE9DC008A82FD /* OnboardingView.swift in Sources */,
 				392548A32BFF901600D761D7 /* ContentView.swift in Sources */,
-				3925AB642C03253200A686C9 /* PIPView.swift in Sources */,
+				3925AB642C03253200A686C9 /* PIPSwiftUIView.swift in Sources */,
 				EE2E72122BFA2B6500CD3E7F /* Cloth.swift in Sources */,
 				EE7C9BDE2BFD8ABE0016C053 /* ClothesPhotoView.swift in Sources */,
-				39E3E44C2BF9FA700033FB89 /* ImageEditer.swift in Sources */,
-				394135BC2C03BC520005F371 /* PIPTest.swift in Sources */,
+				394135BC2C03BC520005F371 /* UIPIPView.swift in Sources */,
 				EE2E721C2BFA395200CD3E7F /* RegisterMainCategory.swift in Sources */,
 				EE2E721A2BFA2BDF00CD3E7F /* UpdateView.swift in Sources */,
 				38A5D8842BFEE9DC008A82FD /* IndicatorView.swift in Sources */,
-				397268672BF7E37600C27F52 /* View+.swift in Sources */,
 				38A5D8812BFEE9DC008A82FD /* OnboardingCard.swift in Sources */,
 				EE2E72182BFA2BC100CD3E7F /* FirstSubmit.swift in Sources */,
-				39E3E43F2BF87CF30033FB89 /* Font+.swift in Sources */,
-				EE7C9BDA2BFCA8480016C053 /* MeasurementView.swift in Sources */,
 				39E3E4502BFA0D290033FB89 /* TestView.swift in Sources */,
 				39E3E44E2BF9FB040033FB89 /* ImageEditPicker.swift in Sources */,
 				3930F2EC2BFB146800E5707E /* MainCategory.swift in Sources */,
+				EE7C9BDA2BFCA8480016C053 /* MeasurementView.swift in Sources */,
 				39DE8AD12BFE40F300882076 /* ClothList.swift in Sources */,
 				3972685D2BF7E30200C27F52 /* Home.swift in Sources */,
 				39DE8AC52BFD4C4C00882076 /* OriginWheelPicker.swift in Sources */,
@@ -682,7 +677,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 89S2Z5S7CX;
+				DEVELOPMENT_TEAM = D23XDL6TZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -716,7 +711,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"STOD/Preview Content\"";
-				DEVELOPMENT_TEAM = 89S2Z5S7CX;
+				DEVELOPMENT_TEAM = D23XDL6TZZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "STOD/Supporting File/Info.plist";
@@ -798,14 +793,6 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsidetrack/swiftui-pipify";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
 		39E3E4462BF9D2230033FB89 /* XCRemoteSwiftPackageReference "Brightroom" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/FluidGroup/Brightroom";
@@ -836,11 +823,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 394135C32C03C2890005F371 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
-		};
-		395A5B332C0264B80013E516 /* Pipify */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 395A5B322C0264B80013E516 /* XCRemoteSwiftPackageReference "swiftui-pipify" */;
-			productName = Pipify;
 		};
 		39E3E4472BF9D2230033FB89 /* BrightroomEngine */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -155,22 +155,27 @@ extension UpdateView {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: 192)
+                        .frame(height: (UIScreen.main.bounds.width-32)/4*3)
                     if let data = editCloth.numericalImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: 192, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
-                        Image(systemName: "photo.badge.plus")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 30, height: 23)
-                            .foregroundColor(.stodGray100)
+                        VStack(spacing: 12) {
+                            Image(systemName: "photo.badge.plus")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 30, height: 23)
+                                .foregroundColor(.stodGray100)
+                            Text("이곳에 보이는 대로 저장됩니다.")
+                                .font(.StodBody)
+                                .foregroundStyle(.stodGray100)
+                        }
+                        
                     }
                 }
-                
             }
             
         }
@@ -193,17 +198,17 @@ extension UpdateView {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.stodGray100, lineWidth: 1)
-                        .frame(height: 192)
+                        .frame(height: (UIScreen.main.bounds.width-32)/4*3)
                     if let data = editCloth.clothImageData {
                         Image(uiImage: UIImage(data: data)!)
                             .resizable()
                             .scaledToFill()
-                            .frame(height: 192, alignment: .center)
+                            .frame(width: UIScreen.main.bounds.width-32, height: (UIScreen.main.bounds.width-32)/4*3, alignment: .center)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     } else {
                         Image(systemName: "photo.badge.plus")
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .frame(width: 30, height: 23)
                             .foregroundColor(.stodGray100)
                     }
